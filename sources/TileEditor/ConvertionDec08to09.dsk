@@ -1,0 +1,65 @@
+[MainWindow]
+Create=1
+Visible=1
+State=2
+Left=0
+Top=0
+Width=640
+Height=142
+MaxLeft=0
+MaxTop=0
+MaxWidth=1032
+MaxHeight=109
+ClientWidth=1024
+ClientHeight=63
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=102
+Width=208
+Height=450
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=200
+ClientHeight=423
+SplitPos=111
+
+[ProjectManager]
+LargeButtons=1
+
+[HistoryLists\hiOpenFile]
+Count=1
+H0=c:\crpg\prog\cbuiler3 animlevel\decors 09 02 99\convertiondec08to09.cpp
+
+[Closed Files]
+File_0=SourceModule,'F:\CRPG\Prog\Editeur\Amelioring\ImDecors2.h',0,1,23,23,37,0,0
+File_1=SourceModule,'F:\CRPG\Prog\Editeur\Decors 25 10 98\ImageZoom.cpp',0,1,1,82,5,0,0
+
+[Modules]
+Module0=C:\Utilitaires\Borland\CBuilder3\Bin\ProjectGroup1.bpg
+Module1=C:\CRPG\Prog\CBuiler3 AnimLevel\Decors 09 02 99\ConvertionDec08to09.mak
+Count=2
+EditWindowCount=0
+
+[C:\Utilitaires\Borland\CBuilder3\Bin\ProjectGroup1.bpg]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\CBuiler3 AnimLevel\Decors 09 02 99\ConvertionDec08to09.mak]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[Watches]
+Count=0
+

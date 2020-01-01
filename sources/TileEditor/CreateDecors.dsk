@@ -1,0 +1,159 @@
+[MainWindow]
+Create=1
+Visible=1
+State=2
+Left=0
+Top=0
+Width=640
+Height=106
+MaxLeft=0
+MaxTop=0
+MaxWidth=1032
+MaxHeight=106
+ClientWidth=1024
+ClientHeight=60
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=105
+Width=208
+Height=446
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=200
+ClientHeight=422
+SplitPos=111
+
+[ProjectManager]
+Create=1
+Visible=1
+State=0
+Left=1
+Top=516
+Width=208
+Height=221
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=200
+ClientHeight=197
+LargeButtons=1
+
+[HistoryLists\hiOpenFile]
+Count=15
+H0=c:\crpg\prog\createdecors\createdecors 20 03 99\imdecors.cpp
+H1=c:\crpg\prog\createdecors\createdecors 20 03 99\createdecors.cpp
+H2=f:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\imdecors.h
+H3=f:\crpg\prog\cbuiler3 animlevel\animlevel paques\ddlib.h
+H4=f:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\imagezoom.h
+H5=f:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\tiledecors.cpp
+H6=c:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\convertiondec09to095.cpp
+H7=c:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\imdecors.h
+H8=c:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\tiledecors.h
+H9=c:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\imdecors.cpp
+H10=c:\crpg\prog\cbuiler3 animlevel\createdecors 20 03 99\createdecors.cpp
+H11=c:\crpg\prog\cbuiler3 animlevel\decors 09 02 99\tiledecors.cpp
+H12=c:\crpg\prog\cbuiler3 animlevel\decors 09 02 99\createdecors.cpp
+H13=c:\crpg\prog\cbuiler3 animlevel\decors 09 02 99\imdecors.cpp
+H14=c:\crpg\prog\cbuiler3 animlevel\decors 09 02 99\imdecors.h
+
+[Closed Files]
+File_0=SourceModule,'C:\CRPG\Prog\Editeur\Decors 25 10 98\CreateDecors.cpp',0,1,1,33,9,0,0
+File_1=SourceModule,'F:\CRPG\Prog\CBuiler3 AnimLevel\AnimLevel Paques\DDlib.cpp',0,1,1,1,1,0,0
+File_2=SourceModule,'F:\CRPG\Prog\CBuiler3 AnimLevel\CreateDecors 20 03 99\ImageZoom.cpp',0,1,1,1,1,0,0
+File_3=SourceModule,'C:\CRPG\Prog\CBuiler3 AnimLevel\Decors 09 02 99\ImDecors.cpp',0,1,1,46,10,0,0
+File_4=SourceModule,'C:\CRPG\Prog\CBuiler3 AnimLevel\Decors 09 02 99\TileDecors.cpp',0,1,10,44,15,1,0
+File_5=SourceModule,'C:\CRPG\Prog\Level & Editeur\Decors 12 11 98\TileDecors.cpp',0,1,613,1,625,1,0
+File_6=SourceModule,'C:\CRPG\Prog\Level & Editeur\Decors 12 11 98\ImDecors.cpp',0,1,1,1,1,0,0
+File_7=SourceModule,'C:\CRPG\Prog\Level & Editeur\Decors 12 11 98\CreateDecors.cpp',0,1,1,1,1,0,0
+File_8=SourceModule,'C:\CRPG\Prog\Level & Editeur\AnimLevel 11 11 98\consts.h',0,1,1,1,1,0,0
+File_9=SourceModule,'C:\CRPG\Prog\Editeur\Decors 25 10 98\TileDecors.cpp',0,1,113,1,127,0,0
+
+[Modules]
+Module0=C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\TileDecors.cpp
+Module1=C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\ImDecors.cpp
+Module2=C:\Utilitaires\Borland\CBuilder3\Bin\ProjectGroup1.bpg
+Module3=C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\CreateDecors.mak
+Count=4
+EditWindowCount=1
+
+[C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\TileDecors.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\ImDecors.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Utilitaires\Borland\CBuilder3\Bin\ProjectGroup1.bpg]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\CreateDecors.mak]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+Create=1
+Visible=1
+State=0
+Left=208
+Top=104
+Width=819
+Height=636
+MaxLeft=-4
+MaxTop=102
+ClientWidth=811
+ClientHeight=609
+SplitPos=142
+MessagePane=0
+ViewCount=4
+CurrentView=1
+View0=0
+View1=1
+View2=2
+View3=3
+
+[View0]
+Module=C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\ImDecors.cpp
+CursorX=18
+CursorY=10
+TopLine=1
+LeftCol=1
+
+[View1]
+Module=C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\TileDecors.cpp
+CursorX=13
+CursorY=789
+TopLine=764
+LeftCol=1
+
+[View2]
+Module=C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\TileDecors.h
+CursorX=66
+CursorY=180
+TopLine=37
+LeftCol=1
+
+[View3]
+Module=C:\CRPG\Prog\CreateDecors\CreateDecors 20 03 99\ImDecors.h
+CursorX=16
+CursorY=26
+TopLine=19
+LeftCol=1
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[Watches]
+Count=0
+
