@@ -1,0 +1,460 @@
+[MainWindow]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=0
+Width=1024
+Height=106
+MaxLeft=0
+MaxTop=0
+ClientWidth=1016
+ClientHeight=60
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=-1
+Top=105
+Width=221
+Height=465
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=213
+ClientHeight=441
+SplitPos=115
+
+[CallStackWindow]
+Create=1
+Visible=1
+State=0
+Left=7
+Top=119
+Width=206
+Height=360
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=198
+ClientHeight=333
+
+[ProjectManager]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=512
+Width=218
+Height=229
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=210
+ClientHeight=205
+LargeButtons=1
+
+[HistoryLists\hiOpenFile]
+Count=32
+H0=c:\crpg\prog\animeditor\animeditor 18 05 99\ddlibeditor.cpp
+H1=c:\crpg\prog\animeditor\animeditor 18 05 99\fprincipale.cpp
+H2=c:\crpg\prog\animeditor\animeditor 18 05 99\toto.txt
+H3=c:\crpg\prog\animeditor\animeditor 18 05 99\objets\loco.ina
+H4=c:\crpg\prog\animeditor\animeditor 18 05 99\idmap.h
+H5=c:\crpg\prog\animeditor\animeditor 18 05 99\animall.h
+H6=c:\crpg\prog\animeditor\animeditor 18 05 99\animall.cpp
+H7=c:\crpg\prog\animeditor\animeditor 18 05 99\imdecors2.cpp
+H8=c:\crpg\prog\animeditor\animeditor 18 05 99\consts.h
+H9=c:\crpg\prog\animeditor\animeditor 18 05 99\persolib.cpp
+H10=c:\crpg\prog\animeditor\animeditor 18 05 99\ddlib.cpp
+H11=c:\crpg\prog\animeditor\animeditor 18 05 99\fmenuscript.cpp
+H12=c:\crpg\prog\animeditor\animeditor 18 05 99\fmenubank.cpp
+H13=c:\crpg\prog\animeditor\animeditor 18 05 99\fbaroutils.cpp
+H14=c:\crpg\prog\animeditor\animeditor 18 05 99\fanimview.cpp
+H15=c:\crpg\prog\animeditor\animeditor 18 05 99\fworkstation.cpp
+H16=f:\crpg\prog\cbuiler3 animlevel\animlevel paques\animall.cpp
+H17=f:\crpg\prog\cbuiler3 animlevel\animlevel paques\imdecors2.cpp
+H18=f:\crpg\prog\animeditor\animeditor 01 05 99\animall.h
+H19=f:\crpg\prog\animeditor\animeditor 01 05 99\fanimview.cpp
+H20=f:\crpg\prog\animeditor\animeditor 01 05 99\maplib.cpp
+H21=f:\crpg\prog\animeditor\animeditor 01 05 99\uanimsinfos.cpp
+H22=f:\crpg\prog\animeditor\animeditor 01 05 99\consts.h
+H23=f:\crpg\prog\animeditor\animeditor 01 05 99\fworkstation.cpp
+H24=f:\crpg\prog\animeditor\animeditor 01 05 99\ddlibeditor.h
+H25=f:\crpg\prog\animeditor\animeditor 01 05 99\fmenuscript.cpp
+H26=f:\crpg\prog\animeditor\animeditor 01 05 99\fprincipale.cpp
+H27=f:\crpg\prog\animeditor\animeditor 01 05 99\imdecors2.h
+H28=c:\crpg\prog\animeditor\animeditor 01 05 99\fbaroutils.cpp
+H29=c:\crpg\prog\animeditor\animeditor 01 05 99\idmap.h
+H30=c:\crpg\prog\animeditor\animeditor 01 05 99\consts.cpp
+H31=c:\crpg\prog\animeditor\animeditor 01 05 99\dilib.cpp
+
+[Closed Files]
+File_0=SourceModule,'C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\Objets\Loco.ina',0,1,1,19,18,0,0
+File_1=SourceModule,'C:\PROG\DirectX 6  SDK\lib\Borland\d3dim.lib',0,1,1,1,1,0,0
+File_2=SourceModule,'C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\toto.txt',0,1,1,23,1,0,0
+File_3=SourceModule,'C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\DDLibEditor.cpp',0,1,1,1,1,0,0
+File_4=SourceModule,'C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\consts.cpp',0,1,1,1,1,0,0
+File_5=SourceModule,'C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\D3DLib.cpp',0,1,13,1,18,0,0
+File_6=SourceModule,'C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\GameDebug.cpp',0,1,115,19,140,0,0
+
+[Modules]
+Module0=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuScript.cpp
+Module1=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBank.cpp
+Module2=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\Animall.cpp
+Module3=C:\Logiciels\Borland\CBuilder3\Bin\ProjectGroup1.bpg
+Module4=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\PersoEditor.mak
+Module5=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\DDlib.cpp
+Module6=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fPrincipale.cpp
+Module7=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\IDMap.cpp
+Module8=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fAnimView.cpp
+Module9=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\PersoLib.cpp
+Module10=C:\CRPG\Prog\DDraw\Include\ddutil.cpp
+Module11=C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\VCL\dstring.h
+Module12=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\ImDecors2.cpp
+Module13=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\SpritesLib.cpp
+Module14=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\uAnimsInfos.cpp
+Module15=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fWorkStation.cpp
+Module16=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\GestFile.cpp
+Module17=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBankGrille.cpp
+Module18=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBankGrav.cpp
+Module19=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuIDName.cpp
+Module20=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuIDPath.cpp
+Module21=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fBarOutils.cpp
+Count=22
+EditWindowCount=1
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuScript.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBank.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\Animall.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Logiciels\Borland\CBuilder3\Bin\ProjectGroup1.bpg]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\PersoEditor.mak]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\DDlib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fPrincipale.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\IDMap.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fAnimView.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\PersoLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\DDraw\Include\ddutil.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\VCL\dstring.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\ImDecors2.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\SpritesLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\uAnimsInfos.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fWorkStation.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\GestFile.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBankGrille.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBankGrav.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuIDName.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuIDPath.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fBarOutils.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+Create=1
+Visible=1
+State=0
+Left=216
+Top=103
+Width=808
+Height=637
+MaxLeft=-4
+MaxTop=102
+ClientWidth=800
+ClientHeight=610
+SplitPos=149
+MessagePane=0
+ViewCount=25
+CurrentView=15
+View0=0
+View1=1
+View2=2
+View3=3
+View4=4
+View5=5
+View6=6
+View7=7
+View8=8
+View9=9
+View10=10
+View11=11
+View12=12
+View13=13
+View14=14
+View15=15
+View16=16
+View17=17
+View18=18
+View19=19
+View20=20
+View21=21
+View22=22
+View23=23
+View24=24
+
+[View0]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\SpritesLib.cpp
+CursorX=1
+CursorY=280
+TopLine=1
+LeftCol=1
+
+[View1]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\SpritesLib.h
+CursorX=28
+CursorY=11
+TopLine=1
+LeftCol=1
+
+[View2]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBank.cpp
+CursorX=36
+CursorY=2
+TopLine=1
+LeftCol=1
+
+[View3]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBank.h
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View4]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuBankGrav.cpp
+CursorX=29
+CursorY=60
+TopLine=48
+LeftCol=1
+
+[View5]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\DDlib.cpp
+CursorX=1
+CursorY=1031
+TopLine=1016
+LeftCol=1
+
+[View6]
+Module=C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\VCL\dstring.h
+CursorX=1
+CursorY=87
+TopLine=71
+LeftCol=1
+
+[View7]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\DDlib.h
+CursorX=53
+CursorY=120
+TopLine=45
+LeftCol=1
+
+[View8]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fAnimView.cpp
+CursorX=50
+CursorY=644
+TopLine=643
+LeftCol=1
+
+[View9]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\ImDecors2.cpp
+CursorX=1
+CursorY=674
+TopLine=654
+LeftCol=1
+
+[View10]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\ImDecors2.h
+CursorX=32
+CursorY=271
+TopLine=264
+LeftCol=1
+
+[View11]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\uAnimsInfos.cpp
+CursorX=40
+CursorY=39
+TopLine=19
+LeftCol=1
+
+[View12]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\GestFile.cpp
+CursorX=51
+CursorY=49
+TopLine=30
+LeftCol=1
+
+[View13]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\GestFile.h
+CursorX=58
+CursorY=31
+TopLine=1
+LeftCol=1
+
+[View14]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\PersoLib.h
+CursorX=31
+CursorY=15
+TopLine=13
+LeftCol=1
+
+[View15]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fMenuScript.cpp
+CursorX=15
+CursorY=32
+TopLine=13
+LeftCol=1
+
+[View16]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fWorkStation.cpp
+CursorX=18
+CursorY=492
+TopLine=481
+LeftCol=1
+
+[View17]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fPrincipale.cpp
+CursorX=89
+CursorY=89
+TopLine=78
+LeftCol=1
+
+[View18]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fPrincipale.h
+CursorX=1
+CursorY=99
+TopLine=81
+LeftCol=1
+
+[View19]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\fAnimView.h
+CursorX=24
+CursorY=13
+TopLine=19
+LeftCol=1
+
+[View20]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\Animall.cpp
+CursorX=43
+CursorY=447
+TopLine=432
+LeftCol=1
+
+[View21]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\IDMap.cpp
+CursorX=1
+CursorY=25
+TopLine=7
+LeftCol=1
+
+[View22]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\PersoLib.cpp
+CursorX=55
+CursorY=87
+TopLine=77
+LeftCol=1
+
+[View23]
+Module=C:\CRPG\Prog\DDraw\Include\ddutil.cpp
+CursorX=92
+CursorY=41
+TopLine=25
+LeftCol=1
+
+[View24]
+Module=C:\CRPG\Prog\AnimEditor\AnimEditor 18 05 99\Animall.h
+CursorX=26
+CursorY=33
+TopLine=13
+LeftCol=1
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[Watches]
+Count=0
+

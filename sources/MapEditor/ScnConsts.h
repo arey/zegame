@@ -1,0 +1,152 @@
+////////////////////////////////////////////////////////////////////////////////
+//  Unité "ScnConsts.h"  :  regroupe toutes les constantes et les definitions //
+//							propre à la gestion de scénarios.				  //
+////////////////////////////////////////////////////////////////////////////////
+#ifndef ScnConstsH
+#define ScnConstsH
+
+//----------------------------------------------------------------------- Define
+#define LANGUAGE_FRANGLAIS		0
+#define LANGUAGE_ENGLISH		1
+#define NB_SCRIPT_LANGUAGE		2
+
+#define MAX_LENGTH_KEYWORD	  196		// Nb car. max. pour les mots-clés entre parenthèse (HERO, PORTE_SUD, ...)
+#define MAX_LENGTH_PREFIX	   32		// Nb car. max. d'un préfixe précédent une action ou une cause
+
+
+//------------------------------------------------------------------------- Enum
+
+//=== Trigger déclenchant une ligne de script ===
+enum
+{	SCN_TRIGGER_FIRST = 0,
+	SCN_TRIGGER_UNKNOW = SCN_TRIGGER_FIRST,	
+	SCN_TRIGGER_EVERY_TIME,
+	SCN_TRIGGER_SCRIPT_FIRST,
+		SCN_TRIGGER_PLAYER_UTILISER = SCN_TRIGGER_SCRIPT_FIRST,
+		SCN_TRIGGER_PLAYER_FRAPPER,
+		SCN_TRIGGER_PERSO_DSZONE,
+		SCN_TRIGGER_METEO,
+		SCN_TRIGGER_TIME,
+		SCN_TRIGGER_PNJ_DEAD,
+	SCN_TRIGGER_SCRIPT_LAST = SCN_TRIGGER_PNJ_DEAD,
+	SCN_TRIGGER_LAST = SCN_TRIGGER_SCRIPT_LAST,
+	SCN_TRIGGER_MAX
+};
+
+const char* const  sTriggerType[SCN_TRIGGER_MAX] =
+{   "UNKNOW",
+	"EVERY_TIME",
+    "PLAYER_UTILISER",
+    "PLAYER_FRAPPER",
+	"PERSO_DSZONE",
+    "METEO",
+    "TIME",
+    "PNJ_DEAD"
+};
+
+//=== TAction : Type de l'action ====
+enum
+{	
+	FIRST_ACTION_TYPE					=   0,
+	ACTION_TYPE_NONE					= FIRST_ACTION_TYPE,
+	// Concerne tous les types de GameObject
+		ACTION_TYPE_GO_NEWMEMORY,
+		ACTION_TYPE_GO_DELMEMORY,
+	// Personnages : héro, pnj, monstres
+		ACTION_TYPE_PERSO_MOVETO,
+		ACTION_TYPE_PERSO_MOVEFROM,
+		ACTION_TYPE_PERSO_CREATE,
+		ACTION_TYPE_PERSO_DELETE,
+	// Objets : arme, outil
+		ACTION_TYPE_OBJET_UTILISER,		
+	// Décors : arbre, grue, table, porte 
+		ACTION_TYPE_DECORS_FRAPPER,
+		ACTION_TYPE_DECORS_UTILISER,
+		ACTION_TYPE_DECORS_PLAYANIM,
+		ACTION_TYPE_DECORS_PLAYSUPANIM, 	  
+		ACTION_TYPE_DECORS_NEWSTATE,  	  
+	// Son
+		ACTION_TYPE_SOUND_PLAY,
+	// Synchro
+		ACTION_TYPE_SYNCHRO_SLEEP,			// Attends N ms
+		ACTION_TYPE_SYNCHRO_WAITEND,		// Synchronisation sur une action précédente
+	LAST_ACTION_YPE						= ACTION_TYPE_SYNCHRO_WAITEND,
+	MAX_ACTION_TYPE
+};
+
+const char* const  sActionType[MAX_ACTION_TYPE][NB_SCRIPT_LANGUAGE] =
+{   
+	{ "Rien",			"Nothing"		},
+	{ "Apprends",		"NewMemory"		},
+	{ "Oublie",			"DelMemory"		},
+	{ "DeplacerEn",		"MoveTo"		},
+	{ "DeplacerDe",		"MoveFrom"		}, 	
+	{ "CreerPerso",		"CreateNPC"		},
+	{ "SupprPerso",		"DeleteNPC"		},
+	{ "Utiliser",		"Use"			},
+	{ "Frapper",		"Heat"			},
+	{ "Utiliser",		"Use"			},
+	{ "LancerAnim",		"PlayAnim"		},
+	{ "JouerAnimSup",	"PlaySupAnim"	},
+	{ "NouvelEtat",		"NewState"		},
+	{ "JouerSon",		"PlaySound"		},
+	{ "Dormir",			"Sleep"			},
+	{ "AttendFin",		"WaitEnd"		}
+};
+
+
+//=== TAction : Préfixe pouvant précédé un nom d'action ====
+enum
+{	
+	FIRST_ACTION_PREFIXE				=   0,
+	ACTION_PREFIXE_NONE					= FIRST_ACTION_PREFIXE,
+		ACTION_PREFIXE_PERSO,
+	LAST_ACTION_PREFIXE					= ACTION_PREFIXE_PERSO,
+	MAX_ACTION_PREFIXE
+};
+
+const char* const sActionPrefixe[MAX_ACTION_PREFIXE][NB_SCRIPT_LANGUAGE] =
+{	{ "rien",			"none"			},
+	{ "perso",			"caract"		}
+};
+
+
+
+//=== TCause : type de la cause ===
+enum
+{	FIRST_CAUSE_TYPE					=   0,
+	CAUSE_TYPE_NONE						= FIRST_CAUSE_TYPE,
+	CAUSE_TYPE_THING_STRIKE_BY,
+	CAUSE_TYPE_THING_STRIKE_WITH,
+	CAUSE_TYPE_THING_MEMORY_IN,
+	CAUSE_TYPE_THING_MEMORY_NO,
+	CAUSE_TYPE_RANDOM,
+	CAUSE_TYPE_TIMER,
+	LAST_CAUSE_TYPE						= CAUSE_TYPE_TIMER,
+	MAX_CAUSE_TYPE
+};
+
+const char* const  sCauseType[MAX_CAUSE_TYPE][NB_SCRIPT_LANGUAGE] =
+{   
+    {"Rien",		"Nothing"		},
+	{"FrapperPar",	"StrikeBy"		},
+	{"FrapperAvec",	"StrikeWith"	},
+	{"Connait",		"Know"			},
+	{"NeSaisPas",	"DontKnow"		},
+	{"Random",		"Rand"			},
+	{"ToutesLesNms","Timer"			}	
+};
+
+
+//-------------------------------------------------------------- Fonctions annexes
+
+int GetIndexTrigger(char* triggertype);		// Renvoie le n° correspondant au nom du trigger passé en paramètre
+int GetActionType(char* action);			// Renvoie le n° de l'action correspondant à cette chaîne
+int GetCauseType(char *cause);				// Renvoie le n° de la cause correspondant à cette chaîne
+int GetActionPrefix(char* action);			// Renvoie le n° du prefix d'une action  et renvoie l'action
+char* GetActionPrefixName(int numPrefix);	// Renvoie le nom du prefix n°numPrefix (en anglais)
+
+
+
+
+#endif

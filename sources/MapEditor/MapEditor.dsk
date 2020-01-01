@@ -1,0 +1,694 @@
+[MainWindow]
+Create=1
+Visible=1
+State=0
+Left=2
+Top=0
+Width=1022
+Height=106
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=1014
+ClientHeight=60
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=-1
+Top=106
+Width=196
+Height=385
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=188
+ClientHeight=361
+SplitPos=84
+
+[ProjectManager]
+Create=1
+Visible=1
+State=0
+Left=-1
+Top=487
+Width=194
+Height=254
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=186
+ClientHeight=230
+LargeButtons=1
+
+[HistoryLists\hiEvalExpression]
+Count=1
+H0=InaNameTresShort
+
+[HistoryLists\hiOpenFile]
+Count=2
+H0=c:\crpg\prog\level & editeur\leveleditor 24 03 2000\zenain.h
+H1=c:\crpg\prog\level & editeur\leveleditor 24 03 2000\ddlibeditor.cpp
+
+[Closed Files]
+File_0=SourceModule,'C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\VCL\sysdefs.h',0,1,417,28,427,0,0
+File_1=SourceModule,'C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\objbase.h',0,1,461,28,471,0,0
+File_2=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\DDLib.cpp',0,1,1563,20,1575,0,0
+File_3=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\uMapView.cpp',0,1,458,33,459,1,0
+File_4=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\Editor.cpp',0,1,28,50,32,3,0
+File_5=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\fPathFinding.cpp',0,1,59,56,70,0,0
+File_6=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\Animall.cpp',0,1,233,28,243,0,0
+File_7=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\IDMap.cpp',0,1,50,85,66,0,0
+File_8=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\ImDecors2.cpp',0,1,397,4,412,0,0
+File_9=SourceModule,'C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\fDesignOutils.cpp',0,3,1,39,439,1,0
+
+[Modules]
+Module0=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Editor.cpp
+Module1=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fObjOutils.cpp
+Module2=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\uMapView.cpp
+Module3=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fPersosOutils.cpp
+Module4=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fDesignOutils.cpp
+Module5=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fLibOutils.cpp
+Module6=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Consts.cpp
+Module7=C:\Logiciels\Borland\CBuilder3\Bin\ProjectGroup1.bpg
+Module8=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MapEditor.mak
+Module9=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GestFile.cpp
+Module10=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLIB.CPP
+Module11=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\PersoLib.cpp
+Module12=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GameDebug.cpp
+Module13=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\D3DLib.cpp
+Module14=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DIlib.cpp
+Module15=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ZeNain.h
+Module16=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnConsts.cpp
+Module17=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLibEditor.cpp
+Module18=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageUtil.cpp
+Module19=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageDDFile.cpp
+Module20=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MapLib.cpp
+Module21=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImDecors2.cpp
+Module22=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\COLORFORMAT.H
+Module23=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageFile.cpp
+Module24=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\SpritesLib.cpp
+Module25=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\FileVirtual.cpp
+Module26=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\INILib.cpp
+Module27=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnScript.cpp
+Module28=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\TimeClock.cpp
+Module29=C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\windef.h
+Module30=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Animall.cpp
+Module31=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnActions.cpp
+Module32=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MemLib.cpp
+Module33=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\PNJLib.cpp
+Module34=C:\CRPG\Prog\DDRAW\INCLUDE\DDutil.cpp
+Module35=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\IDMap.cpp
+Module36=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GameObject.cpp
+Module37=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fMapOutils.cpp
+Module38=C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\MapEditor.mak
+Count=39
+EditWindowCount=1
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Editor.cpp]
+ModuleType=SourceModule
+FormState=3
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fObjOutils.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\uMapView.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fPersosOutils.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fDesignOutils.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fLibOutils.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Consts.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Logiciels\Borland\CBuilder3\Bin\ProjectGroup1.bpg]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MapEditor.mak]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GestFile.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLIB.CPP]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\PersoLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GameDebug.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\D3DLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DIlib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ZeNain.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnConsts.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLibEditor.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageUtil.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageDDFile.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MapLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImDecors2.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\COLORFORMAT.H]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageFile.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\SpritesLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\FileVirtual.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\INILib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnScript.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\TimeClock.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\windef.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Animall.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnActions.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MemLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\PNJLib.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\DDRAW\INCLUDE\DDutil.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\IDMap.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GameObject.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fMapOutils.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\CRPG\Prog\Level & Editeur\LevelEditor 28 07 99\MapEditor.mak]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+Create=1
+Visible=1
+State=0
+Left=191
+Top=98
+Width=833
+Height=642
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=825
+ClientHeight=615
+SplitPos=184
+MessagePane=1
+ViewCount=46
+CurrentView=0
+View0=0
+View1=1
+View2=2
+View3=3
+View4=4
+View5=5
+View6=6
+View7=7
+View8=8
+View9=9
+View10=10
+View11=11
+View12=12
+View13=13
+View14=14
+View15=15
+View16=16
+View17=17
+View18=18
+View19=19
+View20=20
+View21=21
+View22=22
+View23=23
+View24=24
+View25=25
+View26=26
+View27=27
+View28=28
+View29=29
+View30=30
+View31=31
+View32=32
+View33=33
+View34=34
+View35=35
+View36=36
+View37=37
+View38=38
+View39=39
+View40=40
+View41=41
+View42=42
+View43=43
+View44=44
+View45=45
+
+[View0]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Editor.cpp
+CursorX=33
+CursorY=49
+TopLine=38
+LeftCol=1
+
+[View1]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\uMapView.cpp
+CursorX=1
+CursorY=87
+TopLine=77
+LeftCol=1
+
+[View2]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\uMapView.h
+CursorX=1
+CursorY=1
+TopLine=2
+LeftCol=1
+
+[View3]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLibEditor.cpp
+CursorX=39
+CursorY=3
+TopLine=1
+LeftCol=1
+
+[View4]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MapEditor.cpp
+CursorX=9
+CursorY=55
+TopLine=38
+LeftCol=1
+
+[View5]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GameDebug.cpp
+CursorX=25
+CursorY=9
+TopLine=1
+LeftCol=1
+
+[View6]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLibEditor.h
+CursorX=43
+CursorY=9
+TopLine=1
+LeftCol=1
+
+[View7]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MapLib.cpp
+CursorX=27
+CursorY=347
+TopLine=337
+LeftCol=1
+
+[View8]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MapLib.h
+CursorX=35
+CursorY=117
+TopLine=102
+LeftCol=1
+
+[View9]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fDesignOutils.cpp
+CursorX=31
+CursorY=216
+TopLine=206
+LeftCol=1
+
+[View10]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fLibOutils.cpp
+CursorX=28
+CursorY=180
+TopLine=160
+LeftCol=1
+
+[View11]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fPersosOutils.cpp
+CursorX=11
+CursorY=17
+TopLine=1
+LeftCol=1
+
+[View12]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\PersoLib.cpp
+CursorX=30
+CursorY=73
+TopLine=57
+LeftCol=1
+
+[View13]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DIlib.cpp
+CursorX=44
+CursorY=9
+TopLine=1
+LeftCol=1
+
+[View14]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLIB.CPP
+CursorX=42
+CursorY=1345
+TopLine=1329
+LeftCol=1
+
+[View15]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\fLibOutils.h
+CursorX=33
+CursorY=18
+TopLine=1
+LeftCol=1
+
+[View16]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\D3DLib.cpp
+CursorX=54
+CursorY=421
+TopLine=411
+LeftCol=1
+
+[View17]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\DDLIB.h
+CursorX=10
+CursorY=304
+TopLine=294
+LeftCol=1
+
+[View18]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnActions.cpp
+CursorX=52
+CursorY=219
+TopLine=209
+LeftCol=1
+
+[View19]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\MemLib.cpp
+CursorX=46
+CursorY=14
+TopLine=1
+LeftCol=1
+
+[View20]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\PNJLib.cpp
+CursorX=1
+CursorY=10
+TopLine=1
+LeftCol=1
+
+[View21]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnConsts.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View22]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnConsts.h
+CursorX=23
+CursorY=37
+TopLine=1
+LeftCol=1
+
+[View23]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ZeNain.h
+CursorX=20
+CursorY=27
+TopLine=12
+LeftCol=1
+
+[View24]
+Module=C:\CRPG\Prog\DDRAW\INCLUDE\DDutil.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View25]
+Module=C:\CRPG\Prog\DDRAW\INCLUDE\DDutil.h
+CursorX=29
+CursorY=14
+TopLine=1
+LeftCol=1
+
+[View26]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GestFile.cpp
+CursorX=38
+CursorY=131
+TopLine=123
+LeftCol=1
+
+[View27]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\IDMap.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View28]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\IDMap.h
+CursorX=58
+CursorY=34
+TopLine=24
+LeftCol=1
+
+[View29]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\TimeClock.cpp
+CursorX=30
+CursorY=30
+TopLine=1
+LeftCol=1
+
+[View30]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImDecors2.cpp
+CursorX=1
+CursorY=28
+TopLine=20
+LeftCol=1
+
+[View31]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Animall.cpp
+CursorX=1
+CursorY=513
+TopLine=497
+LeftCol=1
+
+[View32]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\TimeClock.h
+CursorX=35
+CursorY=14
+TopLine=1
+LeftCol=1
+
+[View33]
+Module=C:\LOGICI~1\BORLAND\CBUILD~1\INCLUDE\windef.h
+CursorX=1
+CursorY=134
+TopLine=124
+LeftCol=1
+
+[View34]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageFile.cpp
+CursorX=72
+CursorY=11
+TopLine=1
+LeftCol=1
+
+[View35]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageDDFile.cpp
+CursorX=17
+CursorY=132
+TopLine=124
+LeftCol=1
+
+[View36]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\COLORFORMAT.H
+CursorX=5
+CursorY=34
+TopLine=24
+LeftCol=1
+
+[View37]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImageUtil.cpp
+CursorX=34
+CursorY=174
+TopLine=162
+LeftCol=1
+
+[View38]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\SpritesLib.cpp
+CursorX=51
+CursorY=411
+TopLine=392
+LeftCol=1
+
+[View39]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ImDecors2.h
+CursorX=14
+CursorY=13
+TopLine=1
+LeftCol=1
+
+[View40]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\GameObject.cpp
+CursorX=1
+CursorY=333
+TopLine=323
+LeftCol=1
+
+[View41]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\ScnScript.cpp
+CursorX=86
+CursorY=687
+TopLine=678
+LeftCol=1
+
+[View42]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\INILib.cpp
+CursorX=35
+CursorY=88
+TopLine=72
+LeftCol=1
+
+[View43]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\FileVirtual.cpp
+CursorX=15
+CursorY=327
+TopLine=313
+LeftCol=1
+
+[View44]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Consts.cpp
+CursorX=67
+CursorY=114
+TopLine=101
+LeftCol=1
+
+[View45]
+Module=C:\CRPG\Prog\Level & Editeur\LevelEditor 24 03 2000\Consts.h
+CursorX=1
+CursorY=71
+TopLine=54
+LeftCol=1
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[Watches]
+Count=0
+
