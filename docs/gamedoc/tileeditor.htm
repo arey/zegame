@@ -1,0 +1,368 @@
+
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Game Files Specification</title>
+<style><!--
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+h1
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:FR;}
+h2
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	background:#CCCCCC;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+@page Section1
+	{size:8.5in 11.0in;
+	mso-header-
+	mso-footer-
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@list l0
+	{mso-list-id:22243926;
+	mso-list-type:hybrid;
+	mso-list-template-ids:66324154 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:748119944;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1467390730 67698703 268358868 1944119234 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l1:level3
+	{mso-level-number-format:alpha-upper;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:117.0pt;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l2
+	{mso-list-id:964433006;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2037098246 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:2048604638;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1594463476 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{ul
+	{.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 10pt}
+.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 12pt; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal}
+.Parameters {  }
+.parameters {  font-family: "Times New Roman", Times, serif}
+div.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+li.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.yo {  }
+.dwsadwf {  }
+h4 {  }
+h4 {  }
+h5 {  }
+h5 {  }
+h5 {  }
+-->
+</style>
+</head>
+<body lang=EN-US style='tab-interval:.5in' bgcolor="#ffffff">
+<div class=Section1> 
+  <h2 class="Section1"><span style='mso-ansi-language:EN-US'><a name="Beginning"></a>Create 
+    Tile Editor</span></h2>
+</div>
+<blockquote class="MsoBodyText"> 
+  <div class=MsoBodyText> 
+    <p align="left">This tool is a small editor that allow you to import your 
+      own bitmaps into ZeGame. In fact if you are an artist you can draw on Painter, 
+      Paint Shop, Photoshop or 3D Studio Max a picture and then use it to build 
+      map as ground tile or level decoration in the <i>Map Editor</i>. But before 
+      use them to design some levels, you have to define a set of properties for 
+      your bitmap as you could see in the following section.</p>
+    <p align="center"> <i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/tileeditor1.jpg"> 
+      <br>
+      Tile Editor Creation v0.98</font></b></i></p>
+  </div>
+  <blockquote> 
+    <blockquote>
+      <div class=MsoBodyText><u>Tile Editor documentation menu</u> :</div>
+      <ol>
+        <ol>
+          <li> 
+            <div class=MsoBodyText><a href="#ImportABitmap">How to import your 
+              bitmap in the game ?</a></div>
+          </li>
+          <li class="MsoBodyText"><a href="#ChooseID">Choose a unique number for 
+            your object</a></li>
+          <li class="MsoBodyText"><a href="#SelectZones">Select ground zones</a></li>
+          <li class="MsoBodyText"><a href="#DiamondShapedInfo">Individual diamond-shape 
+            information</a></li>
+          <li class="MsoBodyText"><a href="#CutTile">Cutting tile in vertical 
+            thin slices</a></li>
+        </ol>
+      </ol>
+    </blockquote>
+    <div class=MsoBodyText> 
+      <p>In the <i>File</i> menu, you can <b><i>load</i></b> (Ouvrir decors) an 
+        existing <i> .dec</i> file to modify some of its parameters and of course 
+        then <i><b>save</b></i> (sauver decors) it. There is also a <i><b>create</b></i> 
+        (nouveau decors) menu you can use to import your own tile. <br>
+        Here is the process to create your new tile :<br>
+      </p>
+    </div>
+  </blockquote>
+  <ol>
+    <li class="MsoBodyText"> 
+      <div class=Section1> 
+        <h4> Import a bitmap<a name="ImportABitmap"></a><br>
+        </h4>
+        <p class="MsoBodyText">The first thing you should do is to use the <i>Chercher</i> 
+          button to browse your drive in search of your<i> .bmp</i> file. Note 
+          that this tool just knows to load Microsoft bitmap file, so please convert 
+          your <i>.gif</i>, <i>.jpg</i> or <i>.png</i> file into a 256 colors 
+          <i>.bmp</i>.</p>
+        <p class="MsoBodyText">Once you have selected your tile file, you must 
+          enter in the Couleur transparente text field, the index of the background 
+          color that will not be displayed at screen and also its <i>RVB</i> composants. 
+          By convention I advise you to use the purple (255, 0, 255) color as 
+          transparent background color and placed it at the index number 0 of 
+          your color palette.<br>
+          The <i>Selection</i> button allow you to choose this color just by clicking 
+          on it in the right-top <i>Decors</i> panel. <br>
+          <br>
+        </p>
+      </div>
+    </li>
+    <li class="MsoBodyText"> 
+      <h4>Choose an ID number<a name="ChooseID"></a><br>
+      </h4>
+      The second step consist in selecting an ID number for this tile that has 
+      not already be taken by another tile. Then you have to not it in the <a href="zegame/Tiles/IDTiles.id"><i>IDTiles.id</i></a> 
+      files that should list all the used ID of all the tiles of the game.<br>
+      <br>
+      <br>
+    </li>
+    <li class="MsoBodyText"> 
+      <h4 align="left">Select tile ground zones<a name="SelectZones"></a><br>
+      </h4>
+      <div align="left">If you already set down any tile on a game map inthe <i>Level 
+        Editor</i>, you should have noticed that the tile is delimited by one 
+        or more trapezoid shapes. They represents the projection of the object 
+        on the ground. So this is the part of the tile object that touch the ground 
+        level. It's like a 2D ground plan of an object modelized in 3D.<br>
+        <br>
+        If you are using a 3D software (like 3DS Max) to compute the tile, see 
+        the section that exeplains how to place your camera in your environment. 
+        And if you are using a 2D graphics software, you have to use the specific 
+        grid in <a href="images/refgrid2.gif">refgrid2.gif</a> to design the shape 
+        of your ground tiles.</div>
+    </li>
+  </ol>
+</blockquote>
+<div align="center"> 
+  <p><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><br>
+    <img src="images/refgrid2sample.gif" width="467" height="165" hspace="25"><img src="images/wallref.gif" width="143" height="185" hspace="25"> 
+    <br>
+    reference grid scale (in pixels)</font></b></i></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div align="left" class="MsoBodyText"> 
+      <p>This wall is a representative tile sample to show you how to use the 
+        grid reference to setup then test if your own tiles have the right dimension.</p>
+      <p class="MsoBodyText">So once you exactly placed the tile on the grid you 
+        have to select all the lozenges that belongs to it (and at least one). 
+        The first you place on the tile is the main diamond-shaped. MoO. It is 
+        a landmark for all the other lozenge you are going to place. Their coordinates 
+        are computed form this new center.</p>
+      <p class="MsoBodyText"> More the upper point of the main diamond-shaped 
+        is used to place its tile on the map during the game. You have to know 
+        that the sprites are drawn from the top of the screen to the bottom, along 
+        the Y axis. So before they are displayed the tiles are classified along 
+        a Y-Buffer. And the reference point of their main lozenge is used to sort 
+        them. <br>
+        <br>
+      </p>
+    </div>
+    <div align="left" class="MsoBodyText"> 
+      <h4 class="MsoBodyText">4. Set diamond-shaped information<a name="DiamondShapedInfo"></a></h4>
+    </div>
+    <div class=MsoBodyText>
+      <div class=MsoBodyText> 
+        <p>Once you selected all the lozenges that belongs to the tile, you can 
+          set some information concerning them. First, you have to select one 
+          by using the <i>&quot;Infos Trapeze&quot;</i> button. The information 
+          about the one you selected will appear in this <i>&quot;Trapeze&quot;</i> 
+          panel :<br>
+        </p>
+        <table width="100%" border="0">
+          <tr>
+            <td width="38%"><img src="images/tileeditor2.jpg" width="283" height="195" align="middle"></td>
+            <td width="62%"> 
+              <blockquote> 
+                <p><b>Selected trapezoid information</b></p>
+              </blockquote>
+              <ul>
+                <li class="MsoBodyText"> <b><i>num</i></b> <i>(fixed)</i> : serial 
+                  number of this diamond-shaped,</li>
+                <li class="MsoBodyText"><b><i>Ref U</i></b> <font size="-1">&amp;</font> 
+                  <i><b>Ref V</b> (fixed)</i> : its coordinates with regard to 
+                  the main,</li>
+                <li><b><i>Affichage Partiel</i></b> : allow you to divide your 
+                  tiles in smaller vertical part,</li>
+                <li><b><i>Type de Terrain</i></b> : ground type (wall, sand, mud, 
+                  soil ...)</li>
+                <li><b><i>Type de Collisions</i></b> : modify the behavior of 
+                  collisions with characters,</li>
+                <li><b><i>Infranchissable</i></b> : checked if we can walk on 
+                  this trapezoid,</li>
+                <li><b><i>Cle d'affichage</i></b> : indicate if this trapezoid 
+                  is secondary for the display,</li>
+                <li><i><b>Hauteur</b></i> : heigher point of this diamond-shaped 
+                  (in pixels).</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <p><br>
+          <u>Accurate description of some fields</u><br>
+          ...<br>
+          ... to complete ...<br>
+          ...</p>
+        <div align="left" class="MsoBodyText">
+          <p class="MsoBodyText"> </p>
+        </div>
+        <div align="left" class="MsoBodyText"> 
+          <h4 class="MsoBodyText">5. Why do you have to split big tile in vertical 
+            thin slices<a name="CutTile"></a></h4>
+          <p class="MsoBodyText">When you have a big tile (that take more than 
+            4 diamond-shaped), you should probably have to split it in several 
+            thin slices.You may ask why ? that's because of the 2D clipping. That 
+            I will try to explain in this section.<br>
+            <br>
+            In some cases, a character or another sprite can be draw behind a 
+            big tile that didn't have been cuted even though it have to be over 
+            it in reality. Owing to the fact that the Y coordinate of this sprite 
+            is higher than the Y coordinate of the main trapezoid of the tile, 
+            so the sprite is displayed before the tile and the tile recovers it. 
+            Let's see those diagrams :<br>
+          </p>
+          <table width="100%" border="0">
+            <tr> 
+              <td width="29%"> 
+                <div align="left">
+                  <p align="center"><b><i>Large sprite problem</i></b></p>
+                  <p align="left">The right side schema shows you that the monk 
+                    is drawn before the wall because its Y coordinate is lower 
+                    than the one of the wall.</p>
+                  <p>Note that there is the same problem when the main trapezoid 
+                    is selected at the top of the tile : the sprites behind the 
+                    wall could appear above.</p>
+                </div>
+                <div align="left"></div>
+              </td>
+              <td width="71%">
+                <div align="center">
+                  <p align="center"><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/tileeditor3.gif" width="483" height="281"><br>
+                    Wall tile without slicing</font></b></i></p>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <p class="MsoBodyText">&nbsp;</p>
+          <p class="MsoBodyText">&nbsp;</p>
+          <p class="MsoBodyText">&nbsp;</p>
+          <p class="MsoBodyText">&nbsp;</p>
+          </div>
+        <p>&nbsp; </p>
+        <p><br>
+          <br>
+          <br>
+        </p>
+        <p>&nbsp; </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </blockquote>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<HTML>
+<head>
+    <title>ZEGAME - User Guide Menu</title>
+    <META content="Antoine Rey" name=Author>
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- Script de selection de la langue -->
+    <script src="javascript/language.js"></script>
+    <!-- Script de prechargement d'images -->
+    <script src="javascript/images.js"></script>
+    <script src="javascript/menu.js"></script>
+    <script type="text/javascript">
+        window.onload = montre;
+
+        var homeFrame = parent.parent.parent;
+        if ((navigator.Language == 'en') || (navigator.Language == 'fr')) {
+            changeLanguage(homeFrame, navigator.Language);
+        } else {
+            changeLanguage(homeFrame, homeFrame.DEFAULT_LANGUAGE);
+        }
+
+        preload('SelectMenuCursor', 'icon/pointer1_off.gif')
+        preload('UnselectMenuCursor', 'icon/pointer3_off.gif')
+        //--- Hone ---
+        preload('SelectHomeMenu', 'icon/home_s.gif')
+        preload('UnselectHomeMenu', 'icon/home.gif')
+        //--- News ---
+        preload('SelectNewsMenu', 'icon/news_s.gif')
+        preload('UnselectNewsMenu', 'icon/news.gif')
+        //--- Features ---
+        preload('SelectFeaturesMenu', 'icon/computer_s.gif')
+        preload('UnselectFeaturesMenu', 'icon/computer.gif')
+        //--- Current ---
+        preload('SelectCurrentGameSubMenu', 'icon/lightbulb_s.gif')
+        preload('UnselectCurrentGameSubMenu', 'icon/lightbulb.gif')
+        //--- Skills ---
+        preload('SelectSkillsGameSubMenu', 'icon/keyboard_s.gif')
+        preload('UnselectSkillsGameSubMenu', 'icon/keyboard.gif')
+        //--- Tools ---
+        preload('SelectToolsGameSubMenu', 'icon/tools2_s.gif')
+        preload('UnselectToolsGameSubMenu', 'icon/tools2.gif')
+
+        //--- Screen Shots ---
+        preload('SelectScreenshotsMenu', 'icon/palette_s.gif')
+        preload('UnselectScreenshotsMenu', 'icon/palette.gif')
+        //--- Game ---
+        preload('SelectScreenshotsGameSubMenu', 'icon/nains_s.gif')
+        preload('UnselectScreenshotsGameSubMenu', 'icon/nains.gif')
+        //--- Pictures ---
+        preload('SelectPicturesGameSubMenu', 'icon/picture_s.gif')
+        preload('UnselectPicturesGameSubMenu', 'icon/picture.gif')
+        //--- Design ---
+        preload('SelectDesignGameSubMenu', 'icon/pencil_s.gif')
+        preload('UnselectDesignGameSubMenu', 'icon/pencil.gif')
+
+        //--- GameDoc ---
+        preload('SelectGamedocMenu', 'icon/word.gif')
+        preload('UnselectGamedocMenu', 'icon/tome.gif')
+        //--- Team ---
+        preload('SelectTeamMenu', 'icon/larry_s.gif')
+        preload('UnselectTeamMenu', 'icon/larry.gif')
+
+        //--- Download ---
+        preload('SelectDownloadMenu', 'icon/save_s.gif')
+        preload('UnselectDownloadMenu', 'icon/save.gif')
+        //--- System requirements ---
+        preload('SelectSystemreqGameSubMenu', 'icon/chip_s.gif')
+        preload('UnselectSystemreqGameSubMenu', 'icon/chip.gif')
+        //--- Demo ---
+        preload('SelectDemodwlGameSubMenu', 'icon/nains_s.gif')
+        preload('UnselectDemodwlGameSubMenu', 'icon/nains.gif')
+        //--- Sources ---
+        preload('SelectSourcesdwlGameSubMenu', 'icon/text_s.gif')
+        preload('UnselectSourcesdwlGameSubMenu', 'icon/text.gif')
+        //--- Tools ---
+        preload('SelectToolsdwlGameSubMenu', 'icon/tools_s.gif')
+        preload('UnselectToolsdwlGameSubMenu', 'icon/tools.gif')
+
+        //--- Guest Book ---
+        preload('SelectGuestbookMenu', 'icon/tome_s.gif')
+        preload('UnselectGuestbookMenu', 'icon/notebook.gif')
+
+        //--- Misc ---
+        preload('SelectMiscMenu', 'icon/inquiry_s.gif')
+        preload('UnselectMiscMenu', 'icon/inquiry.gif')
+        //--- Milia 2000 ---
+        preload('SelectMiliaGameSubMenu', 'icon/milia_s.gif')
+        preload('UnselectMiliaGameSubMenu', 'icon/milia.gif')
+        //--- Internship ---
+        preload('SelectInternshipGameSubMenu', 'icon/planet_s.gif')
+        preload('UnselectInternshipGameSubMenu', 'icon/planet.gif')
+        //--- Links ---
+        preload('SelectLinksGameSubMenu', 'icon/info_s.gif')
+        preload('UnselectLinksGameSubMenu', 'icon/info.gif')
+
+
+    </script>
+</HEAD>
+<BODY>
+<hr>
+<dl id="menu">
+    <!-- HOME -->
+    <dt onClick="javascript:montre();"><a href="zegame.html" target="mainFrame"
+                                          onclick="homeFrame.currentPage=homeFrame.ZeGameLnk; href=homeFrame.ZeGameLnk; return true"
+                                          onmouseover="changeImage('imgA0','SelectHomeMenu'); self.status='ZeGame s Home page'; return true"
+                                          onmouseout="changeImage('imgA0','UnselectHomeMenu'); self.status=''; return true">
+        <IMG alt="" border="0" height="16" width="16" name="imgA0" src="icon/home.gif"
+             align="absmiddle"> Home</a></dt>
+    <!-- NEWS -->
+    <dt onClick="javascript:montre();"><a href="news.html" target="mainFrame"
+                                          onclick="homeFrame.currentPage='news.html'; return true"
+                                          onmouseover="changeImage('imgA1','SelectNewsMenu'); self.status='To view lastest News about the development of both this web site and ZeGame'; return true"
+                                          onmouseout="changeImage('imgA1','UnselectNewsMenu'); self.status=''; return true">
+        <IMG alt="" border="0" height="16" width="16" name="imgA1" src="icon/news.gif"
+             align="absmiddle"> News</dt>
+    </a>
+    </dt>
+    <!-- NEWS -->
+    <dt onClick="javascript:montre('smenu3');"><a href="features.html#Beginning" target="mainFrame"
+                                                  onclick="homeFrame.currentPage=homeFrame.FeaturesLnk; href=homeFrame.FeaturesLnk+'#Beginning'; return true"
+                                                  onmouseover="changeImage('imgA2','SelectFeaturesMenu')"
+                                                  onmouseout="changeImage('imgA2','UnselectFeaturesMenu')"> <IMG alt=""
+                                                                                                                 border=0
+                                                                                                                 height=16
+                                                                                                                 width=16
+                                                                                                                 name=imgA2
+                                                                                                                 src="icon/computer.gif"
+                                                                                                                 align="absmiddle">
+        Features</A></A> </dt>
+    <dd id="smenu3">
+        <ul>
+            <li><a href="features.html#Skills" target="mainFrame"
+                   onclick="homeFrame.currentPage=homeFrame.FeaturesLnk; href=homeFrame.FeaturesLnk+'#Skills'; return true"
+                   onmouseover="changeImage('imgA2a','SelectSkillsGameSubMenu')"
+                   onmouseout="changeImage('imgA2a','UnselectSkillsGameSubMenu')"> <IMG alt="" border="0" height="16"
+                                                                                        width="16" name="imgA2a"
+                                                                                        src="icon/keyboard.gif"> Skills</a>
+            </li>
+            <li><a href="features.html#GameModules" target="mainFrame"
+                   onclick="homeFrame.currentPage=homeFrame.FeaturesLnk; href=homeFrame.FeaturesLnk+'#GameModules'; return true"
+                   onmouseover="changeImage('imgA2b','SelectCurrentGameSubMenu')"
+                   onmouseout="changeImage('imgA2b','UnselectCurrentGameSubMenu')"> <IMG alt="" border="0" height="16"
+                                                                                         width="16" name="imgA2b"
+                                                                                         src="icon/lightbulb.gif">
+                Modules</a></li>
+            <li><a href="tools.html" target="mainFrame"
+                   onclick="homeFrame.currentPage=homeFrame.FeaturesToolsLnk; href=homeFrame.FeaturesToolsLnk+'#Beginning'; return true"
+                   onmouseover="changeImage('imgA2c','SelectToolsGameSubMenu')"
+                   onmouseout="changeImage('imgA2c','UnselectToolsGameSubMenu')"> <IMG alt="" border="0" height="16"
+                                                                                       width="16" name="imgA2c"
+                                                                                       src="icon/tools2.gif"
+                                                                                       align="absmiddle"> Tools</a></li>
+        </ul>
+    </dd>
+    <!-- SCREEN SHOTS -->
+    <dt onClick="javascript:montre('smenu4');"><A class=clMain
+                                                  href="artgallery.html" target="mainFrame"
+                                                  onclick="return true"
+                                                  onmouseover="changeImage('imgA3','SelectScreenshotsMenu')"
+                                                  onmouseout="changeImage('imgA3','UnselectScreenshotsMenu')"> <IMG
+            alt="" border=0 height=16 width=16 name=imgA3
+            src="icon/palette.gif" align="absmiddle"> Screen Shots</A></dt>
+    <dd id="smenu4">
+        <ul>
+            <li><A
+                    href="screenshots.html" target="mainFrame"
+                    onclick="homeFrame.currentPage=homeFrame.GameScreenShotsLnk; href=homeFrame.GameScreenShotsLnk; return true"
+                    onmouseover="changeImage('imgA3a','SelectScreenshotsGameSubMenu'); self.status='Some snap shots of ZeGame running'; return true"
+                    onmouseout="changeImage('imgA3a','UnselectScreenshotsGameSubMenu'); self.status=''; return true">
+                <IMG alt="" border=0 height=16 width=16 name=imgA3a
+                     src="icon/nains.gif" align="absmiddle"> Game</A></li>
+            <li><A
+                    href="artwork.html" target="mainFrame"
+                    onclick="homeFrame.currentPage='artwork'; return true"
+                    onmouseover="changeImage('imgA3b','SelectPicturesGameSubMenu'); self.status='Jojotonic\'s artwork'; return true"
+                    onmouseout="changeImage('imgA3b','UnselectPicturesGameSubMenu'); self.status=''; return true"> <IMG
+                    alt="" border=0 height=16 width=16 name=imgA3b
+                    src="icon/picture.gif" align="absmiddle"> Artworks</A
+
+
+            ></li>
+        </ul>
+    </dd>
+    <!-- GAMEDOC -->
+    <dt onClick="javascript:montre();"><a href="gamedoc/gamedoc.htm" target="parent"
+                                          onclick="homeFrame.currentPage=homeFrame.GamedocLnk; href=homeFrame.GamedocLnk; return true"
+                                          onMouseOver="self.status='Complete user and developer documentation of ZeGame';
+                             changeImage('imgA4','SelectGamedocMenu'); return true"
+                                          onMouseOut="changeImage('imgA4','UnselectGamedocMenu'); self.status=''; return true;">
+        <IMG alt="" border=0 height=16 width=16 name=imgA4
+             src="icon/tome.gif" align="absmiddle"> Gamedoc</A></dt>
+    <!-- TEAM -->
+    <dt onClick="javascript:montre();"><a class=clMain
+                                          href="team.html" target="mainFrame"
+                                          onclick="homeFrame.currentPage=homeFrame.TeamLnk; href=homeFrame.currentPage; return true"
+                                          onMouseOver="self.status='Some information about Zegame\'s team members';
+                             changeImage('imgA5','SelectTeamMenu'); return true"
+                                          onmouseout="changeImage('imgA5','UnselectTeamMenu'); self.status=''; return true">
+        <IMG alt="" border="0" height="16" width="16" name="imgA5"
+             src="icon/larry.gif" align="absmiddle"> Team</a></dt>
+    <!-- DOWNLOAD -->
+    <dt onClick="javascript:montre('smenu5');"><A class="clMain"
+                                                  href="download.html" target="mainFrame"
+                                                  onclick="homeFrame.currentPage=homeFrame.DownloadLnk; href=homeFrame.currentPage; return true"
+                                                  onmouseover="changeImage('imgA6','SelectDownloadMenu'); self.status='Where you can download whatever you want'; return true"
+                                                  onmouseout="changeImage('imgA6','UnselectDownloadMenu'); self.status=''; return true">
+        <IMG alt="" border=0 height=16 width=16 name=imgA6
+             src="icon/save.gif" align="absmiddle"> Download</A></dt>
+    <dd id="smenu5">
+        <ul>
+            <li><a href="download.html#Demo" target="mainFrame"
+                   onclick="homeFrame.currentPage=homeFrame.DownloadLnk+'#Demo'; href=homeFrame.currentPage; return true"
+                   onmouseover="changeImage('imgA6b','SelectDemodwlGameSubMenu'); self.status='Click here to download the Demo of ZeGame'; return true"
+                   onmouseout="changeImage('imgA6b','UnselectDemodwlGameSubMenu'); self.status=''; return true"> <IMG
+                    alt="" border=0 height=16 width=16 name=imgA6b
+                    src="icon/nains.gif" align="absmiddle"> Demo</A></li>
+            <li><A href="download.html#SourceCode" target="mainFrame"
+                   onclick="homeFrame.currentPage=homeFrame.DownloadLnk+'#SourceCode'; href=homeFrame.currentPage; return true"
+                   onmouseover="changeImage('imgA6c','SelectSourcesdwlGameSubMenu'); self.status='Click here to download the source code of ZeGame'; return true"
+                   onmouseout="changeImage('imgA6c','UnselectSourcesdwlGameSubMenu'); self.status=''; return true"> <IMG
+                    alt="" border=0 height=16 width=16 name=imgA6c
+                    src="icon/text.gif" align="absmiddle"> Sources</A></li>
+            <li><A href="download.html#ToolsKit" target="mainFrame"
+                   onclick="homeFrame.currentPage=homeFrame.DownloadLnk+'#ToolsKit'; href=homeFrame.currentPage; return true"
+                   onmouseover="changeImage('imgA6d','SelectToolsdwlGameSubMenu'); self.status='Click here to download the kit of tools for ZeGame'; return true"
+                   onmouseout="changeImage('imgA6d','UnselectToolsdwlGameSubMenu'); self.status=''; return true"> <IMG
+                    alt="" border=0 height=16 width=16 name=imgA6d
+                    src="icon/tools.gif" align="absmiddle"> Tools</A></li>
+        </ul>
+    </dd>
+    <!-- GUEST BOOK -->
+    <dt onClick="javascript:montre();"><a href="guestbook.html" target="mainFrame"
+                                          onclick="homeFrame.ZeGameLnk='guestbook.html'; return true"
+                                          onMouseOver="self.status='Complete developer and developer documentation of ZeGame';
+                             changeImage('imgA7','SelectGuestbookMenu'); return true"
+                                          onMouseOut="changeImage('imgA7','UnselectGuestbookMenu'); self.status=''; return true;">
+        <IMG alt="" border=0 height=16 width=16 name=imgA7
+             src="icon/notebook.gif" align="absmiddle"> Guest Book</A></dt>
+    <!-- MISC -->
+    <dt onClick="javascript:montre('smenu6');"><a href="misc.html" target="mainFrame"
+                                                  onclick="return false"
+                                                  onmouseover="changeImage('imgA8','SelectMiscMenu')"
+                                                  onmouseout="changeImage('imgA8','UnselectMiscMenu')"> <IMG alt=""
+                                                                                                             border=0
+                                                                                                             height=16
+                                                                                                             width=16
+                                                                                                             name=imgA8
+                                                                                                             src="icon/inquiry.gif"
+                                                                                                             align="absmiddle">
+        Misc</A></dt>
+    <dd id="smenu6">
+        <ul>
+            <li><a href="milia2000.html" target="mainFrame"
+                   onclick="homeFrame.currentPage='milia2000.html'; return true"
+                   onmouseover="self.status='Some digital photos from my trip to Cannes at Milia 2000';
+                                         changeImage('imgA8a','SelectMiliaGameSubMenu'); return true"
+                   onmouseout="changeImage('imgA8a','UnselectMiliaGameSubMenu'); self.status=''; return true;"> <IMG
+                    alt="" border=0 height=16 width=16 name=imgA8a
+                    src="icon/milia.gif" align="absmiddle"> Milia 2000</A></li>
+            <li><a href="usa/usa.htm" target="mainFrame"
+                   onclick="homeFrame.currentPage='usa/usa.htm'; return true"
+                   onmouseover="changeImage('imgA8b','SelectInternshipGameSubMenu'); self.status='That has nothing to do with ZeGame, sorry :-)'; return true"
+                   onmouseout="changeImage('imgA8b','UnselectInternshipGameSubMenu'); self.status=''; return true"> <IMG
+                    alt="" border=0 height=16 width=16 name=imgA8b
+                    src="icon/planet.gif" align="absmiddle"> Internship</A></li>
+            <li><a href="" target="mainFrame"
+                   onclick="return false"
+                   onmouseover="changeImage('imgA8c','SelectLinksGameSubMenu'); self.status=''; return true"
+                   onmouseout="changeImage('imgA8c','UnselectLinksGameSubMenu'); self.status=''; return true"> <IMG
+                    alt="" border=0 height=16 width=16 name=imgA8c
+                    src="icon/info.gif" align="absmiddle"> Links</A></li>
+        </ul>
+    </dd>
+</dl>
+</BODY>
+</HTML>

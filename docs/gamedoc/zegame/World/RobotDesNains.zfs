@@ -1,0 +1,32 @@
+[HEADER]
+ScriptName	= RobotDesNains
+ScriptType	= PERSONNALISE
+ScriptPatron	= <none>
+
+[SCRIPT_LINE_0]
+Trigger		= PLAYER_FRAPPER
+Conditions	= { Random(1) }
+Actions		= { NewMemory(ROBOT_DEAD) & NewState(MEURT1)! & WaitEnd(0) }
+
+[SCRIPT_LINE_1]
+Trigger		= PERSO_DSZONE
+Conditions	= { Random(2) & DontKnow(ROBOT_DONNE_COUP_AU_HERO) & DontKnow(ROBOT_DEAD) }
+Actions		= { NewState(DONNECOUP1) & NewMemory(ROBOT_DONNE_COUP_AU_HERO) }
+
+[SCRIPT_LINE_2]
+Trigger		= EVERY_TIME
+Conditions	= { Know(ROBOT_DONNE_COUP_AU_HERO) }
+Actions		= { Sleep(1800) & DelMemory(ROBOT_DONNE_COUP_AU_HERO) }
+
+
+[SCRIPT_LINE_3]
+Trigger		= EVERY_TIME
+Conditions	= { Know(ROBOT_DEAD) & DontKnow(NAIN_SORTI) }
+Actions		= { Sleep(1800) & NewState(SORTIR1) & NewMemory(NAIN_SORTI) }
+
+
+[SCRIPT_LINE_4]
+Trigger		= EVERY_TIME
+Conditions	= { DontKnow(ROBOT_DEAD) & Random(200) }
+Actions		= { Sleep(500) & NewState(STAND1) }
+

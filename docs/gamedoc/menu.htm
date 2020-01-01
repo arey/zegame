@@ -1,0 +1,92 @@
+<HTML>
+
+<head>
+    <title>ZEGAME - Documentation Menu</title>
+    <META content="Antoine Rey" name=Author>
+    <link rel="stylesheet" href="../css/menu.css">
+    <!-- Script de pr�-chargement d'images -->
+    <script src="javascript/images.js"></script>
+    <script TYPE="text/javascript"></script>
+    <script src="javascript/menu.js"></script>
+    <script type="text/javascript">
+        preload('SelectMenuCursor', 'icon/pointer3_new.gif')
+        preload('UnselectMenuCursor', 'icon/pointer3_off.gif')
+
+        var homeFrame = parent.parent.parent;
+        homeFrame.ZeGameDocLnk = "mainpage.htm";
+        homeFrame.targetFrame = "mainFrame";
+        if (location.search.length > -1) {
+            homeFrame.ZeGameDocLnk = location.search.substring(1);
+            homeFrame.targetFrame = "_parent";
+        }
+        //-->
+    </script>
+
+</HEAD>
+
+<BODY>
+<hr>
+
+<dl id="menu">
+    <!-- User Guide -->
+    <dt onClick="javascript:montre();"><a href="userguide.htm" target="mainFrame"
+                                          onmouseover="changeImage('imgA0','SelectMenuCursor')"
+                                          onmouseout="changeImage('imgA0','UnselectMenuCursor')">
+        <IMG alt="" border="0" height="16" width="16" name="imgA0" src="icon/pointer3_off.gif"
+             align="absmiddle"> User Guide</a></dt>
+    <dd id="smenu3">
+        <ul>
+            <li><a href="userguide.htm#Introduction" target="mainFrame">
+                >> Introduction</a>
+            </li>
+            <li><a href="userguide.htm#GameFeatures" target="mainFrame">
+                >> Game features</a>
+            </li>
+            <li><a href="userguide.htm#HowToPlay" target="mainFrame">
+                >> How to play ?</a>
+            </li>
+            <li><a href="userguide.htm#SystemRequirements" target="mainFrame">
+                >> System requirements</a>
+            </li>
+        </ul>
+    </dd>
+
+    <!-- Editors -->
+    <dt>
+        <IMG alt="" border="0" height="16" width="16" name="imgA0" src="icon/pointer3_off.gif"
+             align="absmiddle"> Editors
+    </dt>
+    <dd id="smenu3">
+        <ul>
+            <li><a href="mapeditor.htm" target="mainFrame">
+                >> Map editor</a>
+            </li>
+            <li><a href="animeditor.htm" target="mainFrame">
+                >> Anim editor</a>
+            </li>
+            <li><a href="tileeditor.htm" target="mainFrame">
+                >> Create tile</a>
+            </li>
+        </ul>
+    </dd>
+
+    <!-- Files specifications Guide -->
+    <dt onClick="javascript:montre();"><a href="filesspec.htm" target="mainFrame"
+                                          onmouseover="changeImage('imgA0','SelectMenuCursor')"
+                                          onmouseout="changeImage('imgA0','UnselectMenuCursor')">
+        <IMG alt="" border="0" height="16" width="16" name="imgA0" src="icon/pointer3_off.gif"
+             align="absmiddle"> Files specifications</a></dt>
+    <dd id="smenu3">
+        <ul>
+            <li><a href="filesspec.htm#TextFiles" target="mainFrame">
+                >> Text files</a>
+            </li>
+            <li><a href="filesspec.htm#BinaryFiles" target="mainFrame">
+                >> Binary files</a>
+            </li>
+        </ul>
+    </dd>
+</dl>
+</BODY>
+</HTML>
+

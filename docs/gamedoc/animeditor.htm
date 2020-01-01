@@ -1,0 +1,530 @@
+
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Game Files Specification</title>
+<style><!--
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+h1
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:FR;}
+h2
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	background:#CCCCCC;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+@page Section1
+	{size:8.5in 11.0in;
+	mso-header-
+	mso-footer-
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@list l0
+	{mso-list-id:22243926;
+	mso-list-type:hybrid;
+	mso-list-template-ids:66324154 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:748119944;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1467390730 67698703 268358868 1944119234 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l1:level3
+	{mso-level-number-format:alpha-upper;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:117.0pt;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l2
+	{mso-list-id:964433006;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2037098246 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:2048604638;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1594463476 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{ul
+	{.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 10pt}
+.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 12pt; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal}
+.Parameters {  }
+.parameters {  font-family: "Times New Roman", Times, serif}
+div.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+li.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.yo {  }
+.dwsadwf {  }
+h4 {  }
+h4 {  }
+h5 {  }
+h5 {  }
+h5 {  }
+-->
+</style>
+</head>
+<body lang=EN-US style='tab-interval:.5in' bgcolor="#ffffff">
+<div class=Section1> 
+  <h2 class="Section1"><span style='mso-ansi-language:EN-US'><a name="Beginning"></a></span></h2>
+  <h2 class="Section1"><span style='mso-ansi-language:EN-US'>Anim Editor<br>
+    <br>
+    </span></h2>
+</div>
+<blockquote class="MsoBodyText"> 
+  <div class=MsoBodyText> 
+    <p align="left">This editor has been specially developped to edit the animations 
+      of characters and objects of this game. You can see in details each frame 
+      of the animation of a character and assign it a set of features used for 
+      collision detection or physics sinulation.<br>
+      There is also a tool that allow you to import in ZeGame your own animations 
+      you have drawn on Painter, Paint Shop Pro, Photoshop, 3DS Max, Maya or Lightwave. 
+      It can be a simple fire or explosion animation as a 8 cardinal points animation 
+      of a dragon. First I recommend you to read the <a href="#filespec.htm#AnimationScriptFile">animation 
+      script file</a> section that explains you how to write them.<br>
+      The following documentation should help you to use this complex (and especially 
+      not very user-friendly) editor.<br>
+    </p>
+    <p align="center"> <i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/animeditor1.jpg" width="767" height="559"> 
+      <br>
+      Anim Editor v0.98</font></b></i></p>
+  </div>
+  <blockquote> 
+    <blockquote> 
+      <div class=MsoBodyText><u>Anim Editor documentation menu</u> :</div>
+      <ol>
+        <ol>
+          <li> 
+            <div class=MsoBodyText><a href="#ImportAnimation">How to import your 
+              animation ?</a></div>
+          </li>
+          <li> 
+            <div class=MsoBodyText><a href="#CreateNewTemplate">Create a new character 
+              or object template</a></div>
+          </li>
+          <li> 
+            <div class=MsoBodyText><a href="#OpenExistingModel">Open an existing 
+              model</a></div>
+          </li>
+          <li> 
+            <div class=MsoBodyText><a href="#AddAnimation">Add your animation 
+              to the active model</a><br>
+            </div>
+          </li>
+        </ol>
+      </ol>
+    </blockquote>
+    <div class=MsoBodyText> 
+      <p>&nbsp; </p>
+    </div>
+  </blockquote>
+  <ol>
+    <li class="MsoBodyText"> 
+      <div class=Section1> 
+        <h4> Import an animation<a name="ImportAnimation"></a><br>
+        </h4>
+        <div class=Section1> 
+          <p class="MsoBodyText">On 3D Studio Max 3.1, imagine that you have modelized 
+            a beautiful animation of a dragon that spit fire. To include it in 
+            the game, you have to render way to render it : either you render 
+            from just one point of view you want, either you render the dragon 
+            from 8 points of view, in fact from the 8 cardinal points : East, 
+            South-east, South, ....You will obtain 1 or 8 animation files (fli, 
+            flc, avi, mpeg , mov ...). </p>
+        </div>
+      </div>
+    </li>
+  </ol>
+  <blockquote> 
+    <div class=Section1> 
+      <div class=MsoBodyText> 
+        <p class="MsoBodyText">Next you have to save each indivual frame of your 
+          animation into bitmap files (<i>.bmp</i>). You can use the tool of your 
+          choice. I use a freeware software on Ms-Dos called <i>Sea</i>. Their 
+          name must have 8 characters and the name conventions are :</p>
+      </div>
+    </div>
+    <ul>
+      <li> 
+        <div class=Section1> 
+          <div class=MsoBodyText>1 or 2 letters for the point of view : <i><b>s</b></i> 
+            for south, <b><i>ne</i></b> for north-east, ...</div>
+        </div>
+      </li>
+      <li> 
+        <div class=Section1> 
+          <div class=MsoBodyText>4 letters for the short name of your animation,</div>
+        </div>
+      </li>
+      <li> 
+        <div class=Section1> 
+          <div class=MsoBodyText>2 or 3 letters for the index of the frame.</div>
+        </div>
+      </li>
+    </ul>
+    <p class="MsoBodyText">All those animation frames will be merge in big bitmap 
+      that I will call <i>Animation Tile Bank</i>. To do that, the AnimEditor 
+      has a small tool you can use. Put your files in the <i>Temp\</i> sub-directory 
+      of the AnimEditor, launch it and click on the <i>Anims &gt;&gt; Nouvelle 
+      Banque menu</i>. The following dialog box should appear : <br>
+    </p>
+    <p align="center"><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><i><img src="images/animeditor2.jpg" width="437" height="239"><br>
+      Animation Tile Bank DialogBox</i></font></b></p>
+    <p align="left" class="MsoBodyText">All those fields are mandatory :</p>
+    <menu> 
+      <li class="MsoBodyText"><i class="MsoBodyText">Lettres des bmps</i> text 
+        field : 4 letters for the short name of your animation,</li>
+      <li class="MsoBodyText"><i>Designation </i>text field : name of the output 
+        Animation Tile Bank bimap,</li>
+      <li class="MsoBodyText"><i>Nb sprites par animation </i>text field : number 
+        of tile that composed an animation from one point of view,</li>
+      <li class="MsoBodyText"><i>Borne inferieure de l'intervalle</i> text field 
+        : index of the first tile of your animation,</li>
+      <li class="MsoBodyText"><i>Format des bmp</i> radio button : you can specify 
+        to the tools the name convention of your small tile bitmap. 8 characters 
+        is the one descibed above, 2 zeros if the index of a frame has 2 digits 
+        and 3 zeros if it has 3 digits,</li>
+      <li class="MsoBodyText"><i>Type de banque</i> radio button : check 8 cardinal 
+        points if your animation has 8 point of views or 1 cardinal point if it 
+        just have one,</li>
+      <li class="MsoBodyText"><i>Space optimization</i> check box : use a home-made 
+        algorithm to place the tiles on the bank,</li>
+      <li class="MsoBodyText"><i>Texture 256x256</i> check box : force the size 
+        of the bank to have 256x256 pixels large,</li>
+      <li class="MsoBodyText"><i>n coul fond</i> text fields : 256 colors index 
+        (0 by default) and its RGB components of the transparent color of the 
+        tile,</li>
+      <li class="MsoBodyText"><i>n coul Ombre</i> text fields : 256 colors index 
+        (255 by default) and its RGB components of the shadow color of the tile.</li>
+    </menu>
+    <p class="MsoBodyText" align="left">Click on the <i>Ok</i> button to go on 
+      the next step or <i>Cancel</i> to exit. You may get a tile bank like this 
+      below. This is the tile bank of a walking sword animation than we can use 
+      when the Hero walks and have its sword in hand. It was created with 16 sprites 
+      of an 8 point of views animation .</p>
+    <p class="MsoBodyText" align="center"><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/animeditor3.jpg" width="640" height="182" border="1"><br>
+      Walking Sword bitmap animation tile bank</font></b></i></p>
+    <p class="MsoBodyText" align="center"><br>
+      Next you have to select for each sprite of your animation what I called 
+      the center of gravity of your object. It is used during transition between 
+      2 animation to superimpose it. That way the connection between 2 images 
+      will be done easily without coding anything.<br>
+      For instance you can set this gravity point at the navel at a character.<br>
+      <i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"> 
+      </font></b></i> </p>
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <p align="center"><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/animeditor4.jpg" width="495" height="438"><br>
+          Anim Tile Bank Dialog</font></b></i></p>
+        <p>When you will have done this last step, a .<i>spi</i> and a .<i>bmp</i> 
+          files will be created in the <i>Temp\ </i>sub-directory of this anim 
+          editor. Their name is the text you gave in the <i>Designation</i> text 
+          field. <br>
+          You could now use this animation in an existing character or sceneray 
+          object template, or create a new one as following...<br>
+        </p>
+      </div>
+    </div>
+  </blockquote>
+  <div class=MsoBodyText> 
+    <div class=MsoBodyText> 
+      <h4>2. Create a new Template (for a Character or an object)<a name="CreateNewTemplate"></a><br>
+      </h4>
+    </div>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <p>This step allow you to create a model of character, a kind of class 
+          that your monsters and your NPCs could inherit. So they will have the 
+          same set of animations, but could not have the same behaviors.</p>
+        <p>Go in the <i>Files<font size="-1"> &gt;&gt;</font>Nouveau <font size="-1">&gt;&gt;</font>Type 
+          de Personnage</i> sub-menu.<br>
+          <br>
+          <img src="images/animeditor5.jpg" width="355" height="90" align="right" hspace="5"> 
+          The First step involve to give an identifier string to this new class 
+          of character.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><img src="images/animeditor6.jpg" width="356" height="240" align="right" hspace="5">Then 
+          you have to choose (or create if it soes not exist) a directory located 
+          in the <i>Persos\</i> sub-directory of the ZeGame.<br>
+          <br>
+          All the files related to this model, will be place in this folder :</p>
+      </div>
+    </div>
+    <ul>
+      <li> 
+        <div class=MsoBodyText> 
+          <div class=MsoBodyText>Main template file <i>(.mdl)</i></div>
+        </div>
+      </li>
+      <li> 
+        <div class=MsoBodyText> 
+          <div class=MsoBodyText>Animation tile bank bimtap files <i>(.bmp)</i></div>
+        </div>
+      </li>
+      <li> 
+        <div class=MsoBodyText> 
+          <div class=MsoBodyText>Animation tile bank information files <i>(.spi)</i></div>
+        </div>
+      </li>
+      <li> 
+        <div class=MsoBodyText> 
+          <div class=MsoBodyText>Animation script file <i>(.ina)</i></div>
+        </div>
+      </li>
+    </ul>
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText> 
+          <p>&nbsp;</p>
+          <p>You just now need to give a name for the main file of this object 
+            model which will have the .<i>mdl</i> extension. You can use the same 
+            name as the directory or the identifier.</p>
+          <p>You have to create an empty animation script file (<i>.ina</i>). 
+            Go to <i>Script <font size="-1">&gt;&gt;</font>Nouveau <font size="-1">&gt;&gt;</font>Script 
+            Animation </i>menu. A header will appear in the left-bottom script 
+            text area. You can save it with the Script <font size="-1">&gt;&gt;</font>Save 
+            as menu. You must again choose a name for this file. It should be 
+            the same as previously.</p>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </blockquote>
+  <div class=MsoBodyText> 
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText><b>3. Open an existing Template<a name="OpenExistingModel"></a></b></div>
+    </div>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText> 
+          <p>To open a character model you have previously created, just go on 
+            <i>Script <font size="-1">&gt;&gt;</font>Ouvrir <font size="-1">&gt;&gt;</font>Perso 
+            <font size="-1">&gt;&gt;</font>Chercher</i> menu (<i>Script <font size="-1">&gt;&gt;</font>Ouvrir 
+            <font size="-1">&gt;&gt;</font>Decors <font size="-1">&gt;&gt;</font>Chercher</i> 
+            for other objects). A file dialog box will appear where you have to 
+            select in the good sub-directory the <i>.ina</i> file you want to 
+            open.<br>
+            For instance, if you want to open the Hero animation model, select 
+            the <i>Persos\Hero\Hero.ina</i> file.</p>
+          <blockquote> 
+            <div class=MsoBodyText> 
+              <div class=MsoBodyText> 
+                <div class=MsoBodyText> 
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </blockquote>
+  <div class=MsoBodyText> 
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText> 
+              <p><b>4. Add your animation to the active model <a name="AddAnimation"></a></b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText> 
+              <div class=MsoBodyText> 
+                <p>In the previous step 1, you learned how to import your <i>.flc</i>, 
+                  <i>.mpg</i> or <i>.avi</i> animation in the .<i>bmp</i> + .<i>spi</i> 
+                  format used by ZeGame. At the end of the import those 2 files 
+                  are located in the<i> Temp\ </i>sub-directory of the anim editor. 
+                  To use this animation : copy the 2 files in the sub-directory 
+                  of the character or object pattern of your choice.<br>
+                  <br>
+                  Whe you open an animation script file, its contents will appear 
+                  in the left-bottom text area of the anim editor. You can either 
+                  modify this script file in this area or in notepad, as you want 
+                  ... For my part, I use notepad; but if somebody will implement 
+                  .ina syntax highlighting, why not ?</p>
+                <p align="center"><img src="images/animeditor7.jpg" width="576" height="274"> 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText> 
+          <p><u>Note</u> :<br>
+            A lot of features for the animation script editing are not yet implemented. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <blockquote>
+      <div class=MsoBodyText>
+        <div class=MsoBodyText></div>
+      </div>
+    </blockquote>
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText> 
+          <p><br>
+          </p>
+          <p><br>
+            <br>
+          </p>
+          <p>&nbsp; </p>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<blockquote class="MsoBodyText">
+  <blockquote> 
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <p>&nbsp; </p>
+      </div>
+    </div>
+  </blockquote>
+  <ol>
+    <blockquote> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText></div>
+      </div>
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText></div>
+      </div>
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText></div>
+      </div>
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText></div>
+      </div>
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText></div>
+      </div>
+    </blockquote>
+  </ol>
+  <blockquote> 
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText></div>
+      </div>
+    </div>
+    <blockquote> 
+      <div class=MsoBodyText> </div>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote class="MsoBodyText"> 
+  <blockquote> 
+    <blockquote> 
+      <div class=MsoBodyText> 
+        <div class=MsoBodyText></div>
+      </div>
+    </blockquote>
+  </blockquote>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Antoine Rey">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (Win98; I) [Netscape]">
+   <title>Nains - Ze Game</title>
+</head>
+<body background="bitmap/lgrey040.jpg">
+<p><a name="Beginning"></a> </p>
+<h1> Download </h1>
+<p>&nbsp; </p>
+<p>In the following lines you will be able to download as well as the last public 
+  demo version of ZeGame (actually the 1.70a) as well as the previous versions 
+  that have already been released in the few months. More you will also find all 
+  the C++ sources that may help you. And also a package that contains some tools 
+  that I have developed for Nains and that have been used to design the levels, 
+  the animations, the characters ...brief, the Total ... </p>
+<ul>
+  <ol>
+    <li><a href="#Demo">Demo</a> 
+      <ul>
+        <li><a href="#DemoSystemRequirements">System requirements</a> </li>
+        <li><a href="#DemoTestPlatforms">Test platforms</a></li>
+        <li><a href="#DemoHistory">History</a></li>
+        <li><a href="#DemoDownloads">Downloads</a></li>
+      </ul>
+    </li>
+    <li><a href="#SourceCode">Source Code</a></li>
+    <ul>
+      <li><a href="#GameSources">Game sources</a></li>
+      <li><a href="#ToolsSources">Tools sources</a></li>
+    </ul>
+    <li><a href="#ToolsKit">Development Kit</a></li>
+    <li><a href="#GameResources">Game Resources</a></li>
+    <li><a href="#Miscellaneous">Miscellaneous files</a></li>
+    <li><a href="#Music">Music</a><br>
+    </li>
+  </ol>
+  <ul>
+  </ul>
+</ul>
+<p>&nbsp;</p>
+<h3>1. Demo<a name="Demo"></a></h3>
+<blockquote> 
+  <p><u>System Requirements<a name="DemoSystemRequirements"></a></u></p>
+  <p>The recommanded configuration to run the demo is :<br>
+    (see <a href="gamedoc/userguide.htm#SystemRequirements">game documentation</a> 
+    for more details)</p>
+  <ul>
+    <li> CPU : Pentium II&nbsp; 350Mhz</li>
+    <li> RAM : 96Mb de RAM</li>
+    <li>OS : PC Windows&#153; 95/98/2000</li>
+    <li> HD : 50Mb free space to install it </li>
+    <li> Video : 2Mb Video card 2D accelerated</li>
+    <li>Sound : Sound card compatible DirectSound <i>(optionnal)</i></li>
+    <li> Joypad <i>(optionnal)</i></li>
+    <li>DirectX 6.1 or above</li>
+  </ul>
+  <p><u>Test Platforms</u><a name="DemoTestPlatforms"></a><br>
+  </p>
+  <p>The demo has been tested on 3 different configurations :</p>
+  <ul>
+    <li>PII 350Mhz 196Mb - Matrox G200&nbsp; 8Mb - Sound Blaster 64<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt; development platform, recommanded 
+      required configuration (avg 40 fps)<br>
+    </li>
+    <li>P166 Mhz 48Mb&nbsp;- Matrox Millenium 1 &nbsp;2Mb - Ultra Sound<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt; minimum configuration, small 
+      resolution (640<font size="-1">x</font>480), barely playable (avg 14 fps)<br>
+    </li>
+    <li>Laptop PIII 650Mhz 128Mb - NeoMagic&nbsp; 6Mb&nbsp;- Yamaha DS-XG<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  </ul>
+  <p><u>History<a name="DemoHistory"></a></u></p>
+  <p>Here are some information about the public released that you could have downloaded 
+    in the past on this site. You can again download previous version that I let 
+    to your hand if you are interested. </p>
+  <blockquote> 
+    <h4><u>1st release</u> - alpha 1.00 - 12/30/1999</h4>
+    <p>In this first release you could already admire the real first level of 
+      ZeGame (<i>big.niv</i>). You can go for a walk with the arrow keys or with 
+      a good old-style joypad, as you want. You can try to put1 or 2 swordthrusts, 
+      shot a burst with an old shotgun or kill some Ogre (if you can :-) 'cause 
+      in reality, they are just here as simple decoration.</p>
+    <p>Apart some scripts that animate the pigs and the locomotive, you could 
+      try to break some vases located near the start point (use the <i>space</i> 
+      key) : it will shatter and then a dwarf will exit and weak up.</p>
+    <p>&nbsp; <br>
+      <b><u>2nd release</u> - alpha 1.62 - 04/19/2000</b> </p>
+    <p>A new level <i>(new.niv)</i> has been specially designed for this release 
+      where you will discover a large set of new features in comparison with version 
+      1.00a. Here are few characteristics :</p>
+    <ul>
+      <ul>
+        <li>new animations for the Hero : run, jump, sword anims, ...</li>
+        <li>other characters : dwarf, robot, monk, ...</li>
+        <li>new interactions with the environment : kill ogres, break robot, activate 
+          traps, ...</li>
+        <li>2 original musics with better quality,</li>
+        <li>... and many other things you will discover by yourself ...</li>
+      </ul>
+    </ul>
+    <p>For information, the turning demo that I exposed at Milia had the 1.51a 
+      version number. The level was 3 times less big, there was less things to 
+      do and there were a lot of bugs. That's why I prefered wait to improve it 
+      a little bit before its release. On the other hand, there were not 2 musics 
+      but 12 musics from Guy-Roger as ambience music, to hold back the tourists 
+      for a full hour.<br>
+      <br>
+    </p>
+    <p><b><u>3rd release</u> - alpha 1.70 - 10/05/2000</b></p>
+    <p>Released at the same time as the new update of the web site, this version 
+      does not include a lot of new features since version 1.61a. The main improvement 
+      is its size. Now the compressed file takes less than 12Mo thanks to the 
+      mp3 format. This is important for the large amount of people that continues 
+      to use a modem and wants to download ZeGame.</p>
+    <ul>
+      <ul>
+        <li>2 previous music now at mp3 format with best audio quality</li>
+        <li>new sounds for musical ambiance &amp; sound effects</li>
+        <li>joystick analogic almost supported</li>
+        <li>force feedback</li>
+      </ul>
+    </ul>
+    <p><b><u>Last release</u> - alpha 1.75 - 06/05/2001</b></p>
+    <p>This version you'll find a way to play ZeGame with other players via the 
+      Internet. If you're connected to the Net it will automatically detect if 
+      a server is available somewhere on the earth and join this session. Else 
+      your computer will become a host for all other futur players.<br>
+    </p>
+  </blockquote>
+  <p><u>Downloads</u><a name="DemoDownloads"></a></p>
+  <table width="101%" border="1">
+    <tr> 
+      <td width="11%"> 
+        <div align="center"><b>Date</b></div>
+      </td>
+      <td width="8%"> 
+        <div align="center"><b>Version</b></div>
+      </td>
+      <td width="25%"> 
+        <div align="center"><b>File</b></div>
+      </td>
+      <td width="7%"> 
+        <div align="center"><b>File Size</b></div>
+      </td>
+      <td width="9%"> 
+        <div align="center"><b>Uncomp.</b></div>
+      </td>
+      <td width="40%"> 
+        <div align="center"><b>Description</b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width="11%" height="28"> 
+        <div align="center">04/17/2001</div>
+      </td>
+      <td width="8%" height="28"> 
+        <div align="center">1.75</div>
+      </td>
+      <td width="25%" height="28"> 
+        <div align="center"><a href="https://github.com/arey/zegame/releases/download/v1.75/ZeGame-v1.75.zip">ZeGame-v1.75.zip</a></div>
+      </td>
+      <td width="7%" height="28"> 
+        <div align="center">10.1Mb</div>
+      </td>
+      <td width="9%" height="28"> 
+        <div align="center">13.3Mb</div>
+      </td>
+      <td width="40%" height="28"> &nbsp;Last demo of ZeGame</td>
+    </tr>
+    <tr> 
+      <td width="11%" height="28"> 
+        <div align="center">10/05/2000</div>
+      </td>
+      <td width="8%" height="28"> 
+        <div align="center">1.70a</div>
+      </td>
+      <td width="25%" height="28"> 
+        <div align="center"><a href="download/ZeGame-v1.70a.rar">ZeGame-v1.70a.rar</a></div>
+      </td>
+      <td width="7%" height="28"> 
+        <div align="center">9.5Mb</div>
+      </td>
+      <td width="9%" height="28"> 
+        <div align="center">13.2Mb</div>
+      </td>
+      <td width="40%" height="28">&nbsp;Release after summer 2000</td>
+    </tr>
+    <tr> 
+      <td width="11%" height="26"> 
+        <div align="center">03/11/2000</div>
+      </td>
+      <td width="8%" height="26"> 
+        <div align="center">1.70a</div>
+      </td>
+      <td width="25%" height="26"> 
+        <div align="center"><a href="download/ZeGame-v1.70a-patch.rar">ZeGame-v1.70a-patch.rar</a></div>
+      </td>
+      <td width="7%" height="26"> 
+        <div align="center">1.1Mb</div>
+      </td>
+      <td width="9%" height="26"> 
+        <div align="center">1.4Mb</div>
+      </td>
+      <td width="40%" height="26"> 
+        <div align="left">&nbsp;Patch fixing a start crash and other minor bugs</div>
+      </td>
+    </tr>
+    <tr> 
+      <td width="11%" height="26"> 
+        <div align="center">04/19/2000</div>
+      </td>
+      <td width="8%" height="26"> 
+        <div align="center">1.62a</div>
+      </td>
+      <td width="25%" height="26"> 
+        <div align="center">ZeGame-v1.62a.rar</div>
+      </td>
+      <td width="7%" height="26"> 
+        <div align="center">49.5 Mb</div>
+      </td>
+      <td width="9%" height="26"> 
+        <div align="center">59.5 MB</div>
+      </td>
+      <td width="40%" height="26">&nbsp;</td>
+    </tr>
+    <tr> 
+      <td width="11%" height="27"> 
+        <div align="center">12/30/1999</div>
+      </td>
+      <td width="8%" height="27"> 
+        <div align="center">1.00a</div>
+      </td>
+      <td width="25%" height="27"> 
+        <div align="center">ZeGame.zip</div>
+      </td>
+      <td width="7%" height="27"> 
+        <div align="center">37 Mb</div>
+      </td>
+      <td width="9%" height="27"> 
+        <div align="center">45.6 MB</div>
+      </td>
+      <td width="40%" height="27"> &nbsp;First public demo of ZeGame</td>
+    </tr>
+  </table>
+  <p>Note that I am sorry for the large amount of data that is to download if 
+    you have an simple modem. In the 2 first version, it is the music that are 
+    stored as wave file that take a large part of the file (80%). In the future 
+    I'll try to reuse some files from previous version (like patch).</p>
+  <p>ZeGame v1.75 - install.exe</p>
+</blockquote>
+<h3>2. Source Code<a name="SourceCode"></a></h3>
+<blockquote> 
+  <p><u>Game sources<a name="GameSources"></a></u></p>
+  <p>Some people have already asked me to help them either with DirectX programming 
+    or with 3D isometric engine. So I already shared some of the source of ZeGame. 
+    And now I place all those sources at every body's disposal. </p>
+  <p> I've also created an account on SourceForge last june. It's an open source 
+    association that offer you a place on their debian linux server for your project. 
+    So I have right now an access to a cvs repository trough ssh on http://zegame.sourceforge.net 
+    where I will also copy ZeGame's source files.</p>
+  <p>At the beginning ZeGame was developing on C++Builder 1 from Borland. But 
+    during the summer 1999 I migrate to Visual C++ 6, even if the Tools remaines 
+    on the first environment. So, with the sources, I've also include the visual 
+    project files.</p>
+  <table width="107%" border="1">
+    <tr> 
+      <td width="10%"> 
+        <div align="center"><b>Date</b></div>
+      </td>
+      <td width="8%"> 
+        <div align="center"><b>Version</b></div>
+      </td>
+      <td width="32%"> 
+        <div align="center"><b>File</b></div>
+      </td>
+      <td width="8%"> 
+        <div align="center"><b>File Size</b></div>
+      </td>
+      <td width="9%"> 
+        <div align="center"><b>Uncomp.</b></div>
+      </td>
+      <td width="33%"> 
+        <div align="center"><b>Description</b></div>
+      </td>
+    </tr>
+    <tr>
+      <td width="10%" height="27">
+        <div align="center">04/17/2001</div>
+      </td>
+      <td width="8%" height="27">
+        <div align="center">1.75</div>
+      </td>
+      <td width="32%" height="27">
+        <div align="center"><a href="https://github.com/arey/zegame/releases/download/v1.75/ZeGame-Sources-v1.75.zip">ZeGame-Sources-v1.75.zip</a></div>
+      </td>
+      <td width="8%" height="27">
+        <div align="center">1.99 Mb</div>
+      </td>
+      <td width="9%" height="27">
+        <div align="center">8.21 Mb</div>
+      </td>
+      <td width="33%" height="27">All Visual C++ source files of ZeGame 1.75</td>
+    </tr>
+    <tr> 
+      <td width="10%" height="27"> 
+        <div align="center">14/10/2000</div>
+      </td>
+      <td width="8%" height="27"> 
+        <div align="center">1.70a</div>
+      </td>
+      <td width="32%" height="27"> 
+        <div align="center"><a href="download/ZeGame-Sources-v1.70.rar">ZeGame-Sources-v1.70a.rar</a></div>
+      </td>
+      <td width="8%" height="27"> 
+        <div align="center">605 Ko</div>
+      </td>
+      <td width="9%" height="27"> 
+        <div align="center">2.51 Mb</div>
+      </td>
+      <td width="33%" height="27">&nbsp;&nbsp;&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.70</td>
+    </tr>
+    <tr> 
+      <td width="10%" height="30"> 
+        <div align="center">03/11/2000</div>
+      </td>
+      <td width="8%" height="30"> 
+        <div align="center">1.70a</div>
+      </td>
+      <td width="32%" height="30"> 
+        <div align="center"><a href="download/ZeGame-Sources-v1.70-Add-on.rar">ZeGame-Sources-v1.70-Add-on.rar</a></div>
+      </td>
+      <td width="8%" height="30"> 
+        <div align="center">13 Ko</div>
+      </td>
+      <td width="9%" height="30"> 
+        <div align="center">47ko</div>
+      </td>
+      <td width="33%" height="30">6 other files : debug.c, wave.c, ddutil.cpp</td>
+    </tr>
+  </table>
+  <p>Note: see <a href="download/ZGSources.txt">ZGSources.txt</a> (also include 
+    in the rar) for more information about how to install the source code.</p>
+  <p><u>Tools sources<a name="ToolsSources"></a><br>
+    </u></p>
+  <table width="107%" border="1">
+    <tr> 
+      <td width="10%"> 
+        <div align="center"><b>Date</b></div>
+      </td>
+      <td width="8%"> 
+        <div align="center"><b>Version</b></div>
+      </td>
+      <td width="32%"> 
+        <div align="center"><b>File</b></div>
+      </td>
+      <td width="10%"> 
+        <div align="center"><b>File Size</b></div>
+      </td>
+      <td width="9%"> 
+        <div align="center"><b>Uncomp.</b></div>
+      </td>
+      <td width="31%"> 
+        <div align="center"><b>Description</b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width="10%" height="27"> 
+        <div align="center">20/11/2000</div>
+      </td>
+      <td width="8%" height="27"> 
+        <div align="center">1.0b</div>
+      </td>
+      <td width="32%" height="27"> 
+        <div align="center"><a href="download/AnimEditor%20v1.0b%20-%20Sources.rar">AnimEditor 
+          v1.0b - Sources.rar</a></div>
+      </td>
+      <td width="10%" height="27"> 
+        <div align="center">186 Ko</div>
+      </td>
+      <td width="9%" height="27"> 
+        <div align="center">771 Ko</div>
+      </td>
+      <td width="31%" height="27">&nbsp;AnimEditor Tool</td>
+    </tr>
+    <tr> 
+      <td width="10%" height="30"> 
+        <div align="center">20/11/2000</div>
+      </td>
+      <td width="8%" height="30"> 
+        <div align="center">0.98</div>
+      </td>
+      <td width="32%" height="30"> 
+        <div align="center"><a href="download/TileEditor%20v0.98%20-%20Sources.rar">TileEditor 
+          v0.98 - Sources.rar</a></div>
+      </td>
+      <td width="10%" height="30"> 
+        <div align="center">50 Ko</div>
+      </td>
+      <td width="9%" height="30"> 
+        <div align="center">180 ko</div>
+      </td>
+      <td width="31%" height="30"> &nbsp;TileEditor Tool</td>
+    </tr>
+    <tr> 
+      <td width="10%" height="30"> 
+        <div align="center">20/11/2000</div>
+      </td>
+      <td width="8%" height="30"> 
+        <div align="center">2.45</div>
+      </td>
+      <td width="32%" height="30"> 
+        <div align="center"><a href="download/MapEditor%20v2.45b%20-%20Sources.rar">MapEditor 
+          v2.45b - Sources.rar</a></div>
+      </td>
+      <td width="10%" height="30"> 
+        <div align="center">293 Ko</div>
+      </td>
+      <td width="9%" height="30"> 
+        <div align="center">1.2 Mb</div>
+      </td>
+      <td width="31%" height="30">MapEditor Tool</td>
+    </tr>
+    <tr> 
+      <td width="10%" height="30"> 
+        <div align="center">20/11/2000</div>
+      </td>
+      <td width="8%" height="30"> 
+        <div align="center">1.0</div>
+      </td>
+      <td width="32%" height="30"> 
+        <div align="center"><a href="download/BuildPakFile%20v1.0%20-%20Sources.rar">BuildPakFile 
+          v1.0 - Sources.rar</a></div>
+      </td>
+      <td width="10%" height="30"> 
+        <div align="center">32 Ko</div>
+      </td>
+      <td width="9%" height="30"> 
+        <div align="center">106 Ko</div>
+      </td>
+      <td width="31%" height="30">&nbsp;BuildPakFile Tool</td>
+    </tr>
+  </table>
+  <p>&nbsp; </p>
+  </blockquote>
+<h3>3. Development Kit<a name="ToolsKit"></a></h3>
+<blockquote> 
+  <p>It is a special package of ZeGame with all the tools that are used to design 
+    it and including their complete documentation (the same help in html format 
+    that you can find on the web page at the url : <a href="http://www.zegame.net/gamedoc/gamedoc.htm">http://www.zegame.net/gamedoc/gamedoc.htm</a></p>
+  You can find the following tools :<br>
+  <ul>
+    <li>Game Level Map Editor</li>
+    <li>Character and object animation editor</li>
+    <li>GFX import tool</li>
+    <li>ZGP file builder </li>
+  </ul>
+  <table width="87%" border="1">
+    <tr> 
+      <td width="11%"> 
+        <div align="center"><b>Date</b></div>
+      </td>
+      <td width="9%"> 
+        <div align="center"><b>Version</b></div>
+      </td>
+      <td width="34%"> 
+        <div align="center"><b>File</b></div>
+      </td>
+      <td width="11%"> 
+        <div align="center"><b>File Size</b></div>
+      </td>
+      <td width="19%"> 
+        <div align="center"><b>Unconpressed</b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width="11%"> 
+        <div align="center">14/10/2000</div>
+      </td>
+      <td width="9%"> 
+        <div align="center">1.00a</div>
+      </td>
+      <td width="34%"> 
+        <div align="center"><a href="download/ZeGame-Devkit-v1.00.rar">ZeGame-DevKit-v1.00.rar</a></div>
+      </td>
+      <td width="11%"> 
+        <div align="center">1.05 Mb</div>
+      </td>
+      <td width="19%"> 
+        <div align="center">2.56 Mb</div>
+      </td>
+    </tr>
+  </table>
+  <p>Note: see <a href="download/ZGDevkit.txt">ZGDevkit.txt</a> (also include 
+    in the rar) for more information about how to install the tools.</p>
+  <p>&nbsp;</p>
+</blockquote>
+<h3>6. Game Resources<a name="GameResources"></a></h3>
+<blockquote>
+  <p>In the demo version, the resources file are stored in big pak file that could 
+    contain any sort of files. I've done a small util to pak the resources that 
+    is include in the development kit (ZGP file builder).</p>
+  <p>The editors doesn't know the .zgp format. So if you want to use them you 
+    have to download those files meanwhile I code a unzgp util.</p>
+  <table width="87%" border="1">
+    <tr> 
+      <td width="11%"> 
+        <div align="center"><b>Date</b></div>
+      </td>
+      <td width="9%"> 
+        <div align="center"><b>Version</b></div>
+      </td>
+      <td width="34%"> 
+        <div align="center"><b>File</b></div>
+      </td>
+      <td width="11%"> 
+        <div align="center"><b>File Size</b></div>
+      </td>
+      <td width="19%"> 
+        <div align="center"><b>Unconpressed</b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width="11%"> 
+        <div align="center">14/10/2000</div>
+      </td>
+      <td width="9%"> 
+        <div align="center">1.00a</div>
+      </td>
+      <td width="34%"> 
+        <div align="center"><a href="download/ZeGame-Res-v1.00.rar">ZeGame-Res-v1.00.rar</a></div>
+      </td>
+      <td width="11%"> 
+        <div align="center">9.33 Mb</div>
+      </td>
+      <td width="19%"> 
+        <div align="center">12.8 Mb</div>
+      </td>
+    </tr>
+  </table>
+  <p>Note: see <a href="download/ZGRes.txt">ZGRes.txt</a> (also include in the 
+    rar) for more information about how to install the resources.</p>
+</blockquote>
+<h3>5. Miscellaneous files<a name="Miscellaneous"></a></h3>
+<p> If some files are missings to run the demo, the tools or to compile, you may 
+  find the answer to your problem here.</p>
+<p>1) If you don't have Visual C++ installed on your machine and when you launch 
+  ZeGame the file <font size="-1">MSVCP60.DLL</font> is missing, you can download 
+  <a href="#MSVCP60.zip">it</a> here and copy it either in the <i>system\</i> 
+  windows sub-directory or directly in the game directory.<br>
+  <br>
+</p>
+<table width="61%" border="1" align="center">
+  <tr> 
+    <td width="18%"> 
+      <div align="center"><b>Date</b></div>
+    </td>
+    <td width="41%"> 
+      <div align="center"><b>File</b></div>
+    </td>
+    <td width="15%"> 
+      <div align="center"><b>File Size</b></div>
+    </td>
+    <td width="26%"> 
+      <div align="center"><b>Unconpressed</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="18%"> 
+      <div align="center">12/30/1999</div>
+    </td>
+    <td width="41%"> 
+      <div align="center"><a href="download/MSVCP60.zip">MSVCP60.zip</a><a name="MSVCP60.zip"></a></div>
+    </td>
+    <td width="15%"> 
+      <div align="center">115 ko</div>
+    </td>
+    <td width="26%"> 
+      <div align="center">393 ko</div>
+    </td>
+  </tr>
+</table>
+<p><br>
+</p>
+<h3>6. Music<a name="Music"></a></h3>
+<p>Here are the 2 exclusives musics (in mp3 format) that Guy-Roger composed specially 
+  for ZeGame :</p>
+<table width="87%" border="1">
+  <tr> 
+    <td width="22%"> 
+      <div align="center"><b>Name</b></div>
+    </td>
+    <td width="13%"> 
+      <div align="center"><b>Length</b></div>
+    </td>
+    <td width="30%"> 
+      <div align="center"><b>Author</b></div>
+    </td>
+    <td width="12%"> 
+      <div align="center"><b>Size</b></div>
+    </td>
+    <td width="23%"> 
+      <div align="center"><b>File</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="22%"> 
+      <div align="center"><b>Plaine</b></div>
+    </td>
+    <td width="13%"> 
+      <div align="center">3'03</div>
+    </td>
+    <td width="30%"> 
+      <div align="center">Guy-Roger Duvert</div>
+    </td>
+    <td width="12%"> 
+      <div align="center">2.8Mb</div>
+    </td>
+    <td width="23%"> 
+      <div align="center"><a href="download/music/plaine.mp3">Plaine.mp3</a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td width="22%"> 
+      <div align="center"><b>Machines</b></div>
+    </td>
+    <td width="13%"> 
+      <div align="center">1'50</div>
+    </td>
+    <td width="30%"> 
+      <div align="center">Guy-Roger Duvert</div>
+    </td>
+    <td width="12%"> 
+      <div align="center">1.7Mb</div>
+    </td>
+    <td width="23%"> 
+      <div align="center"><a href="download/music/machines.mp3">Machines.mp3</a></div>
+    </td>
+  </tr>
+</table>
+<p><br>
+</p>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<blockquote>
+  <h3>&nbsp;</h3>
+</blockquote>
+</body>
+</html>

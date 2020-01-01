@@ -1,0 +1,24 @@
+[HEADER]
+ScriptName	= VaseKiSeBrise2
+ScriptType	= PERSONNALISE
+ScriptPatron	= <none>
+
+[SCRIPT_LINE_0]
+Trigger		= PLAYER_UTILISER
+Conditions	= { DontKnow(FRAPPE_PAR_LE_HERO)}
+Actions		= { NewState(BRISE2)! & WaitEnd(0) & 
+		    CreateNPC(NAINRENEGAT1, 0.7, 0.5, offset, MISTER_LE_RENEGAT) & NewMemory(FRAPPE_PAR_LE_HERO) }
+
+[SCRIPT_LINE_1]
+Trigger		= PLAYER_FRAPPER
+Conditions	= { DontKnow(FRAPPE_PAR_LE_HERO)}
+Actions		= { NewState(BRISE2)! & WaitEnd(0) & 
+		    CreateNPC(NAINRENEGAT1, 0.7, 0.5, offset, MISTER_LE_RENEGAT) & NewMemory(FRAPPE_PAR_LE_HERO) }
+
+[SCRIPT_LINE_2]
+Trigger		= PLAYER_FRAPPER
+Conditions	= { Know(FRAPPE_PAR_LE_HERO)  }
+Actions		= {  NewState(MISTER_LE_RENEGAT, MEURT1) & Sleep(3000) &
+		     DeleteNPC(MISTER_LE_RENEGAT) & Sleep(200) &
+		     NewState(REBUILD1) & DelMemory(FRAPPE_PAR_LE_HERO) }
+

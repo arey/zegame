@@ -1,0 +1,201 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Antoine Rey">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (Win98; I) [Netscape]">
+   <title>Nains - Ze Game</title>
+<!--
+if (window.top.frames.length!=0 && window.top.frames[0].ShowNoButtons!=null)
+    window.top.frames[0].ShowNoButtons();
+//-->
+</head>
+<body background="bitmap/gentle_05.jpg">
+<h1><a name="Beginning"></a>Outils</h1>
+Outils d&eacute;velopp&eacute;s sp&eacute;cialement pour les besoins du jeu. On 
+y trouve des programmes permettant de g&eacute;n&eacute;rer ou mettre &agrave; 
+jour des fichiers, d'&eacute;diter des niveaux, les images du d&eacute;cors, les 
+animations des personnages ...&nbsp; 
+<ul type=CIRCLE>
+  <li> <a href="#MapEditor">MapEditor</a></li>
+  <li> <a href="#AnimEditor">AnimEditor</a></li>
+  <li> <a href="#PakBuilder">PakBuilder</a></li>
+  <li> <a href="#CreateDecors">CreateDecors</a></li>
+  <li> <a href="#Autres">Others</a></li>
+</ul>
+<!-- JavaScript faisant appel à des routines DirectAnimation à travers un 
+     controle ActiveX 
+--><object id="DAControl"
+  style="position:relative; left:50; top:0;width:600;height:240" 
+  classid="CLSID:B6FFC24C-7E13-11D0-9B47-00C04FC2F51D">
+</object>
+<script language="JScript">
+<!--
+m = DAControl.MeterLibrary;
+
+dim =0.03;  // in meters
+
+// a perspective camera
+camera = m.PerspectiveCamera(2*dim, 1.1*dim);
+// a point light
+light = m.PointLight.Transform(m.Translate3(dim/2, dim/4, 1.5*dim));
+// a rotating cube
+newAxe = DAControl.DAVector3;
+cubeGeo = m.ImportGeometry("mesh3d/ZeGame3.x").DiffuseColor(m.Blue).
+              Transform(m.Compose3Array(new Array(
+                m.Scale3Uniform(dim/200),
+		m.Rotate3Degrees(m.XVector3, 90),
+                m.Rotate3RateDegrees(m.XVector3, 50).Duration(1000),
+		m.Translate3(1,50,1)
+		//m.Rotate3RateDegrees(m.YVector3, 60),
+                //m.Rotate3Degrees(m.YVector3, 60),
+		//m.Rotate3Degrees(m.ZVector3, 20).Duration(10)
+)));
+
+// render the cube with the light and camera
+finalImg = m.UnionGeometry(cubeGeo, light).Render(camera);
+
+DAControl.Image = finalImg;     
+     
+// start the animation       
+DAControl.Start();
+
+//-->
+</script>
+<table border=0 cellspacing=2 cellpadding=4 cols=1 width="800" >
+  <tr> 
+    <td bgcolor="#990000"><a name="MapEditor"></a><b><font color="#CCCCCC"><font size=+2>MapEditor</font></font></b></td>
+  </tr>
+  <tr> 
+    <td> <br>
+      <tt>Editeur de niveau d&eacute;velopp&eacute; sous C++ Builder destin&eacute; 
+      &agrave; designer les diff&eacute;rents niveaux constituant ZeGame.&nbsp;</tt> 
+      <br>
+      <tt>Son utilisation est d’uns simplicit&eacute; &agrave; toute &eacute;preuve 
+      : on s&eacute;lectionne un sprite parmi l’&eacute;ventail de d&eacute;cors 
+      ou de sols disponibles dans la biblioth&egrave;que d’&eacute;l&eacute;ments 
+      graphiques que l’on place ensuite sur un bloc de losanges. Les tiles de 
+      sols et les d&eacute;cors sont plac&eacute;s sur des layers diff&eacute;rents&nbsp; 
+      afin de pouvoir les superposer les uns au dessus des autres. Apr&egrave;s 
+      avoir mis c&ocirc;te &agrave; c&ocirc;te les &eacute;l&eacute;ments souhait&eacute;s, 
+      on obtient un niveau qui pourra &ecirc;tre directement utilis&eacute; dans 
+      le jeu ;&nbsp;</tt> <br>
+      <tt>--> 2 fichiers sont g&eacute;n&eacute;r&eacute;s dans le r&eacute;pertoire 
+      Levels\ : MapName.LiL et MapName.niv</tt> <br>
+      <tt>Il est pr&eacute;vu d’y rajouter des fonctions pour placer des personnages 
+      sur la carte, leur assigner un script de comportement, des chemins pr&eacute;d&eacute;finis 
+      &agrave; suivre, leurs dialogues ...</tt> 
+      <center>
+        <p><img src="bitmap/utils-mapeditor1.jpg" height=368 width=510>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+&nbsp; 
+<table border=0 cellspacing=2 cellpadding=4 cols=1 width="800" >
+  <tr> 
+    <td bgcolor="#990000"><a name="AnimEditor"></a><b><font color="#CCCCCC"><font size=+2>AnimEditor</font></font></b></td>
+  </tr>
+  <tr> 
+    <td> <br>
+      <tt>Editeur d’animations des personnages, des objets et des d&eacute;cors 
+      du jeu, il permet de :</tt> 
+      <ul type=SQUARE>
+        <li> <tt>visionner toutes les animations relatives &agrave; un personnage 
+          ou a un objet sous l'une des 8 directions et &agrave; diff&eacute;rents 
+          niveaux de zoom,&nbsp;</tt></li>
+        <li> <tt>&eacute;diter les scripts d’animations permettant d’encha&icirc;ner 
+          les actions les unes &agrave; la suite des autres en plein jeu,</tt></li>
+        <li> <tt>s&eacute;lectionner sur chacun des sprites de chaque anim divers 
+          param&egrave;tres tel la projection du centre de gravit&eacute; du perso 
+          au sol, ses zones de collision ...</tt></li>
+        <li> <tt>placer les animations superpos&eacute;es tel que les explosions, 
+          les flammes, les giclures de sang ou encore les armes/armures que portent 
+          le personnage</tt></li>
+      </ul>
+      <center>
+        <img src="bitmap/utils-animeditor1.jpg" height=480 width=640>
+      </center>
+      <p><br>
+      <table border=0 cellpadding=8 cols=2 width="100%" >
+        <tr> 
+          <td><tt>Il permet aussi de cr&eacute;er &agrave; partir d’une suite 
+            d’images bitmap provenant d’un .flc, les banques de sprites anim&eacute;s.</tt></td>
+          <td><img src="bitmap/utils-animeditor2.jpg" height=195 width=360 align=RIGHT></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table border=0 cellspacing=2 cellpadding=4 cols=1 width="800" >
+  <tr> 
+    <td bgcolor="#990000"><a name="PakBuilder"></a><b><font color="#CCCCCC"><font size=+2>PakBuilder</font></font></b></td>
+  </tr>
+  <tr> 
+    <td> <br>
+      <tt>Petit utilitaire permettant de cr&eacute;er de gros fichiers regroupant 
+      divers types de fichiers provenant de r&eacute;pertoires diff&eacute;rents. 
+      C’est lui qui g&eacute;n&egrave;re les fichiers .zgp regroupant musiques, 
+      images ou encore animations.</tt></td>
+  </tr>
+</table>
+<br>
+&nbsp; 
+<table border=0 cellspacing=2 cellpadding=4 cols=1 width="800" >
+  <tr> 
+    <td bgcolor="#990000"><a name="CreateDecors"></a><b><font color="#CCCCCC"><font size=+2>CreateDecors</font></font></b></td>
+  </tr>
+  <tr> 
+    <td> 
+      <table border=0 cellspacing=2 cellpadding=6 cols=2 width="100%" >
+        <tr> 
+          <td width="45%"><tt>Editeur des d&eacute;cors du jeu. Il permet de placer 
+            au pixel pr&egrave;s un tile sur une grille de trap&egrave;zes.</tt> 
+            <br>
+            <tt>C’est dans cet &eacute;diteur que l’on positionne les murs, les 
+            barri&egrave;res, les dalles, les plates bandes de terre et d’herbes, 
+            le mobilier ...</tt> 
+            <p><tt>Ensuite, on remplit diff&eacute;rents param&egrave;tres concernant 
+              le tile :&nbsp;</tt> <br>
+              <tt>- les trap&egrave;zes situ&eacute;s sur le sol,</tt> <br>
+              <tt>- la hauteur des murs,</tt> <br>
+              <tt>- la couleur de transparence,</tt> <br>
+              <tt>- le type de surface,</tt> <br>
+              <tt>- la mani&egrave;re de g&eacute;rer les collisions,</tt> <br>
+              &nbsp; 
+            <p><tt>Lorsque certains d&eacute;cors s’av&egrave;rent trop larges, 
+              il faut les d&eacute;couper en lamelles verticales afin de ne pas 
+              avoir de probl&egrave;mes de clipping pendant le jeu lorsqu’un personnage 
+              passe, par exemple, derri&egrave;re un mur.</tt> <br>
+              &nbsp; 
+            <p>&nbsp;
+          </td>
+          <td> 
+            <center>
+              <img src="bitmap/utils-decorseditor1.jpg" height=429 width=382>
+            </center>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br>
+&nbsp; <br>
+&nbsp; 
+<table border=0 cellspacing=2 cellpadding=4 cols=1 width="800" >
+  <tr> 
+    <td bgcolor="#990000"><a name="Autres"></a><b><font color="#CCCCCC"><font size=+2>Autres</font></font></b></td>
+  </tr>
+  <tr> 
+    <td> <br>
+      <tt>Il a aussi fallu d&eacute;velopper tout un tas de petits utilitaires 
+      batchs charg&eacute;s de convertir et de faire &eacute;voluer les multiples 
+      versions de format des donn&eacute;es concernant les niveaux, anims, d&eacute;cors 
+      ...</tt></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

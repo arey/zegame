@@ -1,0 +1,1407 @@
+
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Game Files Specification</title>
+<style><!--
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+h1
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:FR;}
+h2
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	background:#CCCCCC;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+@page Section1
+	{size:8.5in 11.0in;
+	mso-header-
+	mso-footer-
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@list l0
+	{mso-list-id:22243926;
+	mso-list-type:hybrid;
+	mso-list-template-ids:66324154 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:748119944;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1467390730 67698703 268358868 1944119234 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l1:level3
+	{mso-level-number-format:alpha-upper;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:117.0pt;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l2
+	{mso-list-id:964433006;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2037098246 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:2048604638;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1594463476 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{ul
+	{.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 10pt}
+.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 12pt; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal}
+.Parameters {  }
+.parameters {  font-family: "Times New Roman", Times, serif}
+div.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+li.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.yo {  }
+.dwsadwf {  }
+-->
+</style>
+</head>
+<body lang=EN-US style='tab-interval:.5in' bgcolor="#ffffff">
+<div class=Section1> 
+  <h2><span style='mso-ansi-language:EN-US'><a name="Beginning"></a>Game Files 
+    Specification</span></h2>
+</div>
+<blockquote> 
+  <div class=MsoBodyText> In this section I present all the different type of 
+    files you can encounter if you go in ZeGame sub-directories. </div>
+</blockquote>
+<ol>
+  <ol>
+    <li> 
+      <div class=Section1> 
+        <div align="left"> 
+          <pre><a href="#TextFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b>Text Files</b></font></span></a><br>     <font size="-2"> &gt;&gt;  </font><a href="#IDFile">ID File</a> (.id)<br>      <font size="-2">&gt;&gt;  </font><a href="#AnimationScriptFile">Animation Script File</a> (.ina)<a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"></font></span></a>
+      <font size="-2">&gt;&gt;  </font><a href="#INIFile">INI File</a> (.ini)<a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"></font></span></a></pre>
+        </div>
+      </div>
+    </li>
+    <li> 
+      <div class=Section1> 
+        <div align="left"> 
+          <pre><a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b>Binary Files</b></font></span></a><br>     <font size="-2"> &gt;&gt;  </font><a href="#SpriteFrameSettings">Sprite Frame settings </a><a href="#SpriteFrameSettings"> File</a> (.spi)<a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b></b></font></span></a><br>     <font size="-2"> &gt;&gt;  </font><a href="#DecorsBitmapSettings">Decors bitmap settings File</a><a href="SpriteFrameSettings"></a> (.dec)<a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b></b></font></span></a><br>     <font size="-2"> &gt;&gt;  </font><a href="#LevelTileLibrary">Level Tile Library File</a>  (.LiL)<a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b></b></font></span></a><br>     <font size="-2"> &gt;&gt;  </font><a href="#UniversalTileLibrary">Universal Tile Library File</a>  (.LiD)<a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b></b></font></span></a><br>     <font size="-2"> &gt;&gt;  </font><a href="#LevelFile">Level File</a>  (.niv)         </pre>
+        </div>
+      </div>
+      <div class=Section1>
+        <div align="left"></div>
+      </div>
+    </li>
+    <li> 
+      <pre><a href="#ResourcesFiles"><b>Resources Files</b></a> 
+     <font size="-2"> &gt;&gt;  </font><a href="#GraphicFiles">Graphic files</a><a href="SpriteFrameSettings"></a><br>     <font size="-2"> &gt;&gt;  </font><a href="#SoundFiles">Sound files</a><a href="#BinaryFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b></b></font></span></a></pre>
+    </li>
+    <li> 
+      <div class=Section1> 
+        <div class=Section1> 
+          <div align="left"> 
+            <div class=Section1> 
+              <div align="left"> 
+                <div class=Section1> 
+                  <div align="left"> 
+                    <pre><a href="#ZeGameScriptFile"><b>ZeGame Script File</b></a> (.zfs)</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ol>
+</ol>
+<div class=Section1> 
+  <div class=Section1> 
+    <div align="left"> 
+      <div class=Section1> 
+        <div align="left"> 
+          <div class=Section1> 
+            <div align="left"> 
+              <div class=Section1> 
+                <div class=Section1> 
+                  <div align="left"> 
+                    <div class=Section1> 
+                      <div align="left"> 
+                        <div class=Section1> 
+                          <div align="left"><br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div class=Section1> 
+      <div align="left"> 
+        <div class=Section1> 
+          <div align="left"> 
+            <div class=Section1> 
+              <div align="left"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </blockquote>
+</blockquote>
+<ol>
+  <ol>
+    <blockquote> 
+      <div class=Section1> 
+        <div align="left"></div>
+      </div>
+    </blockquote>
+  </ol>
+  <ol type="1">
+    <blockquote> 
+      <div class=Section1> 
+        <div align="left"></div>
+      </div>
+    </blockquote>
+  </ol>
+  <ol type="1">
+    <blockquote> 
+      <div class=Section1> 
+        <div align="left"></div>
+      </div>
+    </blockquote>
+  </ol>
+</ol>
+<div class=Section1> 
+  <h3><span style='mso-ansi-language:EN-US'>I] <a name="TextFiles"></a>Text Files</span></h3>
+</div>
+<blockquote class="MsoBodyText"> 
+  <div class=MsoBodyText> 
+    <p>Those kind of files can be edit with a notepad like tool. Every people 
+      who wants to become game or level designer, player, developer, ... can handle 
+      those text files with handcare to change game settings, improve game design, 
+      add new features, ...</p>
+  </div>
+  <div class=Section1> 
+    <h4 class=MsoNormal style='mso-list:l2 level1 lfo1;
+'><b><span style='mso-ansi-language:
+EN-US'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="IDFile"></a> 
+      </span></span></b><b><span style='mso-ansi-language:EN-US'>ID File</span></b></h4>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US' class="Section1">All the files with <b><i>.id</i></b> extension are simple 
+      text files that match a number with a name. In ZeGame, they are used by 
+      a lot of modules that prefer handle number to string, question of execution 
+      speed. </span></div>
+    <div class=MsoBodyText><br>
+      <span style='mso-ansi-language:
+EN-US'>You can find id file to identify a lot of token like :</span></div>
+    <ul>
+      <li> 
+        <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>important 
+          characters like our hero, the pnjs, main monsters, level boss …</span></div>
+      </li>
+      <li> 
+        <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>background 
+          and decoration object<span style="mso-spacerun: yes">  </span>which 
+          can interact with their environment,</span></div>
+      </li>
+      <li> 
+        <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>pictures, 
+          sound or animations resources,</span></div>
+      </li>
+      <li> 
+        <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>grounded 
+          zone of the levels,</span></div>
+      </li>
+      <li> 
+        <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>scripts,</span></div>
+      </li>
+      <li> 
+        <div class=Section1>...</div>
+      </li>
+    </ul>
+    <p class="MsoBodyText"><span style='mso-ansi-language:EN-US'>Here is an example 
+      of the id file <a href="zegame/World/GameScripts.id"><i>World\GameScripts.id</i></a> 
+      :<br>
+      </span></p>
+    <div class=MsoBodyText2><b><span
+lang=FR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'>LocoKiFume<span
+style='mso-tab-count:2'>        </span><span style='mso-tab-count:1'>      </span>1<br>
+      </span></b><b><span
+lang=FR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'>CochonKiMange<span
+style='mso-tab-count:1'>     </span><span style='mso-tab-count:1'>      </span>2<br>
+      </span></b><b><span
+lang=FR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'>VaseKiSeBrise<span
+style='mso-tab-count:1'>     </span><span style='mso-tab-count:1'>      </span>3<br>
+      </span></b><b><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>RobotDesNains<span style='mso-tab-count:1'>     </span><span
+style='mso-tab-count:1'>      </span>4</span></b><b><span style='mso-ansi-language:
+EN-US'></span></b></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>Like you could 
+      see, each script of the scenario has a unique identifier.</span></div>
+  </blockquote>
+  <div class=MsoBodyText> 
+    <p><br>
+      <b><span style='mso-ansi-language:
+EN-US'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="AnimationScriptFile"></a>&nbsp;&nbsp; 
+      </span></span></b><b><span style='mso-ansi-language:EN-US'>Animation Script 
+      File</span></b></p>
+  </div>
+  <div class=MsoBodyText></div>
+  <blockquote> 
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>The <b><i>.ina</i></b> files are used both by character and different kind 
+      of game object.<span style="mso-spacerun: yes">  </span>It allows you to 
+      define the animation of each type of character and object type, for instance 
+      for an Ogre, a renegade Dwarf, the Hero, a pig, a little jar or train smoke.</span></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'><br>
+      Each ina file is divided in 4 parts as :</span></div>
+    <ol>
+      <li class="MsoBodyText"> 
+        <div class=Section1><span style='mso-ansi-language:EN-US'>the enumeration 
+          of the main bitmap frames used by the animation,</span></div>
+      </li>
+      <li class="MsoBodyText"> 
+        <div class=Section1><span style='mso-ansi-language:EN-US'>configuration 
+          of additional frames that recovered previous main frames (optional),</span></div>
+      </li>
+      <li> 
+        <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>the settings 
+          of each animation of the character and</span></div>
+      </li>
+      <li> 
+        <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>the settings 
+          of other animations you could put over another animation (optional).</span></div>
+      </li>
+    </ol>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>Each one of those parts is called a <i>section</i> and is divided in section 
+      blocks from one or more lines. </span></div>
+    <div class=MsoBodyText><br>
+      <i><span style='mso-ansi-language:
+EN-US'>Syntax</span></i><span style='mso-ansi-language:EN-US'><br>
+      </span></div>
+    <div class=Section1></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>Each section name is preceded by a # character, is followed by a </span><i><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-ansi-language:EN-US'>TAB</span></i><span
+style='mso-ansi-language:EN-US'> character and then by the number of section blocks. 
+      </span></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>In the below instance, the animation is composed from 8 main frames : </span></div>
+    <div class=MsoBodyText2><span style='mso-ansi-language:
+EN-US'><span style="mso-spacerun: yes"> </span></span><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";background:#D9D9D9;
+mso-ansi-language:EN-US'>#frame<span style='mso-tab-count:1'>     </span>8</span><span
+style='mso-ansi-language:EN-US'> </span><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'></span></div>
+    <div class=MsoBodyText><br>
+      <span style='mso-ansi-language:
+EN-US'>Between each keywords, you have to use </span><i><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;mso-ansi-language:EN-US'>TAB</span></i><span
+style='mso-ansi-language:EN-US'> character. Your comments must be declared at 
+      the beginning of a line and be preceded by <i>//</i>.</span></div>
+  </blockquote>
+  <div class=MsoBodyText> 
+    <p><br>
+      <b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><span lang=FR>2.1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></i></b><b><i><span
+lang=FR>frame</span></i></b><span lang=FR> <b> section</b></span></p>
+  </div>
+  <div class=MsoBodyText> 
+    <blockquote class="MsoBodyText">You have to enumerate all the bitmap used 
+      by this animation. So you have to input the name of the bitmap files that 
+      are in the same directory than the .<i>ina</i> file, but without their extension. 
+      Before the short name of the bitmap, you have to put the characters <i>F:</i></blockquote>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText> 
+      <p>Notice that all frame is made of a fixed number of sprite and you have 
+        to do attention of the order of your enumeration. Actually, in the following 
+        sections, when you specify the index of a sprite, it doesn’t start from 
+        the beginning of its frame but from the beginning of the first frame !<br>
+      </p>
+      <p><u>Example</u>:</p>
+    </div>
+    <div class=Section1><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";background:#CCCCCC'>F:HeroJump1</span><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'></span></div>
+    <div class=MsoBodyText>In the <i>Persos\Hero\</i> folder, you have the <i>HeroJump1.bmp</i> 
+      that is used to make the animation of our Hero.</div>
+  </blockquote>
+  <div class=Section1> 
+    <h5><b><i><span style='mso-ansi-language:
+EN-US'>2.2) frameSuperposee</span></i></b><b><span style='mso-ansi-language:EN-US'> 
+      section</span></b></h5>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText><span style='mso-ansi-language:EN-US'>You have to configure 
+      all the additional frames that you could put over another animation you 
+      have done in the <i>frame</i> section. </span></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'><br>
+      So you have to enumerate all the bitmap files (<i>S:BitmapFile</i>). Then 
+      link them with a previous main frame that they will superimposed (<i>F:MainFrameBitmapFile</i>). 
+      After, you have to choose what for kind of sprite type this frame is (<i>T:TypeObjSprite</i>); 
+      this is an ID that you have previously set in the <i><a href="zegame/Persos/IDTypeObjSprite.id">Persos\IDTypeObjSprite.id</a> 
+      </i>id file. Another step is to choose where the sprites from this frame 
+      will be display : for a character, you can choose a member of his body (<i>M:DisplayArea</i>). 
+      Finally, you must specify if this frame will be load in Ram at the beginning 
+      of the game or just when we will need it.<br>
+      <br>
+      </span></div>
+    <div class=MsoBodyText><u>Example</u>:<br>
+      <br>
+    </div>
+    <div class=MsoBodyText2><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'>S:HeroJmpEpe1<span
+style='mso-tab-count:1'>      </span>F:HeroJump1<span style='mso-tab-count:
+1'>      </span>T:EPEE1<span style='mso-tab-count:1'>      </span>M:DANS_MAIN_DROITE<span
+style='mso-tab-count:1'>      </span>E:MEM</span></div>
+    <div class=MsoBodyText> 
+      <p><span style='mso-ansi-language:
+EN-US'>The <i>HeroJnmpEpe1.bmp</i> file contains the sprites of a sword (</span><i><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;mso-ansi-language:EN-US'>EPEE1</span></i><span
+style='mso-ansi-language:EN-US'>) that can be map on the </span><i><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>DANS_MAIN_DROITE</span></i><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'> </span><span style='mso-ansi-language:EN-US'>Hero when he jumps (so when 
+        we used sprites of<span style="mso-spacerun: yes">  </span></span><i><span
+style='font-family:"Courier New";mso-ansi-language:EN-US'>HeroJump1.bmp</span></i><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>). </span><span style='mso-ansi-language:EN-US'>This 
+        file will be load in memory when the game will start.<br>
+        </span></p>
+    </div>
+  </blockquote>
+  <div class=Section1> 
+    <h5><b><i style='mso-bidi-font-style:
+normal'><span style='mso-ansi-language:EN-US'>2.3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; 
+      </span></span></i></b><b><i><span style='mso-ansi-language:EN-US'>anim</span></i></b><b><span
+style='mso-ansi-language:EN-US'> section</span></b></h5>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText>In this section, you must define all the animations 
+      of a character or another object. A character can have a lot of animations 
+      used when he walks, runs, jumps, fights, swims, …<br>
+      <br>
+    </div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>An animation has a name you define by <i>N:AnimationName</i>. <i>AnimationName</i> 
+      is an ID of an animation that you must previously define in the id file<a href="zegame/Persos/IDAnimations.id"> 
+      <i>Persos\IDAnimations.id</i></a>.</span></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>All the animations are made of a fixed number of sprites, that you can 
+      precise by <i>N:SpriteNumber</i>. </span></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>There are several ways to set this section. You must indicate the type 
+      by <i>T:TypeNumber</i>.</span></div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'><br>
+      So the general syntax for an anim section bloc is :</span></div>
+    <div class=Section1><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";background:#CCCCCC;
+mso-ansi-language:EN-US'>N:Name<span style='mso-tab-count:1'>      </span>T:Type<span
+style='mso-tab-count:1'>      </span><span style='mso-tab-count:1'>      </span>C:SpriteNumber<span
+style='mso-tab-count:1'>      </span>I:Indexes</span><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'></span></div>
+    <div class=MsoBodyText> 
+      <p><span style='mso-ansi-language:
+EN-US'><br>
+        Let’s see the different type of animation settings that you can encoutered 
+        :</span></p>
+      <p class="MsoBodyText"><span
+style='font-family:Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span><b><span style='mso-ansi-language:EN-US'>type 1</span></b><span
+style='mso-ansi-language:EN-US'> is the simplest form to set an animation because 
+        you just need to give the index of the first sprite of the animation by 
+        <i>I:SpriteIndex</i>.</span></p>
+    </div>
+    <div class=MsoBodyText> 
+      <p><span
+style='font-family:Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span><span style='mso-ansi-language:EN-US'>with <b>type 2</b> 
+        you can precise for each of the 8 points of view, the index of the sprites 
+        that will use. Here is the syntax : <i>I:IndexE1, IndexE2,… IndexEn; IndexSE1, 
+        IndexSE2, …IndexSEn; … ; IndexNE1, IndexNE2,…,IndexNEn.</i></span></p>
+      <p><span
+style='font-family:Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span><b><span style='mso-ansi-language:EN-US'>type 3</span></b><span
+style='mso-ansi-language:EN-US'> is like type 1, but for just 1 cardinal point. 
+        </span></p>
+    </div>
+    <div class=MsoBodyText> 
+      <p><span
+style='font-family:Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span><span style='mso-ansi-language:EN-US'>and<b> type 4</b> 
+        is like type 2, but for just 1 cardinal point.<br>
+        </span></p>
+      <p><span
+style='font-family:Symbol;mso-ansi-language:EN-US'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span><b><span style='mso-ansi-language:EN-US'>type 0 </span></b><span
+style='mso-ansi-language:EN-US'>is a particular type that associate an animation 
+        to one sprite that is a tile. So you must give its ID like this : <i>I:TileID</i> 
+        you have already set up in <i><a href="zegame/World/IDTiles.id">World\IDTiles.id</a></i><a href="zegame/World/IDTiles.id"></a></span></p>
+    </div>
+    <div class=MsoBodyText> 
+      <p>Note that types 1 and 2 are for animations that require 8 cardinal points 
+        and type 3 and 4 are used in the animations that have just 1 position. 
+        And as I<span style="mso-spacerun: yes">  </span>told you in the <i>frame</i> 
+        section, this index is taken from the first Frame you enumerate.</p>
+      <p><u><span lang=FR><span class="MsoBodyText">Examples</span></span></u><span class="MsoBodyText"><span
+lang=FR>:</span></span></p>
+    </div>
+    <div class=MsoBodyText> 
+      <p><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";background:#CCCCCC;
+mso-ansi-language:EN-US'>N:MARCHE1<span style='mso-tab-count:1'>      </span>T:1<span
+style='mso-tab-count:1'>      </span>C:16<span style='mso-tab-count:1'>      </span>I:0<br>
+        </span><span style='mso-ansi-language:EN-US'>It describes a walk animation 
+        that is build with the 16 first sprites of all the frames.</span></p>
+    </div>
+    <div class=MsoBodyText2> 
+      <p><span lang=FR
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'><span class="MsoBodyText2">N:BRISE2<span
+style='mso-tab-count:1'>      </span>T:3<span style='mso-tab-count:1'>      </span>C:27<span
+style='mso-tab-count:1'>      </span>I:16 </span></span></p>
+    </div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>Same thing with a vase that breaks and that we can look just for one view.</span><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:
+"Courier New";background:#CCCCCC;mso-ansi-language:EN-US'><br>
+      <br>
+      </span></div>
+    <div class=Section1> 
+      <p class="MsoBodyText2"> <span style='mso-ansi-language:EN-US'>N:DEMITOUR1<span
+style='mso-tab-count:1'>      </span>T:2<span style='mso-tab-count:1'>      </span>C:4<span
+style='mso-tab-count:1'>      </span>I:64,80,96,112;80,96,112,0;96,112,0,16;112,0,16,32;0,16,32,48;16,32,48,64;32,48,64,80;48,64,80,96</span></p>
+    </div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>It’s the animation of a character that wants to do a half-turn in 4 sprites. 
+      To do that we take the sprites of the character that walks.</span></div>
+    <div class=Section1> 
+      <p> <br>
+      </p>
+      <p class="MsoBodyText2"><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>N:REBUILD1<span style='mso-tab-count:1'>      </span>T:4<span
+style='mso-tab-count:1'>      </span>C:16<span style='mso-tab-count:1'>      </span>I:31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16<span
+style='background:#CCCCCC'></span></span></p>
+    </div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>Same thing with a vase that rebuilds and that we can look just for one 
+      view.</span><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:
+"Courier New";background:#CCCCCC;mso-ansi-language:EN-US'></span></div>
+    <div class=Section1> 
+      <p>&nbsp;</p>
+      <p class="MsoBodyText2"><span lang=FR
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'>N:CASSER1<span
+style='mso-tab-count:1'>      </span>T:0<span style='mso-tab-count:1'>      </span>C:1<span
+style='mso-tab-count:1'>      </span>T:BOCALBRK</span></p>
+    </div>
+    <div class=MsoBodyText><span style='mso-ansi-language:
+EN-US'>A vase broken has just one sprite : it’s the sprite based on the BocalBrk 
+      tile.</span></div>
+  </blockquote>
+  <div class=Section1> 
+    <p><b><span style='mso-ansi-language:
+EN-US'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="INIFile"></a>&nbsp;&nbsp; 
+      </span></span></b><b><span style='mso-ansi-language:EN-US'>INI File</span></b></p>
+  </div>
+  <blockquote> 
+    <div class=MsoBodyText> 
+      <p>Classic microsoft windows .<i>ini</i> files. They are used to store general 
+        settings of the game the player can change. And are also used in some 
+        cases to store more valuable settings. In this case, they nay be encrypted 
+        or/and included in a .<i>pak</i> file.<br>
+        An example of real <i>.ini</i> file is <i><a href="zegame/ZeGame.ini">ZeGame.ini</a></i> 
+        where all the main settings of Nains are stored.<br>
+        <br>
+      </p>
+    </div>
+  </blockquote>
+</blockquote>
+<div class=Section1></div>
+<div class=Section1> 
+  <h3><span style='mso-ansi-language:EN-US'>II]<a name="BinaryFiles"></a> Binary 
+    Files</span></h3>
+</div>
+<blockquote class="MsoBodyText"> 
+  <div class=MsoBodyText> 
+    <p>Those file formats can not interested you. They are here more for potential 
+      coders that would like change some datas of the game with hexadecimal editor 
+      or for possible developers that wish update the game. So they are more fixed 
+      game datas that are handle by the multiple editors. <br>
+      <br>
+    </p>
+    <p><b><span style='mso-ansi-language:
+EN-US'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="SpriteFrameSettings"></a>&nbsp;&nbsp; 
+      </span></span></b><b><span style='mso-ansi-language:EN-US'>Sprite frame 
+      settings File</span></b></p>
+  </div>
+  <div class=Section1></div>
+  <blockquote> 
+    <div class=MsoBodyText> 
+      <p>Generated when you create a frame with <i>AnimEditor</i>. This frame 
+        contains one or more sprites. Each one has a cartesian position on this 
+        frame. This (X,Y) position has been taken since left top corner of the 
+        frame.<br>
+        The extension of those files is <i>.spi</i><br>
+      </p>
+    </div>
+    <div class=MsoBodyText><u>Header</u> :<br>
+    </div>
+  </blockquote>
+  <ul>
+    <ul>
+      <li class="MsoBodyText"> 
+        <div class=MsoBodyText>Name of this .<i>spi</i> file du fichier .<i>spi</i> 
+          <i>(12 characters string)</i>,</div>
+      </li>
+      <li class="MsoBodyText">Number of sprites in this frame<i> (int)</i>,</li>
+      <li class="MsoBodyText">Index of the transparent background color in the 
+        256 colors frame <i>(int)</i>,</li>
+      <li class="MsoBodyText">Index of the shadow color <i>(int)</i>,</li>
+      <li class="MsoBodyText">RGB component of previous transparent background 
+        color <i>(24 bits RGB format)</i>,</li>
+      <li class="MsoBodyText">RGB component of previous shadow color <i>(24 bits 
+        RGB format)</i>.<br>
+      </li>
+    </ul>
+  </ul>
+  <blockquote class="MsoBodyText"> 
+    <p class="MsoBodyText"><u>Body</u> :<br>
+    </p>
+    <blockquote class="MsoBodyText"> 
+      <p class="MsoBodyText">Then for each sprites of this frame :</p>
+      <menu class="MsoBodyText"> 
+        <li class="MsoBodyText">Numero of this sprite (int),</li>
+        <li class="MsoBodyText"><span class="MsoBodyText"><span class="MsoBodyText">Its 
+          dimention in pixel (Width, Height) <i>(2 int)</i>,</span></span></li>
+        <li class="MsoBodyText"><span class="MsoBodyText"><span class="MsoBodyText">Its 
+          position in pixel (X,Y) in the frame <i>(2 int)</i>,</span></span></li>
+        <li class="MsoBodyText"><span class="MsoBodyText"><span class="MsoBodyText">Its 
+          center of gravity (X,Y) <i>(2 int)</i></span></span>.<br>
+        </li>
+      </menu>
+    </blockquote>
+    <p class="MsoBodyText"> <br>
+      <b><span style='mso-ansi-language:
+EN-US'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="DecorsBitmapSettings"></a>&nbsp;&nbsp; 
+      </span></span></b><b><span style='mso-ansi-language:EN-US'>Decors bitmap 
+      settings File</span></b> </p>
+    <p class="MsoBodyText">Generated when you create a new background scenery 
+      from a simple tile bitmap (<i>.bmp</i>) file with the <i>CreateDecors</i> 
+      util.</p>
+    <p class="MsoBodyText">When you design a level, you can place those scenery 
+      objects on the map. To do that we need to know some basic information about 
+      this bitmap : is it a ground tile or an object tile ? does it project shadow 
+      or not ? what are the parts of this bitmap that reach the ground ? ...</p>
+    <p class="MsoBodyText">The extension of those files is <i>.dec</i></p>
+    <p class="MsoBodyText"><u>Header</u> :</p>
+    <div class=MsoBodyText> </div>
+  </blockquote>
+  <ul>
+    <ul>
+      <li class="MsoBodyText"> 
+        <div class=MsoBodyText>Version of this <i>.dec</i> file <i>(1 float)</i>. 
+          Presently, we are at the version 0.98,</div>
+      </li>
+      <li class="MsoBodyText">Unique Identication number of this tile <i> (int)</i>,</li>
+      <li class="MsoBodyText"><span class="MsoBodyText"><span class="MsoBodyText">Its 
+        dimention in pixel (Width, Height) <i>(2 int)</i>,</span></span></li>
+      <li class="MsoBodyText">RGB component of transparent background color <i>(24 
+        bits RGB format)</i>,</li>
+      <li class="MsoBodyText">Index of this transparent background color <i>(int)</i>,</li>
+      <li class="MsoBodyText">Number of diamond-shaped that composed this scenery 
+        <i>(int)</i>,</li>
+      <li class="MsoBodyText">Position in pixel (X,Y) of the main diamond-shaped.</li>
+    </ul>
+  </ul>
+  <blockquote class="MsoBodyText"> 
+    <p class="MsoBodyText"><u>Body</u> :<br>
+    </p>
+    <ul type="circle">
+      <li class="MsoBodyText">Then for each diamond-shaped of this tile :</li>
+    </ul>
+    <blockquote class="MsoBodyText"> 
+      <menu class="MsoBodyText"> 
+        <li class="MsoBodyText">Relative position (dU, dV) of this trapezoid with 
+          regard to the main one<span class="MsoBodyText"><span class="MsoBodyText"> 
+          <i>(2 int)</i>,</span></span></li>
+        <li class="MsoBodyText">Height (in pixel) of the higher point of this 
+          trapezoid <i>(int)</i>,</li>
+        <li class="MsoBodyText">Floor type of this diamond-shaped : sand, rocks, 
+          root vegetables, <i>grass ... (char)</i>,</li>
+        <li class="MsoBodyText">Collision type : none, partial or total <i>(int)</i>,</li>
+        <li class="MsoBodyText">Boolean that tell if it is used to draw a part 
+          of the tile <i>(bool)</i>,</li>
+        <li class="MsoBodyText">Rectangle coordinates of this sheet of tile<span class="MsoBodyText"><span class="MsoBodyText"> 
+          <i>(4 int)</i>.</span></span></li>
+      </menu>
+    </blockquote>
+    <ul type="circle">
+      <li class="MsoBodyText">Position in pixel (X,Y) of the top left corner of 
+        this bitmap in the CreateDecors view<span class="MsoBodyText"><span class="MsoBodyText"> 
+        <i>(2 int)</i>,</span></span></li>
+      <li class="MsoBodyText">Boolean that indicate if we need to draw this tile 
+        in several times or in one time <i>(bool)</i>,</li>
+      <li class="MsoBodyText">Boolean that indicate if there are circle collisions 
+        with this object <i>(bool)</i>,</li>
+      <li class="MsoBodyText">Position in pixel (X,Y) of the circle collision 
+        center<span class="MsoBodyText"><span class="MsoBodyText"> <i>(2 int)</i>,</span></span></li>
+      <li class="MsoBodyText">Radius in pixel of this circle <i>(int)</i>,</li>
+      <li class="MsoBodyText">Special display feature : transluence, shadow ... 
+        <i>(int)</i>.<br>
+        <br>
+      </li>
+    </ul>
+    <div class=MsoBodyText> 
+      <h4> <b><span style='mso-ansi-language:
+EN-US'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="LevelTileLibrary"></a>&nbsp;&nbsp; 
+        </span></span></b><b><span style='mso-ansi-language:EN-US'>Level Tile 
+        Libray File</span></b> </h4>
+      <p>If you already red in the <a href="mapeditor.htm">MapEditor user guide</a> 
+        the section about <a href="mapeditor.htm#TileLevelLibrary">Level Tile 
+        Library</a> creation you know how to create a specific tile level library 
+        from the Universal Tile Library.</p>
+      <p>The extension of those files is <i>.LiL<br>
+        </i></p>
+    </div>
+    <div class=MsoBodyText><u>Header</u> :</div>
+    <div class=MsoBodyText> 
+      <blockquote> 
+        <div class=MsoBodyText> </div>
+      </blockquote>
+    </div>
+    <ul type="circle">
+      <li> 
+        <div class=MsoBodyText> 
+          <div class=MsoBodyText>Name of the level for wich you created this library 
+            <i> (15 chars)</i>,</div>
+        </div>
+      </li>
+      <li> 
+        <div class=MsoBodyText>Type number of tiles<i> </i>we can fin in this 
+          level <i>(int)</i>,</div>
+      </li>
+      <li> 
+        <div class=MsoBodyText><span class="MsoBodyText"><span class="MsoBodyText">Total 
+          number of tiles in this library <i>(1 int)</i>,</span></span><br>
+        </div>
+      </li>
+    </ul>
+    <div class=MsoBodyText><u>Body</u> :<br>
+    </div>
+    <ul type="circle">
+      <li> 
+        <div class=MsoBodyText>Then for each type of tiles :</div>
+      </li>
+    </ul>
+    <div class=MsoBodyText> 
+      <blockquote class="MsoBodyText"> 
+        <blockquote class="MsoBodyText"> 
+          <menu class="MsoBodyText"> 
+            <li class="MsoBodyText">Number of tiles for this type<span class="MsoBodyText"><span class="MsoBodyText"> 
+              <i>(1 int)</i>,</span></span></li>
+            <li class="MsoBodyText">Type of tile Lib (Ground or scenery) <i>(int)</i>,</li>
+            <li>Then for each tile : 
+              <menu> 
+                <li>Name of this tile <i>(15 chars)</i>. </li>
+              </menu>
+            </li>
+            <ul type="square">
+              <blockquote> 
+                <p><br>
+                </p>
+              </blockquote>
+            </ul>
+          </menu>
+        </blockquote>
+      </blockquote>
+    </div>
+    <div class=MsoBodyText><b><span style='mso-ansi-language:
+EN-US'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="UniversalTileLibrary"></a>&nbsp;&nbsp; 
+      </span></span></b><b><span style='mso-ansi-language:EN-US'>Universal Tile 
+      Libray File</span></b></div>
+    <div class=MsoBodyText> 
+      <p class="MsoBodyText"><br>
+        Before read this file description I recommand you to read (if it's not 
+        already done) in the <a href="mapeditor.htm">MapEditor user guide</a> 
+        the section about the <a href="mapeditor.htm#UniversalTileLibrary">Universal 
+        Tile Library</a> modification. So now you know what used those files.</p>
+      <p class="MsoBodyText">The extension of all those files is <i>.LiD</i></p>
+      <p class="MsoBodyText"><u>Header</u> :</p>
+      <div class=MsoBodyText> 
+        <blockquote> 
+          <div class=MsoBodyText> </div>
+        </blockquote>
+      </div>
+      <ul type="circle">
+        <li> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText>Name of this file <i> (15 chars)</i>,</div>
+          </div>
+        </li>
+        <li> 
+          <div class=MsoBodyText>Number of tiles in this library <i>(int)</i>, 
+          </div>
+        </li>
+      </ul>
+      <div class=MsoBodyText><u>Body</u> :<br>
+      </div>
+      <ul type="circle">
+        <li> 
+          <div class=MsoBodyText>Then for each tiles :</div>
+          <ul type="disc">
+            <li>Name of this tile <i> (15 chars)</i>. </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <blockquote> 
+      <div class=MsoBodyText></div>
+    </blockquote>
+    <div class=MsoBodyText> 
+      <div class=MsoBodyText></div>
+    </div>
+    <p><br>
+      <b><span style='mso-ansi-language:
+EN-US'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="LevelFile"></a>&nbsp;&nbsp; 
+      </span></span></b><b><span style='mso-ansi-language:EN-US'>Level File</span></b></p>
+    <p class="MsoBodyText">Those files are the main files (with the level tile 
+      library <i>.LiL</i> file) of a level. When you load (or save) a game level, 
+      this is the file corresponding to the level name that is loaded (or saved). 
+      They are stored in the <i>Levels\</i> sub-directory.</p>
+    <p class="MsoBodyText">The extension of all those files is <i>.niv</i></p>
+    <div class=MsoBodyText> 
+      <p class="MsoBodyText"><u>Header</u> :</p>
+      <div class=MsoBodyText> 
+        <blockquote> 
+          <div class=MsoBodyText> </div>
+        </blockquote>
+      </div>
+      <ul type="circle">
+        <li> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText>Version number of this file : actually we are 
+              at v2.5 <i> (1 float)</i>,</div>
+          </div>
+        </li>
+        <li>Name of the level map<i> (15 chars)</i>,</li>
+        <li>ID numner of this level <i>(int)</i>,</li>
+        <li> 
+          <div class=MsoBodyText>Dimension (Width <i>x</i> Height) in number of 
+            case<i> (2 int)</i>,</div>
+        </li>
+        <li>Name of the level tile library <i>(.LiL)</i> associated to this level<i> 
+          (15 chars)</i>,</li>
+        <li>Level number of floor <i>(int)</i>,</li>
+        <li>Number of game object (tile) present on this level <i>(int)</i>,<br>
+        </li>
+      </ul>
+      <div class=MsoBodyText><u>Body</u> :<br>
+      </div>
+      <ul type="circle">
+        <li> 
+          <div class=MsoBodyText>Then for each game object :</div>
+        </li>
+      </ul>
+    </div>
+    <blockquote> 
+      <div class=MsoBodyText></div>
+      <ul>
+        <li> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText>ID number of this object <i>(int)</i>,</div>
+          </div>
+        </li>
+        <li> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText>Position (U,V) on the map<i> (2 int)</i>,</div>
+          </div>
+        </li>
+        <li> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText>Floor wich it belongs <i>(int)</i>,</div>
+          </div>
+        </li>
+        <li> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText>Layer on this floor (ground, sky, ...) wich 
+              it belongs <i>(int)</i>, <br>
+              <br>
+            </div>
+          </div>
+        </li>
+        <li> 
+          <div class=MsoBodyText> 
+            <div class=MsoBodyText>GameObject based class information : </div>
+          </div>
+          <ul>
+            <li> 
+              <div class=MsoBodyText> 
+                <div class=MsoBodyText>ID number <i>(int)</i>,</div>
+              </div>
+            </li>
+            <li> 
+              <div class=MsoBodyText> 
+                <div class=MsoBodyText>Type : scenary object, character, background 
+                  object ... <i>(int)</i>,</div>
+              </div>
+            </li>
+            <li> 
+              <div class=MsoBodyText> 
+                <div class=MsoBodyText>ID number allocation type : automatic, 
+                  predefined ... <i>(int)</i>,</div>
+              </div>
+            </li>
+            <li> 
+              <div class=MsoBodyText> 
+                <div class=MsoBodyText>Current states of the GameObject : </div>
+              </div>
+              <ul>
+                <li> 
+                  <div class=MsoBodyText> 
+                    <div class=MsoBodyText>number of state items<i> (int)</i>,</div>
+                  </div>
+                </li>
+                <li> 
+                  <div class=MsoBodyText> 
+                    <div class=MsoBodyText>list of states <i>(n int)</i>,</div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li> 
+              <div class=MsoBodyText> 
+                <div class=MsoBodyText>Current memory of the GameObject : </div>
+              </div>
+              <ul>
+                <li> 
+                  <div class=MsoBodyText> 
+                    <div class=MsoBodyText>number of memory<i> </i>items<i> (int)</i>,</div>
+                  </div>
+                </li>
+                <li> 
+                  <div class=MsoBodyText> 
+                    <div class=MsoBodyText>list of memories <i>(n int)</i>,</div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li> 
+              <div class=MsoBodyText> 
+                <div class=MsoBodyText>Script ID associated to this GameObject<i> 
+                  (int)</i>,<br>
+                  <br>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="MsoBodyText"><span class="MsoBodyText">Map zones information 
+          :</span> 
+          <ul>
+            <li> Number of zones <i>(int)</i>,</li>
+            <li>For each zone : . 
+              <ul>
+                <li> Type of the zone : circle, rectangle, ... <i>(int)</i>, </li>
+                <li>ID number <i>(int)</i>,</li>
+                <li>Name of this zone <i>(64 chars),</i></li>
+                <li class="MsoBodyText">Number of <i>GameObject</i> associated 
+                  to this zone <i>(int)</i>,</li>
+                <li> 
+                  <div class=MsoBodyText> 
+                    <div class=MsoBodyText>ID Number list of those <i>GameObject</i> 
+                      <i>(n int)</i>,</div>
+                  </div>
+                </li>
+                <li> 
+                  <div class=MsoBodyText> 
+                    <div class=MsoBodyText>Information that change with the specific 
+                      zone<br>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </blockquote>
+    <div class=Section1> 
+      <div class=Section1> 
+        <div align="left"> 
+          <div class=Section1> 
+            <div align="left"> 
+              <div class=Section1> 
+                <div align="left"> 
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </blockquote>
+  <div class=Section1> 
+    <div class=Section1> 
+      <div align="left"> 
+        <div class=Section1> 
+          <div align="left"> 
+            <div class=Section1> 
+              <div align="left"> 
+                <blockquote class="MsoBodyText"> 
+                  <blockquote class="MsoBodyText"> 
+                    <div class=Section1> 
+                      <div class=Section1> 
+                        <div align="left"> 
+                          <div class=Section1> 
+                            <div align="left"> 
+                              <div class=Section1> 
+                                <div align="left"><br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <blockquote> 
+                      <blockquote> 
+                        <div class=Section1> 
+                          <div align="left"> 
+                            <div class=Section1> 
+                              <div align="left"> 
+                                <div class=Section1> 
+                                  <div align="left"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </blockquote>
+                    <ol>
+                      <ol>
+                        <blockquote> 
+                          <div class=Section1> 
+                            <div align="left"></div>
+                          </div>
+                          <div class=Section1> 
+                            <div align="left"></div>
+                          </div>
+                          <div class=Section1> 
+                            <div align="left"></div>
+                          </div>
+                        </blockquote>
+                      </ol>
+                    </ol>
+                  </blockquote>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</blockquote>
+<div class=Section1> 
+  <div class=Section1> 
+    <div align="left"> 
+      <div class=Section1> 
+        <div align="left"> 
+          <div class=Section1> 
+            <div align="left"> 
+              <div class=Section1> 
+                <h3><span style='mso-ansi-language:EN-US'>III] <a name="ResourcesFiles"></a>Resources 
+                  Files</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<blockquote>
+  <div class=Section1>
+    <div class=Section1>
+      <div align="left">
+        <div class=Section1>
+          <div align="left">
+            <div class=Section1>
+              <div align="left">
+                <div class=Section1>
+                  <div class=MsoBodyText><b><span style='mso-ansi-language:
+EN-US'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="GraphicFiles"></a>&nbsp;&nbsp; 
+                    </span></span></b><b><span style='mso-ansi-language:EN-US'>Graphic 
+                    Files</span></b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=Section1> 
+    <div class=Section1> 
+      <div align="left"> 
+        <div class=Section1> 
+          <div align="left"> 
+            <div class=Section1> 
+              <div align="left"> 
+                <div class=Section1></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</blockquote>
+<div class=Section1>
+  <div class=Section1>
+    <div align="left">
+      <div class=Section1>
+        <div align="left">
+          <div class=Section1>
+            <div align="left">
+              <div class=Section1>
+                <div class=Section1></div>
+                <blockquote> 
+                  <div class=MsoBodyText> 
+                    <p></p>
+                  </div>
+                </blockquote>
+                <div class=Section1>
+                  <div class=Section1>
+                    <div align="left">
+                      <div class=Section1>
+                        <div align="left">
+                          <div class=Section1>
+                            <div align="left">
+                              <div class=Section1>
+                                <div class=MsoBodyText>
+                                  <p> </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <blockquote> 
+                  <div class=Section1> 
+                    <div class=Section1> 
+                      <div align="left"> 
+                        <div class=Section1> 
+                          <div align="left"> 
+                            <div class=Section1> 
+                              <div align="left"> 
+                                <div class=Section1> 
+                                  <div class=MsoBodyText>
+                                    <p><b><span style='mso-ansi-language:
+EN-US'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;<a name="SoundFiles"></a>&nbsp;&nbsp; 
+                                      </span></span></b><b><span style='mso-ansi-language:EN-US'>Sound 
+                                      Files</span></b></p>
+                                    <p>&nbsp; </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class=Section1>
+  <div class=Section1>
+    <div align="left">
+      <div class=Section1>
+        <div align="left">
+          <div class=Section1></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<blockquote class="MsoBodyText">
+  <blockquote class="MsoBodyText"> 
+    <blockquote> 
+      <blockquote> 
+        <div class=Section1> 
+          <div align="left"> 
+            <div class=Section1> 
+              <div align="left"> 
+                <div class=Section1> 
+                  <div align="left"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+    </blockquote>
+    <ol>
+      <ol>
+        <blockquote> 
+          <div class=Section1> 
+            <div align="left"></div>
+          </div>
+          <div class=Section1> 
+            <div align="left"></div>
+          </div>
+          <div class=Section1> 
+            <div align="left"></div>
+          </div>
+        </blockquote>
+      </ol>
+    </ol>
+  </blockquote>
+</blockquote>
+<div class=Section1>
+  <h3><span style='mso-ansi-language:EN-US'>IV] <a name="ZeGameScriptFile"></a>ZeGame 
+    Script File</span></h3>
+</div>
+<blockquote class="MsoBodyText"> 
+  <p class="MsoBodyText">Those files are very useful to handle with behaviors 
+    of as well characters and objects as scenaritic outcome. They are just text 
+    files you can edit with an text editor, their extension are <i>.zfs</i> and 
+    have the appearence of simple <i>.ini</i> files.</p>
+  <p class="MsoBodyText">If you want to design our own level or just change the 
+    behavior of a character, you can edit the file and add (or change) what you 
+    want. Be sure to respect the zfs file syntax described below because I don't 
+    log the errors when I parse the file, and a mistake can easily crash the game, 
+    so be crareful !</p>
+  <p class="MsoBodyText">They are made up of a <i><a href="#zgsHeaderSection">header</a></i> 
+    section and a set of <i><a href="#zgsScriptLineSection">script line</a></i> 
+    section, depending of their complexity.</p>
+  <blockquote class="MsoBodyText"> 
+    <div class=MsoBodyText></div>
+    <p></p>
+  </blockquote>
+  <ol>
+    <li class="MsoBodyText"><a name="zgsHeaderSection"></a><b>Header section<br>
+      <br>
+      </b>This section has 3 labels :<br>
+      <ul>
+        <li><i>ScriptName</i> : name of this script (same name as the file)<b><br>
+          </b></li>
+        <li class="MsoBodyText"><i>ScriptType</i> : this label can take 2 values. 
+          The first is <font size="-1">MODELE</font> (that means template in english) 
+          or <font size="-1">TEMPLATE</font> that indicate this script will not 
+          be directly used by a game object, but will help to design new script. 
+          The second one is <font size="-1">PERSONNALISE</font> or <font size="-1">CUSTOMIZED 
+          </font>that tells that it could be directly used by any object it designed 
+          for. </li>
+        <li class="MsoBodyText"><i>ScriptPatron </i>: give the name of the script 
+          that it inherits. It could be a template or not. If it has no parent 
+          script, just write <i>&lt;none&gt;</i> in this section.<b><br>
+          <br>
+          </b></li>
+      </ul>
+      <p class="MsoBodyText">Here is an example of script header that you can 
+        find in <a href="zegame/World/RobotDesNains2.zfs">RobotDesNains2.zfs</a> 
+        :<b><br>
+        </b> 
+      <div class=MsoBodyText2><b></b></div>
+      <p></p>
+      <div class=MsoBodyText2><b>[HEADER]<br>
+        ScriptName = RobotDesNains2<br>
+        ScriptType = PERSONNALISE<br>
+        ScriptPatron = Robot<span
+lang=FR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'><br>
+        </span></b></div>
+      The script name is <i>RobotDesNains2</i>. This script is used<b> </b>by 
+      an object of the game and inherits from the <i>Robot</i> script.<br>
+      <br>
+      <br>
+    </li>
+    <li><b><a name="zgsScriptLineSection"></a><b>Script Line section</b></b></li>
+  </ol>
+  <blockquote class="MsoBodyText"> 
+    <p class="MsoBodyText">A script is composed of one or more script line. A 
+      script line is always defined by : <br>
+    </p>
+    <ul>
+      <li class="MsoBodyText">a <b>trigger</b> condition : the objects which this 
+        script is assigned must receive an event of this kind of trigger,</li>
+      <li class="MsoBodyText">a <b>cause</b> line : this script will<b><b> </b></b>run 
+        only if all those causes are true,</li>
+      <li class="MsoBodyText">an <b>action</b> line : actions that execute this 
+        script line if causes are valid.</li>
+    </ul>
+    <p class="MsoBodyText">An example of zfs script sections could be find in 
+      <a href="zegame/World/RobotDesNains.zfs">RobotDesNains.zfs</a> : </p>
+    <div class=MsoBodyText2> 
+      <p><b>[SCRIPT_LINE_1]<br>
+        Trigger &nbsp;&nbsp;&nbsp;= PERSO_DSZONE<br>
+        Conditions = { Random(2) &amp; DontKnow(ROBOT_DONNE_COUP_AU_HERO) &amp;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DontKnow(ROBOT_DEAD) 
+        }<br>
+        Actions &nbsp;&nbsp;&nbsp;= { NewState(DONNECOUP1) &amp; NewMemory(ROBOT_DONNE_COUP_AU_HERO) 
+        }</b></p>
+      <p><b>[SCRIPT_LINE_2]<br>
+        Trigger &nbsp;&nbsp;&nbsp;= EVERY_TIME<br>
+        Conditions = { Know(ROBOT_DONNE_COUP_AU_HERO) }<br>
+        Actions &nbsp;&nbsp;&nbsp;= { Sleep(1800) &amp; DelMemory(ROBOT_DONNE_COUP_AU_HERO) 
+        }</b></p>
+      <p><b> [SCRIPT_LINE_3]<br>
+        Trigger &nbsp;&nbsp;&nbsp;= EVERY_TIME<br>
+        Conditions = { Know(ROBOT_DEAD) &amp; DontKnow(NAIN_SORTI) }<br>
+        Actions &nbsp;&nbsp;&nbsp;= { Sleep(1800) &amp; NewState(SORTIR1) &amp; 
+        NewMemory(NAIN_SORTI) }</b></p>
+      <p><b> [SCRIPT_LINE_4]<br>
+        Trigger &nbsp;&nbsp;&nbsp;= EVERY_TIME<br>
+        Conditions = { DontKnow(ROBOT_DEAD) &amp; Random(200) }<br>
+        Actions &nbsp;&nbsp;&nbsp;= { Sleep(500) &amp; NewState(STAND1) }</b><b><span
+lang=FR style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'> 
+        </span></b></p>
+    </div>
+    <p class="MsoBodyText">a) Trigger</p>
+    <ul>
+      <li class="MsoBodyText"><span class="MsoBodyText"> <font size="-1">SCN_TRIGGER_EVERY_TIME</font> 
+        : script line that is estimate at each frame,</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"> <font size="-1">SCN_TRIGGER_SCENARIO_LEVEL_INIT</font> 
+        : event triggered when a game level start that allow each object to initialize,</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"> <font size="-1">SCN_TRIGGER_PLAYER_UTILISER</font> 
+        : event sent to an object when a character use something on somebody else,</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"><font size="-1"> SCN_TRIGGER_PLAYER_FRAPPER</font> 
+        : event sent to an object when something or someone hit this object,<br>
+        <br>
+        </span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"><font size="-1"> SCN_TRIGGER_PERSO_DSZONE</font> 
+        : triggered each time a character is into a ground zone,</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"><font size="-1"> SCN_TRIGGER_PERSO_ZONEIN</font> 
+        : inform that a character has just entered into a ground zone,</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"><font size="-1"> SCN_TRIGGER_PERSO_ZONEOUT: 
+        </font>fired each time a character exit from a gound zone,</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"><font size="-1"> SCN_TRIGGER_PERSO_DEAD</font> 
+        : script line analyzed when a character just died,<br>
+        <br>
+        </span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"> <font size="-1">SCN_TRIGGER_METEO</font> 
+        : event sent each time the meteo change,</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"><font size="-1"> SCN_TRIGGER_TIME</font> 
+        : fire when time periods changes (hour, month, year, ...),</span></li>
+      <li class="MsoBodyText"><span class="MsoBodyText"> <font size="-1">SCN_TRIGGER_PNJ_DEAD</font> 
+        : event triggered when a NPC just dead,</span></li>
+    </ul>
+    <p class="MsoBodyText"><br>
+      <br>
+      <br>
+    </p>
+    <p class="MsoBodyText">&nbsp;</p>
+    <blockquote> 
+      <div class=MsoBodyText></div>
+    </blockquote>
+  </blockquote>
+</blockquote>
+</body>
+</html>

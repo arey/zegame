@@ -1,0 +1,107 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Antoine Rey">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (Win98; I) [Netscape]">
+   <title>Nains - Ze Game</title>
+</head>
+<body background="bitmap/fd_papier2.gif">
+<blockquote>
+<table border=0 cols=3 width="100%" >
+    <tr> 
+      <td width="40%"> 
+        <h1> <a name="Beginning"></a>Source Code Features</h1>
+      </td>
+      <td width="10%"></td>
+      <td width="20%"><img src="bitmap/anim-pig.gif" height=68 width=64></td>
+    </tr>
+  </table>
+  <ul type=CIRCLE>
+    <li> <a href="#Skills">Technical Skills</a></li>
+    <li> <a href="#Modules">Code modules</a></li>
+    <li> <a href="#ToDo">ToDo</a></li>
+  </ul>
+</blockquote>
+<ul>
+  <h3> <a name="Skills"></a>1. Techniques de programmation acquises</h3>
+  <ul type=SQUARE>
+    <li> <font face="Times New Roman,Times"><font size=+1>Connaissance approfondie 
+      du <b><i>C++</i></b></font></font></li>
+    <br>
+    <font face="Arial,Helvetica">--></font><b><font size=+1> </font></b><font face="Arial,Helvetica">H&eacute;ritage 
+    multiple, polymorphisme, template ...</font> 
+    <li> <font face="Times New Roman,Times"><font size=+1>Notion <i>d’<b>Assembleur</b></i> 
+      8086</font></font></li>
+    <br>
+    <font face="Arial,Helvetica">--> Optimisation de routines graphiques</font> 
+    <br>
+    &nbsp; 
+    <li> <font face="Times New Roman,Times"><font size=+1>Programmation sous <b><i>Windows</i></b></font></font></li>
+    <br>
+    <font face="Arial,Helvetica">--> MFC, OWL, API Win32, COM ...</font> 
+    <li> <font face="Times New Roman,Times"><font size=+1>Composants <b><i>DirectX</i></b></font></font></li>
+    <ul type=CIRCLE>
+      <li> <font face="Arial,Helvetica"><b><i>DirectDraw</i></b> : gestion des 
+        sprites, textures, scrolling, animation ...</font></li>
+      <li> <font face="Arial,Helvetica"><b><i>Direct3D</i></b> : effets sp&eacute;ciaux 
+        (transluence, nuit ...)</font></li>
+      <li> <font face="Arial,Helvetica"><b><i>DirectSound</i></b> : musique et 
+        bruitages</font></li>
+      <li><font face="Arial,Helvetica"><b><i>DirectInput</i></b> : gestion du 
+        clavier et du joypad</font></li>
+      <li><font face="Arial,Helvetica"><b><i>DirectPlay</i></b> : jeu online massivement 
+        multi-joueurs</font><br>
+        &nbsp; </li>
+    </ul>
+    <li> <font face="Times New Roman,Times"><font size=+1>Intelligence Artificielle</font></font></li>
+    <br>
+    <font face="Arial,Helvetica">--> Recherche de chemins, collisions, comportement...</font> 
+    <br>
+    <br>
+  </ul>
+  <h3> <a name="Modules"></a>2. Modules d&eacute;velopp&eacute;s sp&eacute;cifiquement 
+    pour le jeu</h3>
+  <font face="Times New Roman,Times">-&nbsp; Moteur 2D regroupant des fonctions 
+  de haut niveau situ&eacute;es au dessus de DirectDraw g&eacute;rant sprites, 
+  textures, banques de tiles, lecteur de BMP ...</font> <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Routines de transparence, d’ombrage 
+  et d’effets sp&eacute;ciaux g&eacute;r&eacute;s en software et optimis&eacute;s 
+  Direct3D,</font> <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Librairie charg&eacute;e de 
+  lire des .ini standard (ou maison),</font> <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Lecteur de fichiers wave sous 
+  DirectSound,</font> <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Gestionnaire de tous les Identificateurs 
+  du jeu,</font> <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Fonctions de debuggage permettant 
+  de tracer l’&eacute;volution du jeu dans des fichiers ou &agrave; l’&eacute;cran,</font> 
+  <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Gestionnaire de fichiers virtuels 
+  regroup&eacute;s dans de gros fichiers ZGP,</font> <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Scripts d’animations des personnages 
+  et des d&eacute;cors,</font> <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Manager d’&eacute;v&eacute;nements 
+  d&eacute;clench&eacute;s par le joueur, par le sc&eacute;nario ou par des pnj,</font> 
+  <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Langage de scripts sc&eacute;naritiques.</font><font face="Times New Roman,Times"></font> 
+  <br>
+  <font face="Times New Roman,Times">-&nbsp;&nbsp; Conception de 2 niveaux partiellements 
+  jouables : big.niv &amp; level.niv</font> <br>
+  - &nbsp;&nbsp;Jeu online multi-joueurs sur Internet<br>
+  &nbsp; 
+  <h3> <a name="ToDo"></a>3. Prochains trucs &agrave; impl&eacute;menter</h3>
+  <ul>
+    <li> Au niveau du moteur sonore, privil&eacute;gier la lecture de fichiers 
+      mp3 &agrave; la place des wave prenant bien trop de places,</li>
+    <li> Am&eacute;lioration du d&eacute;placement du h&eacute;ros,</li>
+    <li> Refonte des tests des collisions des persos avec le d&eacute;cors,</li>
+    <li> Gestion des tests de collisions entre persos,</li>
+    <li> Etude comportementale des monstres,</li>
+    <li> Gestion des combats,</li>
+    <li> Ajout d'animations pour la rendre plus jolies</li>
+  </ul>
+</ul>
+<p>&nbsp;</p>
+</body>
+</html>

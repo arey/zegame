@@ -1,0 +1,11 @@
+BOCAL1               800
+BOCAL2               801
+BOCAL3               802
+PIG1                5000
+PIG2                5001
+BOCALBRK           10001
+BOCALBRK2          10002
+LOCO		    8875
+ROBOT		    8876
+ROBOTDED	    8877
+

@@ -1,0 +1,327 @@
+<HTML>
+
+<head>
+<title>ZEGAME - User Guide Menu</title>
+<META content="Antoine Rey" name=Author>
+
+<STYLE>TD {
+	FONT-FAMILY: nevada; FONT-SIZE: 10pt
+}
+BODY {
+	BACKGROUND-COLOR: "#9999CC"
+}
+A {
+	COLOR: navy; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red
+}
+A:visited:unknown {
+	COLOR: navy
+}
+
+</STYLE>
+<STYLE>DIV.clTop {
+	POSITION: absolute; WIDTH: 170px
+}
+DIV.clSub {
+	LEFT: 10px; POSITION: absolute; WIDTH: 170px
+}
+#divCont {
+	HEIGHT: 400px; LEFT: 10px; POSITION: relative; TOP: 5px; WIDTH: 170px
+}
+A.clMain {
+	COLOR: black; FONT-FAMILY: Arial, Verdana, Helvetica, Helv; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.clSubb {
+	COLOR: black; FONT-FAMILY: Arial, Verdana, Helvetica, Helv; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+#divMain {
+	POSITION: absolute
+}
+</STYLE>
+
+
+<SCRIPT language=JavaScript>
+
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts.
+This may be used freely as long as this msg is intact!
+********************************************************************************/
+
+/************************************************************************************
+This script is a "foldout" menu script, all the "foldouts" will
+stay outfolded in older browsers. Works in ie4+ and ns4+.
+ADDED: Images
+
+To change where the menu appears change the left and top values of the divCont
+in the stylesheets, it's currently placed relative so you can
+place this menu in tables or similar if you want. Change the 
+text colors and size in the A.clMain and A.clSubb classes.
+************************************************************************************/
+
+/************************************************************************************
+Change this to false if you want all the submenus to get unfold when you
+foldout a new one.
+************************************************************************************/
+var stayFolded=true
+
+
+//This is the image that it changes to when it expands.
+var exImg=new Image(); exImg.src='icon/pointer1_off.gif'
+
+//This is the image is changes to with it's "unfolded" or something :}
+//Remeber to change the actual images in the page aswell, but remember to
+//keep the name of the image.
+
+var unImg=new Image(); unImg.src='icon/pointer1_off.gif'
+
+
+/************************************************************************************
+Browsercheck
+************************************************************************************/
+
+var n = (document.layers) ? 1:0;
+var ie = (document.all) ? 1:0;
+var firefox = navigator.appCodeName=='Mozilla' ? 1:0;
+var browser=((n || ie || firefox) && parseInt(navigator.appVersion)>=4)  
+
+
+/************************************************************************************
+Making cross-browser objects
+************************************************************************************/
+
+function makeMenu(obj,nest)
+{
+	nest=(!nest) ? '':'document.'+nest+'.'										
+	this.css=(n) ? eval(nest+'document.'+obj):eval('document.all.'+obj+'.style')					
+   	this.ref=(n) ? eval(nest+'document.'+obj+'.document'):eval('document');		
+	this.height=n?this.ref.height:eval(obj+'.offsetHeight')
+	this.x=(n)? this.css.left:this.css.pixelLeft;this.y=(n)? this.css.top:this.css.pixelTop;							
+	this.hideIt=b_hideIt;	this.showIt=b_showIt; this.vis=b_vis; this.moveIt=b_moveIt											
+	return this
+}
+
+function b_showIt(){this.css.visibility="visible"}
+function b_hideIt(){this.css.visibility="hidden"}
+function b_vis(){if(this.css.visibility=="hidden" || this.css.visibility=="hide") return true;}
+function b_moveIt(x,y){this.x=x; this.y=y; this.css.left=this.x; this.css.top=this.y}
+
+/************************************************************************************
+Initiating the page. Just add to the arrays here to get more menuitems
+and add divs in the page
+************************************************************************************/
+
+function init()
+{
+	oTop=new Array()
+	oTop[0]=new makeMenu('divTop1','divCont')
+	oTop[1]=new makeMenu('divTop2','divCont')
+	oTop[2]=new makeMenu('divTop3','divCont')
+	oTop[3]=new makeMenu('divTop4','divCont')
+	oTop[4]=new makeMenu('divTop5','divCont')
+	/* oTop[5]=new makeMenu('divTop6','divCont')*/
+	
+	oSub=new Array()
+	oSub[0]=new makeMenu('divSub1','divCont.document.divTop1')
+	oSub[1]=new makeMenu('divSub2','divCont.document.divTop2')
+	oSub[2]=new makeMenu('divSub3','divCont.document.divTop3')
+	oSub[3]=new makeMenu('divSub4','divCont.document.divTop4')
+	oSub[4]=new makeMenu('divSub5','divCont.document.divTop5')
+	/*oSub[5]=new makeMenu('divSub6','divCont.document.divTop6')*/
+
+	for(i=0;i<oSub.length;i++){ oSub[i].hideIt() }
+	for(i=1;i<oTop.length;i++){ oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height) }
+}
+
+/************************************************************************************
+This is the function that changes the sub menus to folded or unfolded state.
+************************************************************************************/
+
+function menu(num)
+{
+	if(browser){
+		if(!stayFolded){
+			for(i=0;i<oSub.length;i++){
+				if(i!=num){
+					oSub[i].hideIt()
+					oTop[i].ref["imgA"+i].src=unImg.src
+				}
+			}
+			for(i=1;i<oTop.length;i++){
+				oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+			}
+		}
+		if(oSub[num].vis()){
+			oSub[num].showIt()
+			oTop[num].ref["imgA"+num].src=exImg.src
+		}else{
+			oSub[num].hideIt()
+			oTop[num].ref["imgA"+num].src=unImg.src
+		}
+		for(i=1;i<oTop.length;i++){ 
+			if(!oSub[i-1].vis()) oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height+oSub[i-1].height) 
+			else oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+		}
+	}
+}
+
+//Initiating the menus onload, if it's a 4.x+ browser.
+if(browser) onload=init;
+
+</SCRIPT>
+
+<!-- Script de pr�-chargement d'images -->
+<script LANGUAGE="JavaScript" src="javascript/images.js"></script>
+<script LANGUAGE="JavaScript" TYPE="text/javascript"></script>
+
+<!-- Script de d�tection des navigateurs Internet -->
+<script LANGUAGE="JavaScript" src="javascript/browser.js"></script>
+
+<script LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+if (whichBrs() == 'Firefox') {
+	alert("Ce menu a �t� r�alis� alors que Firefox n'�tait pas n�. Veuillez utiliser Internet Explorer ou installer l'excellent IETab");	
+}
+
+
+
+
+<!--
+	preload('SelectMenuCursor','icon/pointer3_new.gif')
+	preload('UnselectMenuCursor','icon/pointer3_off.gif')
+	var homeFrame = parent.parent.parent;
+	homeFrame.ZeGameDocLnk = "mainpage.htm";
+	homeFrame.targetFrame = "mainFrame";
+	if (location.search.length>-1)
+	{	homeFrame.ZeGameDocLnk = location.search.substring(1);
+		homeFrame.targetFrame = "_parent";
+	}
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+<hr>
+<DIV id=divCont>
+<DIV class=clTop id=divTop1>
+<A	class=clMain 
+	href="userguide.htm" target="mainFrame"
+	onclick="menu(0); homeFrame.currentPage='userguide.htm'; return true"
+	onmouseover="changeImage('imgA0','SelectMenuCursor')"
+	onmouseout="changeImage('imgA0','UnselectMenuCursor')">
+	<IMG alt="" border=0 height=15 name=imgA0
+		 src="icon/pointer3_off.gif" 
+		 width=26> User Guide
+</A><BR><DIV class=clSub id=divSub1>&nbsp;
+	<A	class=clSubb 
+		href="#">>> Introduction
+	</A><BR>&nbsp;
+	<A	class=clSubb 
+		href="#">>> Game features 
+	</A><BR>&nbsp;
+	<A	class=clSubb 
+		href="#">>> How to play ?
+	</A><BR>&nbsp;
+	<A	class=clSubb 
+		href="userguide.htm#SystemRequirements" target="mainFrame"
+		onclick="homeFrame.currentPage='userguide.htm'; return true"
+		onMouseOver="self.status='What hardware and software configuration do you need to run ZeGame'; return true;"
+		onMouseOut="self.status=''; return true;"
+		>>> System requirements
+	</A><BR>&nbsp;
+	<A	class=clSubb 
+		href="#">>> Credits
+	</A>
+<BR></DIV></DIV>
+
+<DIV class=clTop id=divTop2>
+<A	class=clMain 
+	href="editors.htm" target="mainFrame"
+	onclick="menu(1); return false"
+	onmouseover="changeImage('imgA1','SelectMenuCursor')"
+	onmouseout="changeImage('imgA1','UnselectMenuCursor')">
+	<IMG alt="" border=0 height=15 name=imgA1 
+	src="icon/pointer3_off.gif" width=26> Editors</A>
+<BR>
+<DIV class=clSub id=divSub2>&nbsp;
+<A	class=clSubb 
+	href="mapeditor.htm"  target="mainFrame"
+	onClick="homeFrame.currentPage='mapeditor.htm'; return true;"
+	>>> Map Editor</A>
+<BR>&nbsp;
+<A	class=clSubb 
+	href="animeditor.htm" target="mainFrame"
+	onClick="homeFrame.currentPage='animeditor.htm'; return true;"
+	>>> Anim Editor</A>
+<BR>&nbsp;
+<A	class=clSubb 
+	href="tileeditor.htm" target="mainFrame"
+	onClick="homeFrame.currentPage='tileeditor.htm'; return true;"
+	>>> Create Tile</A>
+<BR>
+</DIV></DIV>
+
+<DIV class=clTop id=divTop3>
+<A	class=clMain 
+	href="utils.htm" target="mainFrame"
+	onclick="menu(2); return false"
+	onmouseover="changeImage('imgA2','SelectMenuCursor')"
+	onmouseout="changeImage('imgA2','UnselectMenuCursor')"> 
+	<IMG	alt="" border=0 height=15 name=imgA2
+			src="icon/pointer3_off.gif" width=26> Utils</A> <BR>
+<DIV class=clSub id=divSub3>&nbsp;
+<A	class=clSubb 
+	href="pakbuilder.htm">>> PakBuilder</A>
+<BR>
+</DIV></DIV>
+
+<DIV class=clTop id=divTop4>
+<A	class=clMain 
+	href="design.htm" target="mainFrame"
+	onclick="menu(3); return false"
+	onmouseover="changeImage('imgA3','SelectMenuCursor')"
+	onmouseout="changeImage('imgA3','UnselectMenuCursor')">
+	<IMG alt="" border=0 height=15 name=imgA3 
+		 src="icon/pointer3_off.gif" width=26> Application Design</A><BR>
+<DIV class=clSub id=divSub4>&nbsp;
+<A	class=clSubb 
+	href="#">>> Architecture</A>
+	<BR>&nbsp;
+<A	class=clSubb 
+	href="#">>> Main modules</A>
+<BR>
+</DIV></DIV>
+
+<DIV class=clTop id=divTop5> 
+<A	class=clMain 
+	href="filesspec.htm"  target="mainFrame"
+	onclick="menu(4); homeFrame.currentPage='filesspec.htm'; return true"
+	onMouseOver="self.status='Specification and description of all files used by Nains'; 
+				 changeImage('imgA4','SelectMenuCursor'); return true;"
+	onMouseOut="changeImage('imgA4','UnselectMenuCursor'); self.status=''; return true;">
+	<IMG alt="" border=0 height=15 name=imgA4 
+	src="icon/pointer3_off.gif" width=26> File specification</A>
+<BR>
+<DIV class=clSub id=divSub5>&nbsp;
+<A	class=clSubb 
+	href="filesspec.htm#TextFiles"  target="mainFrame"
+	onclick="homeFrame.currentPage='filesspec.htm'; return true"
+	onMouseOver="self.status='Text files that you can easily edit with notepad'; return true;"
+	onMouseOut="self.status=''; return true;">>> Text files</A>
+<BR>&nbsp;
+<A	class=clSubb 
+	href="filesspec.htm#BinaryFiles"  target="mainFrame"
+	onclick="homeFrame.currentPage='filesspec.htm'; return true"
+	onMouseOver="self.status='Files that have been created by an editor or by the game itself'; return true;"
+	onMouseOut="self.status=''; return true;">>> Binary files</A>
+<BR>
+</DIV></DIV>
+
+</DIV>
+</BODY>
+</HTML>
+

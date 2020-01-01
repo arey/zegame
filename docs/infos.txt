@@ -1,0 +1,12 @@
+ * Français :
+   --------
+
+  Titre       : Nains - ZE Game
+  Description : Ebauche d'un jeu de rôle en 3D isométrique orienté action, savant mélange 		entre zelda, ultima et baldur's, programmé en C++ sous DirectX
+  Mot-clefs   : ZeGame, Nains, CRPG, RPG, C++, DirectX, Game, Jeux
+
+
+ * English : 
+   -------
+  Title       : Nains - ZeGame
+  Description : Computer Role Playing Game Project in 3D ismometric developped in Visual C++ on DirectX

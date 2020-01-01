@@ -1,0 +1,506 @@
+
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Game Files Specification</title>
+<style><!--
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+h1
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:FR;}
+h2
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:FR;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{text-align:justify;
+	mso-pagination:widow-orphan;
+	background:#CCCCCC;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:FR;}
+@page Section1
+	{size:8.5in 11.0in;
+	mso-header-
+	mso-footer-
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@list l0
+	{mso-list-id:22243926;
+	mso-list-type:hybrid;
+	mso-list-template-ids:66324154 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:748119944;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1467390730 67698703 268358868 1944119234 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-upper;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l1:level3
+	{mso-level-number-format:alpha-upper;
+	mso-level-text:"%3\)";
+	mso-level-tab-stop:117.0pt;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:italic;}
+@list l2
+	{mso-list-id:964433006;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2037098246 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:2048604638;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1594463476 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{ul
+	{.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 10pt}
+.Parameters {  font-family: "Times New Roman", Times, serif; font-size: 12pt; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal}
+.Parameters {  }
+.parameters {  font-family: "Times New Roman", Times, serif}
+div.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+li.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.Parameters { text-align:justify; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; }
+.yo {  }
+.dwsadwf {  }
+h4 {  }
+h4 {  }
+h5 {  }
+h5 {  }
+h5 {  }
+-->
+</style>
+</head>
+<body lang=EN-US style='tab-interval:.5in' bgcolor="#ffffff">
+<div class=Section1> 
+  <h2 class="Section1"><span style='mso-ansi-language:EN-US'><a name="Beginning"></a>Map 
+    Editor</span></h2>
+</div>
+<blockquote class="MsoBodyText"> 
+  <div class=MsoBodyText> 
+    <p>This tool is a powerful graphical tool created specially for ZeGame. It 
+      is useful to design the different level maps of this game like <i>big</i>, 
+      <i>milia</i> or <i>new</i> that you can find in the current version of Nains.</p>
+    <p align="center"><i><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><b><img src="images/mapeditor1.jpg" width="768" height="554">New 
+      level loaded in the MapEditor</b></font></i></p>
+    <p>It can be used by anybody and allows to build easily a map by selecting 
+      tiles and place them on the same isometric 3D view you have during the game. 
+      So if you are an infographist, a hard-core gamer, a developper and (of course) 
+      a game designer, you can use this tool to create your own levels and integrate 
+      them by yourself into ZeGame.</p>
+    <p>The following sections describe the way to use this tool : </p>
+  </div>
+</blockquote>
+<blockquote class="MsoBodyText"> 
+  <ol>
+    <li> 
+      <div class=MsoBodyText> 
+        <div class=Section1> 
+          <div align="left"> 
+            <pre><a href="#TextFiles"><span style='mso-ansi-language:EN-US'><font face="Verdana, Arial, Helvetica, sans-serif"><b>User Guide</b></font></span></a><br>     <font size="-2"> &gt;&gt; </font><a href="#InterfacePresentation">Interface presentation</a><br>    <font size="-2">  &gt;&gt; </font><a href="#HowToStart">How to start ?</a><br>    <font size="-2">                <font size="-4">--&gt;</font> <a href="#MapCreation">Map creation</a></font>
+    <font size="-2">                <font size="-4">--&gt;</font> <a href="#TileLevelLibrary">Tile level library</a></font>
+    <font size="-2">                <font size="-4">--&gt;</font> <a href="#UniversalTileLibrary">Universal</a></font><a href="#UniversalTileLibrary"> tile library</a>
+    <font size="-2">  &gt;&gt; </font><a href="#DesignLevel">How to design a level ?</a> 
+<font size="-2">                    <font size="-4">--&gt;</font> <a href="#BackgroundFloor">Background floor drawing</a></font>
+<font size="-2">                    <font size="-4">--&gt;</font> <a href="#PlaceObject">Place an object on the map</a></font>
+<font size="-2">                    <font size="-4">--&gt;</font> <a href="#RemoveObject">Remove something from the map</a></font>
+<font size="-2">      &gt;&gt; </font><a href="#AdvancedFeatures">Avanced designing features</a>
+<font size="-2">                    <font size="-4">--&gt;</font> <a href="#AssignScript">Assign a scenartic script</a></font>
+
+</pre>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ol>
+</blockquote>
+<div class=MsoBodyText></div>
+<blockquote> 
+  <div class=MsoBodyText> 
+    <h3>1. <a name="UserGuide"></a>User Guide</h3>
+  </div>
+  <blockquote class="MsoBodyText"> 
+    <div class=MsoBodyText> 
+      <h4>1) <a name="InterfacePresentation"></a>General presentation of the interface</h4>
+      <p>The editor is divided in main areas :</p>
+    </div>
+    <ul type="square">
+      <li> 
+        <div class=MsoBodyText>the<i><b> map view</b></i>, located at the left 
+          top corner of the editor, take 3/4 of the screen. It is a 3D isometric 
+          representation of a level, the same view that you will have in the game. 
+          And it is on this view that you could place the tiles and the characters 
+          you want to build a level.<br>
+          <br>
+        </div>
+      </li>
+      <li class="MsoBodyText">the <i><b>map tools</b></i>, situated at the bottom 
+        of the screen, is divided in 2 sections : the left one give you information 
+        about the map and the right one allow you to do several actions as select 
+        an object on the map view. <br>
+        <br>
+      </li>
+      <li class="MsoBodyText"> the <i><b>lib utils</b></i>, located at he right 
+        top corner of the screen, allow you to choose with what type of component 
+        you want to work : characters, objects, background, ...<br>
+        <br>
+      </li>
+      <li class="MsoBodyText"> the <i><b>object palette</b></i>, placed at the 
+        right side of the editor, give you the oppurtunity to work accurately 
+        with a kind of object.</li>
+    </ul>
+    <div class=MsoBodyText> 
+      <p>The menu give you access to a lot of functions to create, load or save 
+        a level as well as create your level tile library.</p>
+      <h4>2) <a name="HowToStart"></a>How to start ?</h4>
+    </div>
+    <div class=MsoBodyText> 
+      <p>This editor allow you to create level maps for ZeGame. This chapter will 
+        try to explain you how to process.</p>
+    </div>
+    <blockquote> 
+      <div class=MsoBodyText> 
+        <h5 class="MsoBodyText">A) <a name="MapCreation"></a>Map creation</h5>
+      </div>
+      <div class=MsoBodyText> 
+        <div align="left"> 
+          <p align="left">To create a new map go in the menu <i>Fichiers\Nouvelle</i> 
+            Carte. The following dialog box will appear :</p>
+          <p align="center"><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><br>
+            <img src="images/mapeditor2.jpg" width="228" height="176" align="middle" border="0" usemap="#CreationMap"><map name="CreationMap"><area shape="rect" coords="158,147,222,167" href="#CreerButtonLink"><area shape="rect" coords="7,30,214,52" href="#NomDeLaCarteLink"><area shape="rect" coords="10,56,213,76" href="#NumeroDeLaCarteLink"><area shape="rect" coords="8,99,213,120" href="#DimensionCarteLink"></map><br>
+            New map creation dialog box </font></b></i><br>
+          </p>
+        </div>
+      </div>
+      <div class=MsoBodyText>Here you have to give several informations :<br>
+        - <a name="#NomDeLaCarteLink"></a> the name of your map (<i>Nom de la 
+        Carte</i>),<br>
+        -<a name="#NumeroDeLaCarteLink"> </a> a ID number for this map (<i>Numero 
+        de la Carte</i>),<br>
+        - <a name="DimensionCarteLink"></a>as well as its dimensions in number 
+        of trapezoid (<i>Dimension de la Carte</i>).<br>
+        <br>
+        After you click on the <i><a name="CreerButtonLink"></a>Creer</i> button, 
+        an empty wire grid will appear.</div>
+      <div class=MsoBodyText> 
+        <p>Before doing anything, I advise you to select a tile library in the 
+          <i>Lib Outils</i> panel. See the<a href="#TileLevelLibrary"> <i>Create 
+          Level Li</i>b</a> section for more information about how to create a 
+          special tile library for your own map. A file chooser dialog box must 
+          appear and you can select the <i><a href="filesspec.htm#LevelTileLibrary">.LiL</a></i> 
+          file you want.<br>
+          <br>
+        </p>
+      </div>
+      <div class=MsoBodyText> 
+        <h5>B) <a name="TileLevelLibrary"></a>Tile Level Library<br>
+        </h5>
+      </div>
+      <div class=MsoBodyText><u>Preamble<br>
+        <br>
+        </u></div>
+      <div class=MsoBodyText> 
+        <p>When I started the game I did a lot of difficult things that I would 
+          have never done. Create a tile library specifically for a level is part 
+          of those things. It should have helped to only load the tiles required 
+          by this level with the aim of optimize the game, but I could do it automatically 
+          instead of bothering the level designer … Fortunately it provides of 
+          way to select a set of tiles among a lot.<br>
+        </p>
+        <p><u>Presentation</u></p>
+      </div>
+      <div class=MsoBodyText>From the menu you can open, load or create a level 
+        tile library. By default the <a href="#NewLevelLibraryMap">dialog</a> 
+        opens in new level tile library mode.<br>
+        Like you can see the panel is divided in 2 lists. The left list is for 
+        your level library. And the right list shows all the tiles you have in 
+        the universal tile library. <br>
+        <br>
+      </div>
+      <div class=MsoBodyText></div>
+      <div class=MsoBodyText><u>Create a new library<br>
+        <br>
+        </u></div>
+      <div class=MsoBodyText>The first thing you should do is to enter the <a name="LevelTileLibraryLink"></a>name 
+        of your library in the <i>Librarie du Niveau</i> field. Then you can select 
+        the tiles you want use in your map from the right list : you can select 
+        a tile and click on the <i><a name="AjouterButtonLink"></a>Ajouter</i> 
+        button or click on the <i><a name="AjouterToutButtonLink"></a>Ajouter 
+        tout</i> button to add all tiles from the right list in your map library.</div>
+      <div class=MsoBodyText> 
+        <p>&nbsp;</p>
+        <p align="center"><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/mapeditor3.jpg" width="550" height="376" border="0" usemap="#NewLevelLibraryMap"><map name="NewLevelLibraryMap"><area shape="rect" coords="29,107,121,122" href="#LevelTileLibraryLink"><area shape="rect" coords="258,348,334,366" href="#AjouterToutButtonLink"><area shape="rect" coords="281,321,334,340" href="#AjouterButtonLink"><area shape="rect" coords="62,53,108,67" href="#TileKindDecorsLink"><area shape="rect" coords="263,54,289,66" href="#TileKindSolLink"><area shape="rect" coords="493,129,542,143" href="#GrotteTabLink"><area shape="rect" coords="494,145,542,160" href="#PlaineTabLink"></map><br>
+          Level tile level creation dialog box</font></b></i></p>
+        <p> The tiles of the universal library are classified in 2 different kinds 
+          : <br>
+          - <a name="TileKindDecorsLink"></a>tiles used to draw the background 
+          (<i>Decors</i>) : tables, trees, walls, objects, …<br>
+          - <a name="#TileKindSolLink"></a>and tiles used to draw the ground (<i>Sols</i>) 
+          : bade of grass, soil, paving stones …</p>
+      </div>
+      <div class=MsoBodyText><br>
+        In both of those 2 kinds of tile, you have several sections for :<br>
+        - natural tiles (<i>Natur</i>) : trees, bushes, grass, …<br>
+        - object tiles (<i>Objet</i>) : table, robot, wheel, …<br>
+        - wall tiles (<i>Mur</i>) : barrier, gate, rocks, …<br>
+        - architectural tiles (<i>Archi</i>) : house, vase, hut, …<br>
+      </div>
+      <div class=MsoBodyText><br>
+        Those tiles are again divided in 2 tabs : <br>
+        - <a name="#GrotteTabLink"></a>underground cave (<i>Grotte</i>)<br>
+        - <a name="#PlaineTabLink"></a>plain (<i>Plaine</i>)<br>
+        <br>
+      </div>
+      <div class=MsoBodyText> 
+        <p>When you save your library, it generates a <i><a href="filesspec.htm#LevelTileLibrary">.LiL</a></i> 
+          file that has the name you gave and that is stored in the <i>Level\ 
+          </i>directory.<br>
+          <br>
+        </p>
+      </div>
+      <div class=MsoBodyText> 
+        <h5>C)<a name="UniversalTileLibrary"></a> Universal Tile Library<br>
+        </h5>
+      </div>
+      <div class=MsoBodyText>After you add a tile (bitmap file and <i>.dec</i> 
+        file) in its directory, you have to edit the Universal Tile Library (go 
+        in the <i>Lib\</i> menu) and add your new tile in the category you want. 
+        You can also add in <a href="zegame/Tiles/IDTiles.id">Tiles\IDTiles.id</a> 
+        its ID if you didn't do that.<br>
+        <br>
+      </div>
+      <div class=MsoBodyText>The universal tile library is stored in the <i>.LiD</i> 
+        files in the <i>Tiles\</i> directory. There are 14 files, 7 for the plain 
+        tiles and 7 for the cave tiles. In the 7 files, you have 4 files for the 
+        object of the background (…<i>dArchi</i>, …<i>dNatur</i>, …<i>Objet</i>, 
+        …<i>Mur</i>) and 3 files for the ground tiles (…<i>sArchi</i>, …<i>sNatur</i>, 
+        …Inter). So load the file corresponding to the category you want, add 
+        your tiles and save it.</div>
+      <div class=MsoBodyText> 
+        <p>&nbsp;</p>
+        <p><u>Example</u></p>
+        <p class="MsoBodyText">We have loaded the <i>PlainedNatur.LiD </i>that 
+          is a part of the Univeral Tile Library that has been created to register 
+          all the natural scenery tiles that we can find in a plain. Here we have 
+          just 2 trees : an evergreen oak and an olive tree.</p>
+        <p align="center"><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/mapeditor4.jpg" width="329" height="354"><br>
+          Universal Tile Library panel</font></b></i></p>
+        <p> <u>Incoming features</u><br>
+          For the moment, the categories are hard-coded. So you cannot add a new 
+          one without going in the <i>C++</i> files (<a href="sources/Consts.h">Consts.h</a> 
+          more exactly). In the future I like to pass those constants in resources 
+          files you can change as you want.<br>
+        </p>
+      </div>
+    </blockquote>
+    <div class=MsoBodyText> 
+      <p></p>
+      <p></p>
+    </div>
+    <div class=MsoBodyText> 
+      <h4>3) <a name="DesignLevel"></a>Designing a level</h4>
+    </div>
+    <div class=MsoBodyText> 
+      <p>Once you have created a new map or just load an existing one, you can 
+        build it as you want : draw the entire map, add characters or ground zones, 
+        assign a script to an object, test the pathfinder and so more.<br>
+        <br>
+        The map editor screen is made up of 4 panels : </p>
+    </div>
+    <blockquote> 
+      <div class=MsoBodyText> 
+        <p>a) <i><b>MapView</b></i> panel where you can see the map like it will 
+          be in the game,<br>
+          b)<i> <b>MapTools</b></i> panel give you some information about the 
+          current map and allow you to place, select or delete objects on the 
+          map,<br>
+          c) <i><b>LibTools</b></i> panel allow you to select on what kind of 
+          things you want to work : on characters, background, ground zones …<br>
+          d) <i><b>ObjectTools</b></i> is a panel that indeed depends on what 
+          work space you are working.</p>
+        <div class=MsoBodyText> 
+          <p> </p>
+        </div>
+        <div class=MsoBodyText> 
+          <h5>A)<a name="BackgroundFloor"></a> How to draw the Background Floor 
+            ?</h5>
+        </div>
+      </div>
+      <p class="MsoBodyText">Once you select a tile library for the level, as 
+        above-mentioned in the <a href="#MapCreation">MapCreation</a> section, 
+        the first thing you could do is to draw a part of the floor of your new 
+        empty level. <br>
+        <br>
+        So you have to click on the <i>Fond</i> button at the top of the <i>LibTools</i> 
+        panel. Then you must select one of the three types of floor you want to 
+        use (<i>sNatur</i>, <i>sArchi</i> or <i>Inter</i>). Left click on the 
+        <i>Placer</i> button on the <i>Actions</i> panel in the <i>MapTools</i> 
+        and position your mouse on the MapView where you want to place this floor 
+        tile. Just one more step : left clic on the view. You just placed a floor 
+        tile. <br>
+        You can continue with this same type of floor or select another one with 
+        the aim to continue to draw the background of your level.<br>
+        <br>
+        An advanced function allow you to paint the ground with the same tile 
+        easily. Use the <i>Peindre</i> button instead of the <i>Placer</i> button. 
+        And when you want to draw the ground let the left button pushed and move 
+        your mouse where you want.<br>
+        <br>
+      </p>
+      <div class=MsoBodyText> 
+        <p> </p>
+      </div>
+      <div class=MsoBodyText> 
+        <h5>B)<a name="PlaceObject"></a> How to place an Object on the map ?</h5>
+      </div>
+      <p class="MsoBodyText">If you read the <a href="BackgroundFloor">previous 
+        section</a>, you know how to place a background tile so it will be very 
+        easy to put an object tile on the map.<br>
+        Click on the <i>Decors</i> button at the top of the <i>LibTools</i> panel. 
+        Then choose one of the four kind of object (<i>dNatur</i>, <i>Objet</i>, 
+        <i>Mur</i> or <i>dArchi</i>). Use the <i>Placer</i> button in the <i>MapTools</i> 
+        panel and place your selected object where you want on the map by a simple 
+        left-click.</p>
+      <p class="MsoBodyText">Note that you cannot stack 2 object tiles (or 2 floor 
+        tiles) one above the other. In that case the trapezoids of your tile will 
+        become read instead of yellow.<br>
+        <br>
+      </p>
+      <div class=MsoBodyText> 
+        <p> </p>
+      </div>
+      <div class=MsoBodyText> 
+        <h5>C)<a name="RemoveObject"></a> How to remove something from the map 
+          ?</h5>
+      </div>
+      <p class="MsoBodyText">To delete any tile you have previously put on the 
+        map, just click on the <i>Select</i> button in the <i>MapTools</i> panel, 
+        then select the tile you want to remove and click on the <i>Suppr</i> 
+        button of the <i>MappTools</i> panel.</p>
+      <p class="MsoBodyText"><u>Tips</u><br>
+        Note that you can use the contextual menu by right-clicking once you have 
+        selected the object you want to remove. And choose the <i>Supprimer objet</i> 
+        menu. </p>
+      <p class="MsoBodyText">&nbsp;</p>
+      <div class=MsoBodyText> 
+        <p></p>
+        <p></p>
+      </div>
+    </blockquote>
+    <div class=MsoBodyText> 
+      <h4>4) <a name="AdvancedFeatures"></a>Advanced MapEdtior designing features</h4>
+    </div>
+    <p class="MsoBodyText">In this section I will cover more particular points 
+      of how designing a level. It will include script assignement and ground 
+      zone creation.</p>
+    <blockquote> 
+      <div class=MsoBodyText> 
+        <h5>A)<a name="AssignScript"></a> Assign script to an object</h5>
+        
+        <p class="MsoBodyText">Once you have selected any object of the map, you 
+          can assign it a scenary script that you must have previously wroten. 
+          And make sure that every object you've got assign a script have an unique 
+          ID.</p>
+        <p class="MsoBodyText">In the following example, a <i>bocal1</i> tile 
+          object was choosen. We name it <font size="-1">VASE_MORTEL_2</font> 
+          (with the top <i>Choose</i> button) that map with the 1000004 unique 
+          object number. Then we have assigned it the <i>VaseKiSeBrise2</i> script 
+          (with the bottom <i>Choose</i> button), that is the script number 5. 
+          You can edit this script that is in fact just the<a href="zegame/World/VaseKiSeBrise2.zfs"><i>World\VaseKiSeBrise2.zfs</i></a> 
+          file.<br>
+        </p>
+        </div>
+    </blockquote>
+    <blockquote> 
+      <p align="center"><i><b><font face="Arial, Helvetica, sans-serif" size="2" color="#808080"><img src="images/mapeditor5.jpg" width="347" height="173" align="left"><img src="images/mapeditor6.jpg" width="187" height="317"><br>
+        Assign a script to VASE_MORTEL_2 object</font></b></i></p>
+      <div class=MsoBodyText> 
+        <div align="left"><i><b></b></i><br>
+          <br>
+        </div>
+      </div>
+    </blockquote>
+    <div class=MsoBodyText> 
+      <h3>&nbsp;</h3>
+    </div>
+  </blockquote>
+  <div class=MsoBodyText> 
+    <p>&nbsp;</p>
+  </div>
+  <blockquote class="MsoBodyText"> 
+    <div class=Section1></div>
+  </blockquote>
+</blockquote>
+</body>
+</html>
