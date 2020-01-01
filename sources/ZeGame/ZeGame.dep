@@ -1,0 +1,704 @@
+# Microsoft Developer Studio Generated Dependency File, included by ZeGame.mak
+
+.\Sources\ScnActions_PersosMove.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\MemLib.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnActions.h"\
+	".\Sources\ScnActions_PersosMove.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnGame.h"\
+	".\Sources\ScnScript.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\WorldSimulation.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ScnActions_Sound.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\ScnActions.h"\
+	".\Sources\ScnActions_Sound.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\SoundEffect.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\Mpglib\Common.c : \
+	".\Sources\Mpglib\Mpg123.h"\
+	
+
+.\Sources\Mpglib\Dct64.c : \
+	".\Sources\Mpglib\Mpg123.h"\
+	
+
+.\Sources\Mpglib\Decode.c : \
+	".\Sources\Mpglib\Mpg123.h"\
+	
+
+.\Sources\Mpglib\interface.c : \
+	".\Sources\Mpglib\Mpg123.h"\
+	".\Sources\Mpglib\Mpglib.h"\
+	
+
+.\Sources\Mpglib\Layer3.c : \
+	".\Sources\Mpglib\Huffman.h"\
+	".\Sources\Mpglib\Mpg123.h"\
+	".\Sources\Mpglib\Mpglib.h"\
+	
+
+.\Sources\Mpglib\Tabinit.c : \
+	".\Sources\Mpglib\Mpg123.h"\
+	
+
+.\Sources\Animall.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\Consts.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\D3DLib.cpp : \
+	"..\..\..\..\prog\sdk - directx 6.1\include\d3denum.h"\
+	"..\..\..\..\prog\sdk - directx 6.1\include\d3dutil.h"\
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\D3DLib.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\SpritesLib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\DDlib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\include\ddutil.h"\
+	".\Sources\Consts.h"\
+	".\Sources\D3DLib.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImageUtil.h"\
+	".\Sources\PixelFormat.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\DDLibAsm.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\DDLibAsm.h"\
+	".\Sources\PixelFormat.h"\
+	
+
+.\Sources\DIlib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\DIlib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\DSLib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\include\wave.h"\
+	".\Sources\DSLib.h"\
+	".\Sources\DSMp3.h"\
+	".\Sources\DSWave.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\Mpglib\Mpg123.h"\
+	".\Sources\Mpglib\Mpglib.h"\
+	".\Sources\SoundUtil.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\DSMp3.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\DSLib.h"\
+	".\Sources\DSMp3.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\Mpglib\Mpg123.h"\
+	".\Sources\Mpglib\Mpglib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\DSWave.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\include\wave.h"\
+	".\Sources\DSLib.h"\
+	".\Sources\DSWave.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\SoundUtil.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\fBeginDlg.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\fBeginDlg.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeGame.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\FileManager.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\FileManager.h"\
+	".\Sources\PakFile.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\FileVirtual.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\FileManager.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\PakFile.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\FPath.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\GameDebug.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\GameObject.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnEvents.h"\
+	".\Sources\ScnScript.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\GameObjectList.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\GestFile.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GestFile.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\IDMap.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\StdAfx.h"\
+	
+
+.\Sources\ImageDDFile.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\ColorFormat.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FileFormat.h"\
+	".\Sources\ImageDDFile.h"\
+	".\Sources\ImageFile.h"\
+	
+
+.\Sources\ImageFile.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\ColorFormat.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FileFormat.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\ImageDDFile.h"\
+	".\Sources\ImageFile.h"\
+	
+
+.\Sources\ImageUtil.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\ColorFormat.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\ImageFile.h"\
+	".\Sources\ImageUtil.h"\
+	
+
+.\Sources\ImDecors2.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\include\ddutil.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\D3DLib.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\DDLibAsm.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImageUtil.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MemLib.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\SpritesLib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\INILib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\StdAfx.h"\
+	
+
+.\Sources\MapLib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\D3DLib.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\DDLibAsm.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\MapZone.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\MapZone.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\MapZone.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\MemLib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\MemLib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\PakFile.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\PakFile.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\PersoLib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\DDLibAsm.h"\
+	".\Sources\DIlib.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GestFile.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\MapZone.h"\
+	".\Sources\MemLib.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnEvents.h"\
+	".\Sources\SoundEffect.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\WorldSimulation.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\PhysicObject.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\PNJLib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\WorldSimulation.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ScnActions.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\MemLib.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnActions.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnGame.h"\
+	".\Sources\ScnScript.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\WorldSimulation.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ScnCauses.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\MapZone.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnCauses.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnGame.h"\
+	".\Sources\ScnScript.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\ZeNain.h"\
+	".\Sources\ZoneManager.h"\
+	
+
+.\Sources\ScnConsts.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ScnEvents.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnEvents.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ScnGame.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnGame.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ScnScript.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ScnActions.h"\
+	".\Sources\ScnActions_PersosMove.h"\
+	".\Sources\ScnActions_Sound.h"\
+	".\Sources\ScnCauses.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnEvents.h"\
+	".\Sources\ScnScript.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\SoundEffect.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\DSLib.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\SoundEffect.h"\
+	".\Sources\SoundEffectID.h"\
+	".\Sources\SoundLib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\WorldSimulation.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\SoundLib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DSLib.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\SoundLib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\WorldSimulation.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\SoundUtil.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\include\debug.h"\
+	".\include\wave.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\SoundUtil.h"\
+	
+
+.\Sources\SpritesLib.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\D3DLib.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\DDLibAsm.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\SpritesLib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\StdAfx.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\StdAfx.h"\
+	
+
+.\Sources\TimeClock.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	
+
+.\Sources\WorldSimulation.cpp : \
+	".\Sources\WorldSimulation.h"\
+	
+
+.\Sources\ZeGame.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\fBeginDlg.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeGame.h"\
+	".\Sources\ZeGameMain.h"\
+	".\Sources\ZeGameWnd.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ZeGame.rc : \
+	".\res\Nains.ico"\
+	".\res\ZeGame.rc2"\
+	
+
+.\Sources\ZeGameMain.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Animall.h"\
+	".\Sources\Consts.h"\
+	".\Sources\D3DLib.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\DDLibAsm.h"\
+	".\Sources\DIlib.h"\
+	".\Sources\DSLib.h"\
+	".\Sources\FileManager.h"\
+	".\Sources\FileVirtual.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameDebug.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\GestFile.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImageFile.h"\
+	".\Sources\ImageUtil.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\MemLib.h"\
+	".\Sources\PakFile.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnEvents.h"\
+	".\Sources\ScnGame.h"\
+	".\Sources\ScnScript.h"\
+	".\Sources\SoundEffect.h"\
+	".\Sources\SoundLib.h"\
+	".\Sources\SpritesLib.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\ZeGame.h"\
+	".\Sources\ZeGameMain.h"\
+	".\Sources\ZeGameWnd.h"\
+	".\Sources\ZeNain.h"\
+	".\Sources\ZoneManager.h"\
+	
+
+.\Sources\ZeGameWnd.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\ZeGame.h"\
+	".\Sources\ZeGameMain.h"\
+	".\Sources\ZeGameWnd.h"\
+	".\Sources\ZeNain.h"\
+	
+
+.\Sources\ZoneManager.cpp : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	".\Sources\Consts.h"\
+	".\Sources\DDlib.h"\
+	".\Sources\FPath.h"\
+	".\Sources\GameObject.h"\
+	".\Sources\GameObjectList.h"\
+	".\Sources\IDMap.h"\
+	".\Sources\ImDecors2.h"\
+	".\Sources\MapLib.h"\
+	".\Sources\MapZone.h"\
+	".\Sources\PersoLib.h"\
+	".\Sources\PhysicObject.h"\
+	".\Sources\PNJLib.h"\
+	".\Sources\ScnConsts.h"\
+	".\Sources\ScnEvents.h"\
+	".\Sources\StdAfx.h"\
+	".\Sources\TimeClock.h"\
+	".\Sources\ZeNain.h"\
+	".\Sources\ZoneManager.h"\
+	
+
+"..\zegame 29 02 2000\ddutil.cpp" : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	"..\zegame 29 02 2000\ddutil.h"\
+	
+
+"..\zegame 29 02 2000\debug.c" : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	"..\zegame 29 02 2000\debug.h"\
+	
+
+"..\zegame 29 02 2000\wave.c" : \
+	"..\..\..\..\software\visual studio\vc98\include\basetsd.h"\
+	"..\zegame 29 02 2000\debug.h"\
+	"..\zegame 29 02 2000\wave.h"\
+	

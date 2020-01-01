@@ -1,0 +1,470 @@
+////////////////////////////////////////////////////////////////////////////////
+//  Unité "MPServer.cpp" : Serveur Multi-player sous DirectPlay				  //
+//                                                                            //
+//	Description :															  //
+//                                                                            //
+//  Copyright (C) 2001 Antoine Rey    antoine.rey@free.fr					  //
+//                                    elric@ifrance.com		                  //
+//  Version      : 0.1			                                              //
+//  Creation     : 04/03/2001 		                                          //
+//  Last upgrade : <none>                                                     //
+////////////////////////////////////////////////////////////////////////////////
+
+//#include "GameDebug.h"				// Utilise pour les logs
+#include "ZeNain.h"					//--- Special for Visual C++ 6 MFC ---
+#pragma hdrstop
+#include "MPServer.h"				// Header de la classe
+
+
+#define PLAYER_LOCK()                   EnterCriticalSection( &g_MPServer.m_csPlayerContext ); 
+#define PLAYER_ADDREF( pPlayerInfo )    if( pPlayerInfo ) pPlayerInfo->lRefCount++;
+#define PLAYER_RELEASE( pPlayerInfo )   if( pPlayerInfo ) { pPlayerInfo->lRefCount--; if( pPlayerInfo->lRefCount <= 0 ) SAFE_DELETE( pPlayerInfo ); } pPlayerInfo = NULL;
+#define PLAYER_UNLOCK()                 LeaveCriticalSection( &g_MPServer.m_csPlayerContext );
+
+////////////////////////////////////////////////////////////////////////////////
+// Classe MPSERVER					                                          //
+////////////////////////////////////////////////////////////////////////////////
+
+HANDLE MPServer::hServerLaunched = CreateEvent(NULL,	FALSE, FALSE, NULL);;
+HANDLE MPServer::hServerStop = CreateEvent(NULL,	FALSE, FALSE, NULL);
+
+// Port que le serveur utilise par defaut
+DWORD MPServer::m_dwDefaultServerPort = 1078;
+
+//=== Constructeur par defaut ================================================//
+MPServer::MPServer()
+{	m_pDPServer = NULL;
+	m_lNumberOfActivePlayers = 0;
+	strcpy(m_strAppName, "ZeGameServer");
+	strcpy(m_strSessionName, "ZeGameSession");
+	m_bServerStarted = FALSE;
+	m_dwPort = m_dwDefaultServerPort;			// port pris arbitrairement
+//	m_pLog = new GameDebug("zgserver.log");		// ouverture du fichier de log du serveur pour cette session
+	m_strServerURL[0]='\0';
+	m_strAppName[0]='\0';
+	m_hDlg = NULL;
+}
+//----------------------------------------------------------------------------//
+
+//=== Destructeur ============================================================//
+MPServer::~MPServer()
+{	if (m_pDPServer!=NULL)
+	{	StopServer();
+	}
+	DeleteCriticalSection( &m_csServerContext );
+	DeleteCriticalSection( &m_csPlayerContext );
+//	delete m_pLog;
+}	
+//----------------------------------------------------------------------------//
+
+
+//=== Demarre le serveur DirectPlay ==========================================//
+HRESULT MPServer::StartServer()
+{   HRESULT hr;
+    PDIRECTPLAY8ADDRESS pDP8AddrLocal = NULL;
+	DWORD numChars = 512;
+
+	#ifdef _DEBUG
+//	m_pLog->TRACER("ZeGame Server starting with session %s ...\n", m_strSessionName);
+	#endif
+    // Normalisation du nom de la session
+	WCHAR wstrSessionName[MAX_PATH];
+    DXUtil_ConvertGenericStringToWide( wstrSessionName, m_strSessionName );
+
+	// Init COM so we can use CoCreateInstance
+    CoInitializeEx( NULL, COINIT_MULTITHREADED );
+
+	// Cree l'IDirectPlay8Server
+    if( FAILED( hr = CoCreateInstance( CLSID_DirectPlay8Server, NULL, 
+                                       CLSCTX_INPROC_SERVER,
+                                       IID_IDirectPlay8Server, 
+                                       (LPVOID*) &m_pDPServer ) ) )
+        return DXTRACE_ERR( TEXT("CoCreateInstance"), hr );
+
+    // Initialise l'IDirectPlay8Server
+    if( FAILED( hr = m_pDPServer->Initialize( NULL, DirectPlayServerMessageHandler, 0 ) ) )
+        return DXTRACE_ERR( TEXT("Initialize"), hr );
+
+    hr = CoCreateInstance( CLSID_DirectPlay8Address, NULL, 
+                           CLSCTX_ALL, IID_IDirectPlay8Address, 
+                           (LPVOID*) &pDP8AddrLocal );
+    if( FAILED(hr) )
+    {   DXTRACE_ERR( TEXT("CoCreateInstance"), hr );
+        goto LCleanup;
+    }
+
+    hr = pDP8AddrLocal->SetSP( &CLSID_DP8SP_TCPIP );
+    if( FAILED(hr) )
+    {   DXTRACE_ERR( TEXT("SetSP"), hr );
+        goto LCleanup;
+    }
+
+    // Ajoute le port a l'URL DirectPlay. Si le port vaut zero, DirectPlay choisira
+	// de lui meme un port.
+    if( m_dwPort != 0 )
+    {	if( FAILED( hr = pDP8AddrLocal->AddComponent( DPNA_KEY_PORT, 
+                                                      &m_dwPort, sizeof(m_dwPort),
+                                                      DPNA_DATATYPE_DWORD ) ) )
+		return DXTRACE_ERR( TEXT("AddComponent"), hr );
+    }
+
+    DPN_APPLICATION_DESC dpnAppDesc;
+    ZeroMemory( &dpnAppDesc, sizeof(DPN_APPLICATION_DESC) );
+    dpnAppDesc.dwSize           = sizeof( DPN_APPLICATION_DESC );
+    dpnAppDesc.dwFlags          = DPNSESSION_CLIENT_SERVER;
+    dpnAppDesc.guidApplication  = g_guidZeGame;
+    dpnAppDesc.pwszSessionName  = wstrSessionName;
+
+    hr = m_pDPServer->Host( &dpnAppDesc, &pDP8AddrLocal, 1, NULL, NULL, NULL, 0  );
+    if( FAILED(hr) )
+    {   DXTRACE_ERR( TEXT("Host"), hr );
+        goto LCleanup;
+    }
+	
+	hr = pDP8AddrLocal->GetURLA(m_strServerURL, &numChars);
+
+	InitializeCriticalSection(&m_csServerContext);
+	InitializeCriticalSection(&m_csPlayerContext);
+
+    m_bServerStarted = TRUE;	// Le serveur a demarre
+	#ifdef _DEBUG
+//	m_pLog->TRACER("ZeGame Server started !\n");
+	#endif
+
+LCleanup:
+    SAFE_RELEASE( pDP8AddrLocal );
+
+    return hr;
+}
+//----------------------------------------------------------------------------//
+
+//-----------------------------------------------------------------------------
+//=== Envoi a un nouveau jouer #dpnidNewPlayer la description du monde : =====//
+// - son propre DPNID affecte par le serveur
+// - nombre de joueurs deja connectes
+// - la liste des joueurs connectes : un message par joueur connecte
+HRESULT MPServer::SendWorldStateToNewPlayer( DPNID dpnidNewPlayer )
+{
+    HRESULT hr;
+    DWORD dwNumPlayers = 0;
+    DPNID* aPlayers = NULL;
+
+    // Envoie au nouveau joueur son propre DPNID determine par le serveur
+    GAMEMSG_SET_ID msgSetID;
+    msgSetID.dwType      = GAME_MSGID_SET_ID;
+    msgSetID.dpnidPlayer = dpnidNewPlayer;
+	msgSetID.dwNbPlayersOnline = m_lNumberOfActivePlayers;
+    DPN_BUFFER_DESC bufferDesc;
+    bufferDesc.dwBufferSize = sizeof(GAMEMSG_SET_ID);
+    bufferDesc.pBufferData  = (BYTE*) &msgSetID;
+    // DirectPlay will tell via the message handler if there are any severe errors, so ignore any errors 
+    DPNHANDLE hAsync;
+    g_pDPServer->SendTo( dpnidNewPlayer, &bufferDesc, 1,
+                         0, NULL, &hAsync, DPNSEND_NOLOOPBACK );
+
+	// Recupere la liste de tous joueurs deja connectes au serveur
+    while( TRUE )
+    {   hr = g_pDPServer->EnumPlayersAndGroups( aPlayers, &dwNumPlayers, DPNENUM_PLAYERS );
+        if( SUCCEEDED(hr) )
+            break;
+        if( FAILED(hr) && hr != DPNERR_BUFFERTOOSMALL )
+            return DXTRACE_ERR( TEXT("EnumPlayersAndGroups"), hr );
+        SAFE_DELETE_ARRAY( aPlayers );
+        aPlayers = new DPNID[ dwNumPlayers ];
+    }
+
+	// Pour chaque joueur deja connecte, on envoie au nouveau joueur un message
+	// disant qu'il est deja online.
+    for( DWORD i = 0; i<dwNumPlayers; i++ )
+    {   ZEGAME_PLAYER_INFO* pPlayerInfo = NULL;
+
+        // Don't send a create msg to the new player about itself.  This will 
+        // be already done when we sent one to DPNID_ALL_PLAYERS_GROUP
+        if( aPlayers[i] == dpnidNewPlayer ) continue;  
+
+        hr = g_pDPServer->GetPlayerContext( aPlayers[i], (LPVOID*) &pPlayerInfo, 0 );
+
+        // Ignore this player if we can't get the context
+        if( pPlayerInfo == NULL || FAILED(hr) ) continue; 
+
+        SendPlayerOnlineMsg( pPlayerInfo, dpnidNewPlayer );
+    }
+
+    SAFE_DELETE_ARRAY( aPlayers );
+
+    return S_OK;
+}
+//----------------------------------------------------------------------------//
+
+
+//=== Previent le joueur #dpnidTarget qu'un nouveau joueur vient de se ======//
+//=   connecter au serveur et lui passe le parametre #pPlayerAbout contenant //
+//=   des informations au sujet de ce nouveau joueur.
+//=   @param pPlayerAbout	Infos decrivant le nouveau joueur
+//=   @param dpnidTarget	DPNID_ALL_PLAYERS_GROUP ou ????
+HRESULT MPServer::SendCreatePlayerMsg( ZEGAME_PLAYER_INFO* pPlayerAbout, DPNID dpnidTarget )
+{
+    GAMEMSG_CREATE_PLAYER msgCreatePlayer;
+    msgCreatePlayer.dwType = GAME_MSGID_CREATE_PLAYER;
+    msgCreatePlayer.dpnidPlayer = pPlayerAbout->dpnidPlayer;
+    strcpy( msgCreatePlayer.strPlayerName, pPlayerAbout->strPlayerName );
+
+    DPN_BUFFER_DESC bufferDesc;
+    bufferDesc.dwBufferSize = sizeof(GAMEMSG_CREATE_PLAYER);
+    bufferDesc.pBufferData  = (BYTE*) &msgCreatePlayer;
+
+    // DirectPlay will tell via the message handler
+    // if there are any severe errors, so ignore any errors 
+    DPNHANDLE hAsync;
+    m_pDPServer->SendTo( dpnidTarget, &bufferDesc, 1,
+                         0, NULL, &hAsync, DPNSEND_NOLOOPBACK );
+
+    return S_OK;
+}
+//----------------------------------------------------------------------------//
+
+//=== Previent le joueur #dpnidTarget que tel joueur #pPlayerInfo est deja ===//
+// connecte au serveur 
+HRESULT MPServer::SendPlayerOnlineMsg( ZEGAME_PLAYER_INFO* pPlayerAbout, DPNID dpnidTarget )
+{	GAMEMSG_ONLINE_PLAYER msgCreatePlayer;
+    msgCreatePlayer.dwType = GAME_MSGID_ONLINE_PLAYER;
+    msgCreatePlayer.dpnidPlayer = pPlayerAbout->dpnidPlayer;
+    strcpy( msgCreatePlayer.strPlayerName, pPlayerAbout->strPlayerName );
+
+    DPN_BUFFER_DESC bufferDesc;
+    bufferDesc.dwBufferSize = sizeof(GAMEMSG_ONLINE_PLAYER);
+    bufferDesc.pBufferData  = (BYTE*) &msgCreatePlayer;
+
+    // DirectPlay will tell via the message handler 
+    // if there are any severe errors, so ignore any errors 
+    DPNHANDLE hAsync;
+    m_pDPServer->SendTo( dpnidTarget, &bufferDesc, 1,
+                         0, NULL, &hAsync, DPNSEND_NOLOOPBACK );
+
+    return S_OK;
+}
+//----------------------------------------------------------------------------//
+
+//=== Arrete le Serveur multi-joueur =========================================//
+void MPServer::StopServer()
+{   if(m_pDPServer)
+    {	m_pDPServer->Close(0);
+		SAFE_RELEASE(m_pDPServer);
+	}
+	m_bServerStarted = FALSE;
+}
+//----------------------------------------------------------------------------//
+
+
+//----------------------------------------------------------------------------//
+void MPServer::incrementNumberOfActivePlayer()
+{	InterlockedIncrement((long*) &m_lNumberOfActivePlayers );
+}
+
+void MPServer::decrementNumberOfActivePlayer()
+{	InterlockedDecrement((long*) &m_lNumberOfActivePlayers );
+}
+//----------------------------------------------------------------------------//
+
+/////////////////////////////// Fin de MPSERVER ////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// Fonctions ANNEXES														  //
+////////////////////////////////////////////////////////////////////////////////
+
+//=== Demarre le serveur multi-joueur =======================================//
+DWORD WINAPI LaunchServer(LPVOID lpParam)
+{	MPServer *pMPServer = new MPServer();
+	HRESULT hr = pMPServer->StartServer();
+	if FAILED(hr) return hr;
+	SetEvent(MPServer::hServerLaunched);	// Envoi l'evenement "Le serveur a demarre avec succces"
+	// Attends qu'on lui dise d'arreter le serveur avant de stopper la tache
+	WaitForSingleObject(MPServer::hServerStop, INFINITE);
+	pMPServer->StopServer();
+	return 0;
+}
+//----------------------------------------------------------------------------//
+ 
+
+//=== Initialise le Serveur multi-joueur =====================================//
+// Le serveur est cree dans un processus a part afin de pouvoir tourner en meme 
+// temps que le jeu lorsqu'un joueur fait aussi office de serveur.
+void InitGame_MPServer()
+{	DWORD dwThreadId, dwThrdParam = 1; 
+    HANDLE hThread; 
+    hThread = CreateThread( 
+        NULL,                        // no security attributes 
+        0,                           // use default stack size  
+        LaunchServer,                // thread function 
+        &dwThrdParam,                // argument to thread function 
+        0,                           // use default creation flags 
+        &dwThreadId);                // returns the thread identifier
+	if (hThread==NULL) _asm int 3;
+	SetThreadPriority(hThread,THREAD_PRIORITY_ABOVE_NORMAL);
+}
+//----------------------------------------------------------------------------//
+
+//=== Stop le serveur multi-joueur ==========================================//
+// => en informant tous les joueurs connectes que la session va etre detruite
+void CloseGame_MPServer()
+{	MPServer *pMPServer = MPServer::getSingletonPtr();
+	pMPServer->StopServer();
+	delete pMPServer;
+}
+//----------------------------------------------------------------------------//
+
+//=== Handler des messages DirectPlay ========================================//
+HRESULT WINAPI DirectPlayServerMessageHandler( PVOID pvUserContext, 
+                                         DWORD dwMessageId, 
+                                         PVOID pMsgBuffer )
+{
+/*	m_MPServer.EnterCriticalSection( &m_csPlayerContext );
+	//callback is now locked
+	//....
+	m_MPServer.LeaveCriticalSection( &m_csPlayerContext );*/
+        
+
+    switch( dwMessageId )
+    {
+		// Un nouveau joueur vient de se connecter au serveur
+		// => on en informe les autres joueurs
+		case DPN_MSGID_CREATE_PLAYER:
+        {
+            HRESULT hr;
+            PDPNMSG_CREATE_PLAYER pCreatePlayerMsg;
+            // Message DirectPlay qui sera renvoye au joueurs connectes en leur disant que tel 
+			// nouveau joueur est a present connecte au serveur
+			pCreatePlayerMsg = (PDPNMSG_CREATE_PLAYER) pMsgBuffer;
+
+            // Recupere les informations enviyees par ce nouveau joueur (particulierement son nom) 
+            DWORD dwSize = 0;
+            DPN_PLAYER_INFO* pdpPlayerInfo = NULL;
+            hr = g_pDPServer->GetClientInfo( pCreatePlayerMsg->dpnidPlayer, pdpPlayerInfo, &dwSize, 0 );
+            if( FAILED(hr) && hr != DPNERR_BUFFERTOOSMALL )
+            {   if( hr == DPNERR_INVALIDPLAYER )
+                {   // Ignore this message if this is for the host
+                    break;
+                }
+                return DXTRACE_ERR( TEXT("GetClientInfo"), hr );
+            }
+			#ifdef _DEBUG
+//			g_MPServer.getLog()->TRACER("Player %s has join the game\n", pdpPlayerInfo->pwszName);
+			#endif
+            
+			// Envoie a tous les joueurs connectes que ce nouveau joueur a joint la partie
+			pdpPlayerInfo = (DPN_PLAYER_INFO*) new BYTE[ dwSize ];
+            ZeroMemory( pdpPlayerInfo, dwSize );
+            pdpPlayerInfo->dwSize = sizeof(DPN_PLAYER_INFO);
+            hr = g_pDPServer->GetClientInfo( pCreatePlayerMsg->dpnidPlayer, 
+                                       pdpPlayerInfo, &dwSize, 0 );
+            if( FAILED(hr) ) return DXTRACE_ERR( TEXT("GetClientInfo"), hr );
+
+			// Cree et remplie une structure ZEGAME_PLAYER_INFO que l'on enverra a tous les joueurs connectes
+            ZEGAME_PLAYER_INFO* pPlayerInfo = new ZEGAME_PLAYER_INFO;
+            ZeroMemory( pPlayerInfo, sizeof(ZEGAME_PLAYER_INFO) );
+            pPlayerInfo->lRefCount   = 1;
+            pPlayerInfo->dpnidPlayer = pCreatePlayerMsg->dpnidPlayer;
+
+            // Le nom du joueur est convertit en TCHAR qui filtre les caracteres speciaux
+			DXUtil_ConvertWideStringToGeneric( pPlayerInfo->strPlayerName, 
+                                               pdpPlayerInfo->pwszName, MAX_PLAYER_NAME );
+            // On n'a plus besoin des informations relatives au joueur que l'on avait demande au serveur
+			SAFE_DELETE_ARRAY( pdpPlayerInfo );
+
+            // Ces informations relatives au nouveau joueur sont passes en parametre du message DirectPlay
+            pCreatePlayerMsg->pvPlayerContext = pPlayerInfo;
+
+			// Envoie a tous les joueurs connectes un message les informants de la connection d'un nouveau joueur
+            g_MPServer.SendCreatePlayerMsg( pPlayerInfo, DPNID_ALL_PLAYERS_GROUP );
+
+            // Envoie a ce nouveau joueur des informations sur le monde courant
+            g_MPServer.SendWorldStateToNewPlayer( pCreatePlayerMsg->dpnidPlayer );
+
+			// Incremente le nombre de joueurs connectes au serveur
+            g_MPServer.incrementNumberOfActivePlayer();
+			if( g_MPServer.getDlgHandle() != NULL ) 
+			{	PostMessage( g_MPServer.getDlgHandle(), WM_APP_UPDATE_STATS, 0, 0 );
+			}
+            break;
+        }
+
+        case DPN_MSGID_DESTROY_PLAYER:
+        {
+            PDPNMSG_DESTROY_PLAYER pDestroyPlayerMsg;
+            pDestroyPlayerMsg = (PDPNMSG_DESTROY_PLAYER)pMsgBuffer;
+            ZEGAME_PLAYER_INFO* pPlayerInfo = (ZEGAME_PLAYER_INFO*) pDestroyPlayerMsg->pvPlayerContext;
+
+            // Ignore this message if this is the host player
+            if( pPlayerInfo == NULL )
+                break; 
+
+            // Send all connected players a message telling about this destroyed player
+            g_MPServer.SendDestroyPlayerMsgToAll( pPlayerInfo );
+
+           
+			PLAYER_LOCK();                  // enter player context CS
+            PLAYER_RELEASE( pPlayerInfo );  // Release player and cleanup if needed
+            PLAYER_UNLOCK();                // leave player context CS
+
+            // Update the number of active players, and 
+            // post a message to the dialog thread to update the 
+            // UI.  This keeps the DirectPlay message handler 
+            // from blocking
+            g_MPServer.decrementNumberOfActivePlayer();
+            if( g_MPServer.getDlgHandle() != NULL ) PostMessage( g_MPServer.getDlgHandle(), WM_APP_UPDATE_STATS, 0, 0 );
+
+            break;
+        }
+
+        case DPN_MSGID_TERMINATE_SESSION:
+        {/*
+            PDPNMSm_TERMINATE_SESSION pTerminateSessionMsg;
+            pTerminateSessionMsg = (PDPNMSm_TERMINATE_SESSION)pMsgBuffer;
+
+            m_hrDialog = DPNERR_CONNECTIONLOST;
+            EndDialog( m_hDlg, 0 );*/
+            break;
+        }
+
+        case DPN_MSGID_RECEIVE:
+        {
+           /* PDPNMSm_RECEIVE pReceiveMsg;
+            pReceiveMsg = (PDPNMSm_RECEIVE)pMsgBuffer;
+            ZEGAME_PLAYER_INFO* pPlayerInfo = (ZEGAME_PLAYER_INFO*) pReceiveMsg->pvPlayerContext;
+
+            GAMEMSm_GENERIC* pMsg = (GAMEMSm_GENERIC*) pReceiveMsg->pReceiveData;
+            if( pMsg->dwType == GAME_MSGID_WAVE )
+                SendWaveMessageToAll( pPlayerInfo->dpnidPlayer );*/
+            break;
+        }
+    }
+
+    return S_OK;
+}
+//----------------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------------
+// Name: SendDestroyPlayerMsgToAll
+// Desc: 
+//-----------------------------------------------------------------------------
+HRESULT	MPServer::SendDestroyPlayerMsgToAll( ZEGAME_PLAYER_INFO* pPlayerInfo )
+{
+    GAMEMSG_DESTROY_PLAYER msgDestroyPlayer;
+    msgDestroyPlayer.dwType = GAME_MSGID_DESTROY_PLAYER;
+    msgDestroyPlayer.dpnidPlayer = pPlayerInfo->dpnidPlayer;
+
+    DPN_BUFFER_DESC bufferDesc;
+    bufferDesc.dwBufferSize = sizeof(GAMEMSG_CREATE_PLAYER);
+    bufferDesc.pBufferData  = (BYTE*) &msgDestroyPlayer;
+
+    // DirectPlay will tell via the message handler 
+    // if there are any severe errors, so ignore any errors 
+    DPNHANDLE hAsync;
+    g_pDPServer->SendTo( DPNID_ALL_PLAYERS_GROUP, &bufferDesc, 1,
+                         0, NULL, &hAsync, DPNSEND_NOLOOPBACK );
+
+    return S_OK;
+}
+
+

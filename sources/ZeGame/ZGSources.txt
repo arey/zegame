@@ -1,0 +1,146 @@
+============================================================================
+                           NAINS - ZE GAME                                
+                         Computer Role Playing Game                          
+  	    	    Sources Code version 1.75 (04/24/2001)
+
+	       	    	(c) copyright 1998-2001
+		          Code by Antoine Rey
+			  elric@ifrance.com
+
+============================================================================
+
+
+Description
+-----------
+Thanks for downloading our sources ! I've spent a lot of time into
+developing ZeGame, and hope that it can give you some piece of 
+advice.
+
+You can find in this package the C++ classes of the following
+modules :
+
+ o 3D isometric graphic engine
+    -> based on DirectDraw and Direct3D IM,
+    -> it performs massive sprites rendering at screen, double-buffering, transluency and shadows,
+    -> bimaps loading and tiles bank management
+
+ o Sound engine
+    -> based on DirectSound, 
+    -> allow to play mp3 and wave files as musik or sound effects
+    -> manage stereo and spatial sounds playing 
+
+ o Animation engine
+    -> used to animate all the characters and objects of the game,
+    -> home-made animation script language 
+
+ o Input device engine
+    -> based on DirectInput,
+    -> manage keyboard and joypad 
+
+ o AI engine
+    -> Events manager between game tokens,
+    -> Scenaritic script files
+
+ o Multiplayer part
+    -> based on DirectPlay and web server programming,
+    -> Massive online multi-player game over the Internet
+
+ o Pak file module
+    -> file system that allow to merge all ressources file in one or more big files,
+    -> and virtual file management : disk or RAM
+
+ o Miscellaneous modules
+    -> Ini file reader,
+    -> Debuggage, ...
+
+
+Requires
+--------
+ - DirectX 8 or better
+ - Microsoft Visual C+ 6
+ - ZeGame resources file
+
+
+Install
+-------
+Extract the rar in any folder you want. You can compile the 
+exceutable file. To run it you have copy all the resources
+file of ZeGame in a ZeGame\ sub-directory of where you just 
+installed it : either the .zgp files or the files include in
+"ZeGame-Res-v1.70.rar".
+
+Make sure that you have the DirectX 8 SDK on your computer.
+I used Visual C++ 6.0 for this project and was unable to test the 
+Workspace and Project with earlier versions.
+
+If you get compiler errors, make sure that you have your Directories set
+in Devstudio to find the correct DX6 files ( or that you physically 
+placed them in your Compiler's include and library directories ).  
+( in Visual C++ 6.0 ) 
+Tools\Options\Directories\ Show directories for:
+	Include files
+	Library	files 
+If they aren't there, go to the bottom of the list (where the empty box is)
+Click in the empty box, then click the "..." button and find the directory
+that is appropriate.  Include files could be in "c:\DX8SDK\include" as an 
+example. 
+After you select the correct folder, Use the Up arrow to move that folder
+up to the top of the list.
+
+
+Download
+--------
+
+Make sure that you visit our web page often for updates about
+ZeGame engine.
+
+* Home page
+        http://www.zegame.net
+
+* Documentation
+	http://www.zegame.net/gamedoc/gamedoc.htm
+
+* Direct download
+	- Sources : 
+		http://www.zegame.net/download/ZeGame-Sources-v1.75.rar
+	- Resources:
+        	http://www.zegame.net/download/ZeGame-Res-v1.70.rar
+	- Development kit:
+		http://www.zegame.net/download/ZeGame-Devkit-1.00.rar
+		
+
+Bugs
+----
+If you find one that isn't listed, let meknow.  And if you have 
+a fix for it, so much the better!
+
+
+Enjoy and have Fun !
+
+
+Zegame development team.
+
+
+
+============================================================================
+				DISCLAIMER
+============================================================================
+
+If you plan to put this program on your web page or a cdrom of any sort, let 
+me know via email, I'm curious to see where it ends up :)
+
+If you use the code for your own projects please give me credit, or mention my 
+web site somewhere in your program or it's docs.
+
+You may not sell this Software or include it on any distribution or 
+compilation without consent of the author.
+
+Any use of this Software is at your own risk.  
+
+In no event shall the Author be liable for any special, incidental, indirect,
+or consequential damages whatsoever (including, without limitation, damages 
+for loss of business profits, business interruption, loss of business 
+information, or any other pecuniary loss) arising out of the use of or 
+inability to use this Software.
+
+============================================================================

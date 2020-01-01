@@ -1,0 +1,118 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ZeGame - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2B.tmp" with contents
+[
+/nologo /G5 /MD /W3 /GR /GX /O2 /I "Include/" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "VISUALC" /D "MICROSOFT" /D "NEW_FILE_MANAGER" /D "WIN2000" /Fp"Release/ZeGame.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\CRPG\Prog\ZeNain\ZeGame 29 09 2000\Sources\PNJLib.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2B.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2C.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/ZeGame.pdb" /machine:I386 /out:"ZeGame/ZeGame.exe" /libpath:"Lib" 
+".\Release\ScnActions_PersosMove.obj"
+".\Release\ScnActions_Sound.obj"
+".\Release\Common.obj"
+".\Release\Dct64.obj"
+".\Release\Decode.obj"
+".\Release\interface.obj"
+".\Release\Layer3.obj"
+".\Release\Tabinit.obj"
+".\Release\PhysicInorganicObject.obj"
+".\Release\PhysicObject.obj"
+".\Release\PhysicObjectManager.obj"
+".\Release\PhysicProjectileObject.obj"
+".\Release\DIlib.obj"
+".\Release\ForceFeedbackEffect.obj"
+".\Release\ForceFeedbackEffect_BumpIntoWall.obj"
+".\Release\ForceFeedbackEffectManager.obj"
+".\Release\httpsocket.obj"
+".\Release\MPClient.obj"
+".\Release\MPMonitor.obj"
+".\Release\MPServer.obj"
+".\Release\MPSession.obj"
+".\Release\zghttpsocket.obj"
+".\Release\ZGMultiplayer.obj"
+".\Release\Animall.obj"
+".\Release\Consts.obj"
+".\Release\D3DLib.obj"
+".\Release\DDlib.obj"
+".\Release\DDLibAsm.obj"
+".\Release\DSLib.obj"
+".\Release\DSMp3.obj"
+".\Release\DSWave.obj"
+".\Release\fBeginDlg.obj"
+".\Release\FileManager.obj"
+".\Release\FileVirtual.obj"
+".\Release\FPath.obj"
+".\Release\GameDebug.obj"
+".\Release\GameObject.obj"
+".\Release\GameObjectList.obj"
+".\Release\GestFile.obj"
+".\Release\IDMap.obj"
+".\Release\ImageDDFile.obj"
+".\Release\ImageFile.obj"
+".\Release\ImageUtil.obj"
+".\Release\ImDecors2.obj"
+".\Release\INILib.obj"
+".\Release\MapLib.obj"
+".\Release\MapZone.obj"
+".\Release\MemLib.obj"
+".\Release\PakFile.obj"
+".\Release\PersoLib.obj"
+".\Release\PNJLib.obj"
+".\Release\ScenarioManager.obj"
+".\Release\ScenarioObject.obj"
+".\Release\ScnActions.obj"
+".\Release\ScnCauses.obj"
+".\Release\ScnConsts.obj"
+".\Release\ScnEvents.obj"
+".\Release\ScnGame.obj"
+".\Release\ScnScript.obj"
+".\Release\SoundEffect.obj"
+".\Release\SoundLib.obj"
+".\Release\SoundUtil.obj"
+".\Release\SpritesLib.obj"
+".\Release\StdAfx.obj"
+".\Release\TimeClock.obj"
+".\Release\WorldSimulation.obj"
+".\Release\ZeGame.obj"
+".\Release\ZeGameMain.obj"
+".\Release\ZeGameWnd.obj"
+".\Release\ZoneManager.obj"
+".\Release\ddutil.obj"
+".\Release\debug.obj"
+".\Release\dxutil.obj"
+".\Release\wave.obj"
+".\Release\ZeGame.res"
+".\Lib\Mapi32.lib"
+".\Lib\d3dim.lib"
+".\Lib\ddraw.lib"
+".\Lib\dinput.lib"
+".\Lib\dsound.lib"
+".\Lib\dxguid.lib"
+".\Lib\DXTrans.lib"
+".\Lib\Guids.lib"
+".\Lib\d3dframe.lib"
+".\Lib\Winmm.lib"
+".\Lib\dinput8.lib"
+".\Lib\WSOCK32.LIB"
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2C.tmp"
+<h3>Output Window</h3>
+Compiling...
+PNJLib.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ZeGame.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

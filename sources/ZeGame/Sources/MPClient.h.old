@@ -1,0 +1,113 @@
+////////////////////////////////////////////////////////////////////////////////
+//  Unité "MPClient.h" : Client Multi-player sous DirectPlay				  //
+//                                                                            //
+//	Description :															  //
+//                                                                            //
+//  Copyright (C) 2001 Antoine Rey    antoine.rey@free.fr					  //
+//                                    elric@ifrance.com		                  //
+//  Version      : 0.1			                                              //
+//  Creation     : 04/03/2001 		                                          //
+//  Last upgrade : <none>                                                     //
+////////////////////////////////////////////////////////////////////////////////
+
+#ifndef MPClientH
+#define MPClientH
+
+//---------------------------------------------------------------------- Include
+#include "Singleton.h"		// Template de toutes les classes singletons
+#include <dplay8.h>			// DirectPlay8
+#include <dpaddr.h>
+#include "ZGMultiplayer.h"	// Constantes communes a toute la partir reseau de ZeGame
+
+//----------------------MPClient------------------------------------------------ Define
+#define g_MPClient MPClient::getSingleton()
+#define g_pDPClient MPClient::getSingleton().getDPClient()
+
+//------------------------------------------------------------------------- Enum
+
+//------------------------------------------------------------------------ Class
+////////////////////////////////////////////////////////////////////////////////
+// Classe MPCLIENT															  //
+class MPClient : public Singleton <MPClient>
+{ // ---------------------------------------------------------- Attributs privés
+  protected:
+	IDirectPlay8Client* m_pDPClient;                // DirectPlay server object
+
+	DPN_APPLICATION_DESC   dpnAppDesc;
+    IDirectPlay8Address*   pDP8AddressHost;
+    IDirectPlay8Address*   pDP8AddressLocal;
+    WCHAR*                 wszHostName;
+	
+	char*				   pPlayerName;				// Nom du joueur
+	CHAR				   m_strClientURL[512];		// URL au format DirectPlay du Client (caractere ANSI)
+
+	struct DPHostEnumInfo
+    {
+        DWORD                 dwRef;
+        DPN_APPLICATION_DESC* pAppDesc;
+        IDirectPlay8Address* pHostAddr;
+        IDirectPlay8Address* pDeviceAddr;
+        TCHAR                szSession[MAX_PATH];
+        DWORD                dwLastPollTime;
+        BOOL                 bValid;
+        DPHostEnumInfo*      pNext;
+    };
+
+	DPHostEnumInfo          m_DPHostEnumHead;		// Link list
+	CRITICAL_SECTION        m_csHostEnum;
+	BOOL                    m_bEnumListChanged;
+  
+  public:
+    DPNHANDLE              m_hEnumAsyncOp;
+	DPNHANDLE              m_hConnectAsyncOp;
+	bool				   bHostServerFounded;
+	HRESULT                m_hrConnectComplete;
+
+	static HANDLE hHostServerFounded;		// Evenement envoye lorsque le serveur a ete trouve
+	static HANDLE m_hConnectCompleteEvent;	//							le client s'est connecte a la session
+			
+  // ------------------------------------------------------ Méthodes publiques
+  public:
+	
+	//--- Constructeurs & Destructeurs ---
+	MPClient();							// Constructeur par defaut
+	virtual ~MPClient();				// Destructeur
+
+	void setPlayerName(char* name);		// Permet de donner un pseudo au joueur
+	
+	HRESULT  InitClient();				// Initialise le Client DirectPlay
+	HRESULT ConnectToServer(const char* serverIP, int port);
+	HRESULT JoinSession(DPHostEnumInfo* session);
+
+	//HRESULT  StartClient();			// Demarre le Client DirectPlay
+	//void     StopClient();			// Arrete le Client multi-joueur
+
+	//--- Fonctions inline ---
+	inline IDirectPlay8Client* getDPClient() { return m_pDPClient; }
+	inline CHAR* getClientURL() { return m_strClientURL; }
+	inline char* getPlayerName() { return pPlayerName; }
+	
+	inline DPHostEnumInfo* getConnectingSession() { return m_DPHostEnumHead.pNext; }
+
+	
+	HRESULT SessionsDlgNoteEnumResponse( PDPNMSG_ENUM_HOSTS_RESPONSE pEnumHostsResponse );
+	VOID    SessionsDlgEnumListCleanup();
+		
+
+	// -------------------------------------------------------- Méthodes privees
+  protected:
+	
+
+	
+
+    
+};
+//=========================== Fin de la classe MPCLIENT ======================//
+
+//------------------------------------------------------------ Fonctions annexes
+// Fonction CallBack recevant tous les messages destines au client DirectPlay
+HRESULT WINAPI	DirectPlayClientMessageHandler( PVOID pvUserContext, DWORD dwMessageId, PVOID pMsgBuffer );
+
+#endif	// MPClientH
+
+
