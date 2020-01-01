@@ -1,0 +1,57 @@
+============================================================================
+                               NAINS - ZE GAME                                
+                         Computer Role Playing Game                          
+  	    	     Resources version 1.0 (10/22/2000)
+
+		       	    (c) copyright 1998-2000
+		           Graphics by Joël Mouclier
+			      Code by Antoine Rey
+		           Music by Guy-Roger Duvert
+
+============================================================================
+
+Home page : https://arey.github.io/zegame/
+You can contact the authors by e-mail at antoine@javaetmoi.com
+
+
+Description
+~~~~~~~~~~~
+You can find here all the resources files used for ZeGame : graphics,
+sound effect, music, anims ...
+
+
+Install
+~~~~~~~
+
+If you want to use either any tools you can find in the Development Kit or 
+to compile the sources without using .zgp files, you have to unrar this file
+in the ZeGame\ sub-directory where you installed the sources.
+
+
+Have Fun !
+
+
+Zegame development team.
+
+
+-----------------------------------------------------------------------
+ DISCLAIMER
+-----------------------------------------------------------------------
+
+If you plan to put this program on your web page or a cdrom of any sort, 
+let me know via email, I'm curious to see where it ends up :)
+
+If you use the code for your own projects please give me credit, or mention
+my web site somewhere in your program or it's docs.
+
+You may not sell this Software or include it on any distribution or 
+compilation without consent of the authors.
+
+Any use of this Software is at your own risk.  
+
+In no event shall the Author be liable for any special, incidental, indirect,
+or consequential damages whatsoever (including, without limitation, damages 
+for loss of business profits, business interruption, loss of business 
+information, or any other pecuniary loss) arising out of the use of or 
+inability to use this Software.
+-----------------------------------------------------------------------

@@ -1,0 +1,68 @@
+============================================================================
+                               NAINS - ZE GAME                                
+                         Computer Role Playing Game                          
+  	    	   Development Kit version 1.0 (10/22/2000)
+
+		       	    (c) copyright 1998-2000
+		           Graphics by Joël Mouclier
+			      Code by Antoine Rey
+		           Music by Guy-Roger Duvert
+
+============================================================================
+
+Home page : https://arey.github.io/zegame/
+You can contact the authors by e-mail at antoine@javaetmoi.com
+
+
+Files
+~~~~~
+ - Devkit.txt	    :  this text file
+ - MapEditor.exe    :  game level editor
+ - AnimEditor.exe   :  character & object animation editor
+ - CreateDecors.exe :  bitmaps import tool
+ - BuildPakFile.exe :  ZGP files builder
+ - Pak*.ini	    :  samples of ini files used by BuildPakFile.exe
+ - GameDoc\	    :  html doc that explains how using those tools
+
+Install
+~~~~~~~
+
+You have to unrar those files in the folder where are installed all the
+resources (bitmap, level, sound, data ...) of ZeGame. You can dowmload
+those resources file from the follwowing url : 
+http://www.zegame.net/download/ZeGame-Res-v1.70.rar
+
+
+Use
+~~~
+
+See Gamedoc\gamedoc.html or web site that refer how use all those tools.
+
+
+Have Fun !
+
+
+Zegame development team.
+
+
+-----------------------------------------------------------------------
+ DISCLAIMER
+-----------------------------------------------------------------------
+
+If you plan to put this program on your web page or a cdrom of any sort, 
+let me know via email, I'm curious to see where it ends up :)
+
+If you use the code for your own projects please give me credit, or mention
+my web site somewhere in your program or it's docs.
+
+You may not sell this Software or include it on any distribution or 
+compilation without consent of the author.
+
+Any use of this Software is at your own risk.  
+
+In no event shall the Author be liable for any special, incidental, indirect,
+or consequential damages whatsoever (including, without limitation, damages 
+for loss of business profits, business interruption, loss of business 
+information, or any other pecuniary loss) arising out of the use of or 
+inability to use this Software.
+-----------------------------------------------------------------------
